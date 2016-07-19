@@ -1,0 +1,16 @@
+{
+  "name": "ride-sharing-concept",
+  "version": "1.0.0",
+  "description": "Ride charing algorithm with OSRM",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node build/index.js && supervisor -w src"
+  },
+  "author": "Andzej Maciusovic",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "osrm": "^5.2.6"
+  }
+}
