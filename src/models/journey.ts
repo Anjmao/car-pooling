@@ -1,7 +1,8 @@
 import { JourneyData  } from './journey-data';
 import { Constants  } from './constants';
-import { Point  } from './point';
 import { Haversine } from './haversine';
+import { Point  } from './point';
+
 
 export class Journey {
 
@@ -9,7 +10,7 @@ export class Journey {
 
     private static DEBUG = Constants.isDebugMode();
 
-    public Journey(thisJourney: JourneyData) {
+    constructor(thisJourney: JourneyData) {
         this.setThisJourney(thisJourney);
     }
 
@@ -179,28 +180,26 @@ export class Journey {
     }
 
     public computeHaversines(): void {
-    if (this.thisJourney.getStartLocation() == null || this.thisJourney.getEndLocation() == null)
-        throw new Error("Coordinates are not set");
+        if (this.thisJourney.getStartLocation() == null || this.thisJourney.getEndLocation() == null)
+            throw new Error("Coordinates are not set");
 
-    // ensure coordinates are within bounds of Seattle
-    if (!this.validBounds())
-        throw new Error("Only trips inside "
-            + "Seattle are supported now.");
+        // ensure coordinates are within bounds of Seattle
+        if (!this.validBounds())
+            throw new Error("Only trips inside Seattle are supported now.");
 
-    var cur = this.thisJourney.getStartLocation();
-    var totalDistance = 0;
-    for (let waypoint of this.thisJourney.getWaypoints()) {
-        totalDistance += Haversine.getHaversine(cur.getX(), waypoint.getX(),
-            cur.getY(), waypoint.getY());
-        cur = waypoint;
+        var cur = this.thisJourney.getStartLocation();
+        var totalDistance = 0;
+        for (let waypoint of this.thisJourney.getWaypoints()) {
+            totalDistance += Haversine.getHaversine(cur.getX(), waypoint.getX(), cur.getY(), waypoint.getY());
+            cur = waypoint;
+        }
+
+        var end = this.thisJourney.getEndLocation();
+        totalDistance += Haversine.getHaversine(cur.getX(), end.getX(),
+            cur.getY(), end.getY());
+
+        this.thisJourney.setDistance(totalDistance);
+        this.thisJourney.setTime(0);
+
     }
-
-    var end = this.thisJourney.getEndLocation();
-    totalDistance += Haversine.getHaversine(cur.getX(), end.getX(),
-        cur.getY(), end.getY());
-
-    this.thisJourney.setDistance(totalDistance);
-    this.thisJourney.setTime(0);
-
-}
 }

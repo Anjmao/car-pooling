@@ -1,9 +1,4 @@
-/**
- * Calculate the haversine distance
- * https://en.wikipedia.org/wiki/Haversine_formula
- */
-
-class Haversine {
+export class Haversine {
     private static RADIUS : number = 6371;
 
     public static getHaversine(lat1 : number, lat2 : number, lon1 : number, lon2 : number) : number {

@@ -22,7 +22,7 @@ export class JourneyData {
 
     private passengerList : Passenger[];
 
-    private waypoints : Set<Point>;
+    private waypoints : Point[];
 
     private ordering : string;
 
@@ -78,11 +78,11 @@ export class JourneyData {
         this.passengerList = passengerList;
     }
 
-    public getWaypoints() : Set<Point> {
+    public getWaypoints(): Point[] {
         return this.waypoints;
     }
 
-    public setWaypoints(waypoints : Set<Point>) {
+    public setWaypoints(waypoints : Point[]) {
         this.waypoints = waypoints;
     }
 
