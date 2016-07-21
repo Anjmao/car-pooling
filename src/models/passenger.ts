@@ -1,40 +1,39 @@
-public class Passenger {
+import { Point } from './point';
 
-	private String UID;
-	private Point origin;
-	private Point destination;
-	
-	public Passenger(String name) {
-		this(name, (Point)null, (Point)null);
-	}
-	
-	public Passenger(String name, Point origin, Point destination) {
-		this.setUID(name);
-		this.setOrigin(origin);
-		this.setDestination(destination);
-	}
-	
-	public Point getOrigin() {
-		return origin;
-	}
+export class Passenger {
+    private UID : string;
 
-	public void setOrigin(Point origin) {
-		this.origin = origin;
-	}
+    private origin : Point;
 
-	public Point getDestination() {
-		return destination;
-	}
+    private destination : Point;
 
-	public void setDestination(Point destination) {
-		this.destination = destination;
-	}
+    public constructor(name? : any, origin? : any, destination? : any) {
+        this.setUID(name);
+        this.setOrigin(origin);
+        this.setDestination(destination);
+    }
 
-	public String getUID() {
-		return UID;
-	}
+    public getOrigin() : Point {
+        return this.origin;
+    }
 
-	public void setUID(String uID) {
-		UID = uID;
-	}	
+    public setOrigin(origin : Point) {
+        this.origin = origin;
+    }
+
+    public getDestination() : Point {
+        return this.destination;
+    }
+
+    public setDestination(destination : Point) {
+        this.destination = destination;
+    }
+
+    public getUID() : string {
+        return this.UID;
+    }
+
+    public setUID(uID : string) {
+        this.UID = uID;
+    }
 }

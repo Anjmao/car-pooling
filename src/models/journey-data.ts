@@ -1,6 +1,8 @@
 import { Point } from './point';
+import { Passenger } from './passenger';
+import { Driver } from './driver';
 
-class JourneyData {
+export class JourneyData {
     
     constructor() {
         this.time = 0;
@@ -20,7 +22,7 @@ class JourneyData {
 
     private passengerList : Passenger[];
 
-    private waypoints : Point[];
+    private waypoints : Set<Point>;
 
     private ordering : string;
 
@@ -68,11 +70,11 @@ class JourneyData {
         this.driver = driver;
     }
 
-    public getPassengerList() : ArrayList<Passenger> {
+    public getPassengerList() : Passenger[] {
         return this.passengerList;
     }
 
-    public setPassengerList(passengerList : ArrayList<Passenger>) {
+    public setPassengerList(passengerList : Passenger[]) {
         this.passengerList = passengerList;
     }
 

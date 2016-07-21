@@ -1,6 +1,6 @@
 import { Point } from './point';
 
-class Driver {
+export class Driver {
 	
 	private UID: string;
 	private currentLocation: Point;
