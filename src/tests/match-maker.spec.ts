@@ -12,7 +12,7 @@ describe('Match maker', function () {
         maker = new MatchMaker();
     });
 
-    it('should calculate routes', () => {
+    xit('should calculate routes', () => {
         var p1 = new Passenger('Vovka', getRandomPoint(), getRandomPoint());
         var p2 = new Passenger('Borkia', getRandomPoint(), getRandomPoint());
 
@@ -22,7 +22,25 @@ describe('Match maker', function () {
         maker.setDrivers(d1);
         var journeys = maker.process();
 
-        console.log(journeys, 'ddd');
+        console.log(journeys.length, 'total journeys');
+    });
+
+    it('performance test', () => {
+        let passengers: Passenger[] = [];
+        for (let index = 0; index < 3; index++) {
+            passengers.push(new Passenger('Vovka' + index, getRandomPoint(), getRandomPoint()))
+        }
+
+        let drivers: Driver[] = [];
+        for (let index = 0; index < 10; index++) {
+            drivers.push(new Driver('Buratinas', getRandomPoint()))
+        }
+
+        maker.setPassengers(...passengers);
+        maker.setDrivers(...drivers);
+
+        let journeys = maker.process();
+        console.log(journeys[0], 'total journeys');
     });
 });
 
@@ -32,7 +50,7 @@ function getRandomPoint() {
     return new Point(randomLat, randomLong);
 }
 
-function getRandomDoubleInRange(minimum: number,maximum: number) {
+function getRandomDoubleInRange(minimum: number, maximum: number) {
     var randomVal = minimum + (maximum - minimum) * Math.random();
     return randomVal;
 }

@@ -3,12 +3,11 @@ import { Constants  } from './constants';
 import { Haversine } from './haversine';
 import { Point  } from './point';
 
-
 export class Journey {
 
-    private thisJourney: JourneyData;
-
     private static DEBUG = Constants.isDebugMode();
+    
+    thisJourney: JourneyData;
 
     constructor(thisJourney: JourneyData) {
         this.setThisJourney(thisJourney);
@@ -169,10 +168,6 @@ export class Journey {
             return false;
 
         return true;
-    }
-
-    public compareTo(o: Journey): number {
-        return this.thisJourney.compareTo(o.thisJourney);
     }
 
     public toString(): string {

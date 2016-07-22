@@ -10,14 +10,28 @@ describe('Match maker', function () {
     beforeEach(function () {
         maker = new match_maker_1.MatchMaker();
     });
-    it('should calculate routes', function () {
+    xit('should calculate routes', function () {
         var p1 = new passenger_1.Passenger('Vovka', getRandomPoint(), getRandomPoint());
         var p2 = new passenger_1.Passenger('Borkia', getRandomPoint(), getRandomPoint());
         var d1 = new driver_1.Driver('Buratinas', getRandomPoint());
         maker.setPassengers(p1, p2);
         maker.setDrivers(d1);
         var journeys = maker.process();
-        console.log(journeys, 'ddd');
+        console.log(journeys.length, 'total journeys');
+    });
+    it('performance test', function () {
+        var passengers = [];
+        for (var index = 0; index < 3; index++) {
+            passengers.push(new passenger_1.Passenger('Vovka' + index, getRandomPoint(), getRandomPoint()));
+        }
+        var drivers = [];
+        for (var index = 0; index < 10; index++) {
+            drivers.push(new driver_1.Driver('Buratinas', getRandomPoint()));
+        }
+        maker.setPassengers.apply(maker, passengers);
+        maker.setDrivers.apply(maker, drivers);
+        var journeys = maker.process();
+        console.log(journeys[0], 'total journeys');
     });
 });
 function getRandomPoint() {

@@ -81,7 +81,7 @@ var MatchMaker = (function () {
         this.computeJourneyDetailsHaversine(journeysHaversine, orderings);
         // sort Journey to get the best route
         // TODO: check if sorting correct
-        journeysHaversine = journeysHaversine.sort();
+        journeysHaversine = journeysHaversine.sort(this.sortJourneys);
         return journeysHaversine;
     };
     MatchMaker.prototype.computeJourneyDetailsHaversine = function (journeys, orderings) {
@@ -130,6 +130,9 @@ var MatchMaker = (function () {
                 journeys.push(j);
             }
         }
+    };
+    MatchMaker.prototype.sortJourneys = function (a, b) {
+        return a.thisJourney.getDistance() - b.thisJourney.getDistance();
     };
     // takes an empty ArrayList and a set of possible ordering
     // populates the array with JourneyData objects that have 

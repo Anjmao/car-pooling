@@ -97,7 +97,7 @@ export class MatchMaker {
 		
 		// sort Journey to get the best route
         // TODO: check if sorting correct
-		journeysHaversine = journeysHaversine.sort();
+		journeysHaversine = journeysHaversine.sort(this.sortJourneys);
 		
 		return  journeysHaversine;
 	}
@@ -154,6 +154,10 @@ export class MatchMaker {
 				journeys.push(j);
 			}
 		}
+	}
+
+	private sortJourneys(a: Journey, b: Journey) {
+		return a.thisJourney.getDistance() - b.thisJourney.getDistance();
 	}
 	
 	// takes an empty ArrayList and a set of possible ordering

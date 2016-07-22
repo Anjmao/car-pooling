@@ -143,9 +143,6 @@ var Journey = (function () {
             return false;
         return true;
     };
-    Journey.prototype.compareTo = function (o) {
-        return this.thisJourney.compareTo(o.thisJourney);
-    };
     Journey.prototype.toString = function () {
         return this.thisJourney.toString();
     };
