@@ -25,13 +25,14 @@ describe('Match maker', function () {
             passengers.push(new passenger_1.Passenger('Vovka' + index, getRandomPoint(), getRandomPoint()));
         }
         var drivers = [];
-        for (var index = 0; index < 2000; index++) {
-            drivers.push(new driver_1.Driver('Buratinas', getRandomPoint()));
+        for (var index = 0; index < 1000; index++) {
+            drivers.push(new driver_1.Driver('Buratinas' + index, getRandomPoint()));
         }
         maker.setPassengers.apply(maker, passengers);
         maker.setDrivers.apply(maker, drivers);
         var journeys = maker.process();
-        console.log(journeys[0], 'total journeys');
+        console.log(journeys.length, 'total journeys');
+        console.log(journeys[0], 'best journey');
         done();
     });
 });

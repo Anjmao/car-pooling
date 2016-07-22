@@ -32,15 +32,16 @@ describe('Match maker', function () {
         }
 
         let drivers: Driver[] = [];
-        for (let index = 0; index < 2000; index++) {
-            drivers.push(new Driver('Buratinas', getRandomPoint()))
+        for (let index = 0; index < 1000; index++) {
+            drivers.push(new Driver('Buratinas'+index, getRandomPoint()))
         }
 
         maker.setPassengers(...passengers);
         maker.setDrivers(...drivers);
 
         let journeys = maker.process();
-        console.log(journeys[0], 'total journeys');
+        console.log(journeys.length, 'total journeys');
+        console.log(journeys[0], 'best journey');
         done();
     });
 });
