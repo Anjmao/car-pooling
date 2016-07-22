@@ -55,27 +55,10 @@ var MatchMaker = (function () {
         var orderings = [];
         // get permutations
         this.permute("", passengerChars.join(''), orderings);
-        if (this.DEBUG) {
-        }
         // remove cases of no overlap [pick up, drop off, pick up, ...]
         // first [pick, drop] is useless
         this.removeNoOverlaps(orderings);
-        if (this.DEBUG) {
-        }
-        // As soon as passenger calls for driver, 
-        // time starts. We will call this the start of
-        // journey. The journey ends when the passenger
-        // is dropped off.
-        // For each of the orderings, we will start with the
-        // driver's current location
-        // google directions api
-        // list of journeys
-        //var journeys: Journey[] = [];
-        //this.computeJourneyDetailsGoogleDirectionsAPI(journeys, orderings);
-        // sort Journey to get the best route
-        // TODO: check if sorting correct
-        //journeys = journeys.sort();
-        //console.log("Google Directions API\n" + journeys[0]);
+        this.removeNoFirstInFirstOut(orderings);
         // haversine
         var journeysHaversine = [];
         this.computeJourneyDetailsHaversine(journeysHaversine, orderings);
@@ -134,62 +117,20 @@ var MatchMaker = (function () {
     MatchMaker.prototype.sortJourneys = function (a, b) {
         return a.thisJourney.getDistance() - b.thisJourney.getDistance();
     };
-    // takes an empty ArrayList and a set of possible ordering
-    // populates the array with JourneyData objects that have 
-    // total journey time and distances
-    /*private void computeJourneyDetailsGoogleDirectionsAPI(ArrayList<Journey> journeys, HashSet<String> orderings)  {
-        // get best path for each of the available drivers
-        for(Driver driver: DriverList) {
-            
-            // corresponding passenger orderings
-            for(String ordering: orderings) {
-                // start location = driver present location
-                
-                // end location = last passenger drop off
-                char lastPassenger = ordering.charAt(ordering.length() - 1);
-                // get passenger drop off from PassengerList
-                // lastPassenger - buffer = location of passenger in list
-                Point last = PassengerList.get(lastPassenger - buffer).getDestination();
-                
-                // waypoints are all chars from ordering.charAt(0...n-2)
-                // first occurrence of character = pick up
-                // second occurrence of character = drop off
-                // on adding to set, if add returns false, it must mean
-                // first occurrence has been accounted for.
-                Set<Point> waypoints = new LinkedHashSet<Point>();
-                // using TreeSet since ordering is key
-                for(int i = 0;  i < ordering.length() - 1 ; i++) {
-                    char curPassenger = ordering.charAt(i);
-                    curPassenger -= buffer;
-                    boolean addOrigin = waypoints.add(PassengerList.get(curPassenger).getOrigin());
-                    // if addOrigin is false, it was already added to the set
-                    if(!addOrigin)
-                        waypoints.add(PassengerList.get(curPassenger).getDestination());
-                }
-                
-                // get Journey for this ordering
-                JourneyData thisJourney = new JourneyData();
-                thisJourney.setDriver(driver);
-                thisJourney.setPassengerList(PassengerList);
-                thisJourney.setOrdering(ordering);
-                thisJourney.setWaypoints(waypoints);
-                thisJourney.setStartLocation(driver.getCurrentLocation());
-                thisJourney.setEndLocation(last);
-                thisJourney.setOrderingCharacterBuffer(buffer);
-                Journey j = new Journey(thisJourney);
-                
-                // talk to the Google Directions API to get trip information
-                j.obtainData();
-                
-                // add updated journey to the list
-                journeys.add(j);
+    MatchMaker.prototype.removeNoOverlaps = function (orderings) {
+        var i = orderings.length;
+        while (i--) {
+            var ordering = orderings[i];
+            if (ordering.charAt(0) === ordering.charAt(1)) {
+                orderings.splice(i, 1);
             }
         }
-    }*/
-    MatchMaker.prototype.removeNoOverlaps = function (orderings) {
-        for (var i = 0; i < orderings.length; i++) {
+    };
+    MatchMaker.prototype.removeNoFirstInFirstOut = function (orderings) {
+        var i = orderings.length;
+        while (i--) {
             var ordering = orderings[i];
-            if (ordering.charAt(0) == ordering.charAt(1)) {
+            if (ordering.charAt(0) !== ordering.charAt(ordering.length - 1)) {
                 orderings.splice(i, 1);
             }
         }

@@ -19,19 +19,20 @@ describe('Match maker', function () {
         var journeys = maker.process();
         console.log(journeys.length, 'total journeys');
     });
-    it('performance test', function () {
+    it('performance test', function (done) {
         var passengers = [];
         for (var index = 0; index < 3; index++) {
             passengers.push(new passenger_1.Passenger('Vovka' + index, getRandomPoint(), getRandomPoint()));
         }
         var drivers = [];
-        for (var index = 0; index < 10; index++) {
+        for (var index = 0; index < 2000; index++) {
             drivers.push(new driver_1.Driver('Buratinas', getRandomPoint()));
         }
         maker.setPassengers.apply(maker, passengers);
         maker.setDrivers.apply(maker, drivers);
         var journeys = maker.process();
         console.log(journeys[0], 'total journeys');
+        done();
     });
 });
 function getRandomPoint() {

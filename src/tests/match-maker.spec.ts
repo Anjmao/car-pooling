@@ -25,14 +25,14 @@ describe('Match maker', function () {
         console.log(journeys.length, 'total journeys');
     });
 
-    it('performance test', () => {
+    it('performance test', (done) => {
         let passengers: Passenger[] = [];
         for (let index = 0; index < 3; index++) {
             passengers.push(new Passenger('Vovka' + index, getRandomPoint(), getRandomPoint()))
         }
 
         let drivers: Driver[] = [];
-        for (let index = 0; index < 10; index++) {
+        for (let index = 0; index < 2000; index++) {
             drivers.push(new Driver('Buratinas', getRandomPoint()))
         }
 
@@ -41,6 +41,7 @@ describe('Match maker', function () {
 
         let journeys = maker.process();
         console.log(journeys[0], 'total journeys');
+        done();
     });
 });
 
