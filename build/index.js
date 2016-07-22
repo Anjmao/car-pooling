@@ -1,30 +1,30 @@
 "use strict";
-process.env.UV_THREADPOOL_SIZE = Math.ceil(require('os').cpus().length * 1.5);
-const express = require("express");
-var OSRM = require('../');
-var path = require('path');
+var express = require("express");
 var app = express();
-var osrm = new OSRM(path.join(__dirname, "../test/data/berlin-latest.osrm"));
-// Accepts a query like:
-// http://localhost:8888?start=52.519930,13.438640&end=52.513191,13.415852
+var match_maker_1 = require('./match-maker');
+var passenger_1 = require('./models/passenger');
+var driver_1 = require('./models/driver');
+var point_1 = require('./models/point');
+var constants_1 = require('./models/constants');
 app.get('/', function (req, res) {
-    if (!req.query.start || !req.query.end) {
-        return res.json({ "error": "invalid start and end query" });
-    }
-    var coordinates = [];
-    var start = req.query.start.split(',');
-    coordinates.push([+start[0], +start[1]]);
-    var end = req.query.end.split(',');
-    coordinates.push([+end[0], +end[1]]);
-    var query = {
-        coordinates: coordinates,
-        alternateRoute: req.query.alternatives !== 'false'
-    };
-    osrm.route(query, function (err, result) {
-        if (err)
-            return res.json({ "error": err.message });
-        return res.json(result);
-    });
+    var maker = new match_maker_1.MatchMaker();
+    var p1 = new passenger_1.Passenger('Vovka', getRandomPoint(), getRandomPoint());
+    var p2 = new passenger_1.Passenger('Borkia', getRandomPoint(), getRandomPoint());
+    var d1 = new driver_1.Driver('Buratinas', getRandomPoint());
+    maker.setPassengers(p1, p2);
+    maker.setDrivers(d1);
+    var journeys = maker.process();
+    console.log(journeys, 'ddd');
 });
 console.log('Listening on port: ' + 8888);
 app.listen(8888);
+function getRandomPoint() {
+    var randomLat = getRandomDoubleInRange(constants_1.Constants.getMinimumLatitude(), constants_1.Constants.getMaximumLatitude());
+    var randomLong = getRandomDoubleInRange(constants_1.Constants.getMinimumLongitude(), constants_1.Constants.getMaximumLongitude());
+    return new point_1.Point(randomLat, randomLong);
+}
+function getRandomDoubleInRange(minimum, maximum) {
+    var randomVal = minimum + (maximum - minimum) * Math.random();
+    return randomVal;
+}
+//# sourceMappingURL=index.js.map

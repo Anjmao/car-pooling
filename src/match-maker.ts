@@ -17,17 +17,17 @@ export class MatchMaker {
 	
 	private DEBUG = Constants.isDebugMode();
 	
-	public setPassengers(passengers: Passenger[]): void {
+	public setPassengers(...passengers: Passenger[]): void {
 		for(let passenger of passengers)
 			this.PassengerList.push(passenger);
 	}
 	
-	public setDrivers(drivers: Driver[]): void {
+	public setDrivers(...drivers: Driver[]): void {
 		for(let driver of drivers)
 			this.DriverList.push(driver);
 	}
 	
-	public process(): void {
+	public process(): Journey[] {
 		// get all orderings of passengers
 		// say list is -> p1, p2, p3, ... pn
 		// get permutations of AABBCC... without repeats
@@ -44,8 +44,8 @@ export class MatchMaker {
 		var passengerChars: string[] = [];
 		
 		for(var i = this.buffer ; i < this.buffer + this.PassengerList.length ; i++) {
-			passengerChars.push(String.fromCharCode(65 + i));
-			passengerChars.push(String.fromCharCode(65 + i));
+			var letter = String.fromCharCode(i);
+			passengerChars.push(letter, letter);
 		}
 		
 		// all possible orderings for passengers
@@ -53,7 +53,7 @@ export class MatchMaker {
 		var orderings: string[] = [];
 		
 		// get permutations
-		this.permute("", passengerChars.toString(), orderings);
+		this.permute("", passengerChars.join(''), orderings);
 		
 		if (this.DEBUG) {
 			//console.log("DEBUG All permutations:               ");
@@ -82,14 +82,14 @@ export class MatchMaker {
 		
 		// google directions api
 		// list of journeys
-		var journeys: Journey[] = [];
-		this.computeJourneyDetailsGoogleDirectionsAPI(journeys, orderings);
+		//var journeys: Journey[] = [];
+		//this.computeJourneyDetailsGoogleDirectionsAPI(journeys, orderings);
 		
 		// sort Journey to get the best route
         // TODO: check if sorting correct
-		journeys = journeys.sort();
+		//journeys = journeys.sort();
 		
-		console.log("Google Directions API\n" + journeys[0]);
+		//console.log("Google Directions API\n" + journeys[0]);
 		
 		// haversine
 		var journeysHaversine: Journey[] = [];
@@ -99,8 +99,7 @@ export class MatchMaker {
         // TODO: check if sorting correct
 		journeysHaversine = journeysHaversine.sort();
 		
-		console.log("Haversines\n" + journeysHaversine[0]);
-		
+		return  journeysHaversine;
 	}
 	
 	private computeJourneyDetailsHaversine(journeys: Journey[], orderings: string[]): void {
@@ -116,7 +115,7 @@ export class MatchMaker {
 				// get passenger drop off from PassengerList
 				// lastPassenger - buffer = location of passenger in list
                 // TODO: check if its correct to convert chart to int
-				var last = this.PassengerList[parseInt(lastPassenger) - this.buffer].getDestination();
+				var last = this.PassengerList[lastPassenger.charCodeAt(0) - this.buffer].getDestination();
 				
 				// waypoints are all chars from ordering.charAt(0...n-2)
 				// first occurrence of character = pick up
@@ -160,7 +159,7 @@ export class MatchMaker {
 	// takes an empty ArrayList and a set of possible ordering
 	// populates the array with JourneyData objects that have 
 	// total journey time and distances
-	private void computeJourneyDetailsGoogleDirectionsAPI(ArrayList<Journey> journeys, HashSet<String> orderings)  {
+	/*private void computeJourneyDetailsGoogleDirectionsAPI(ArrayList<Journey> journeys, HashSet<String> orderings)  {
 		// get best path for each of the available drivers
 		for(Driver driver: DriverList) {
 			
@@ -208,27 +207,27 @@ export class MatchMaker {
 				journeys.add(j);
 			}
 		}
-	}
+	}*/
 
-	private void removeNoOverlaps(HashSet<String> orderings) {
-		for (Iterator<String> i = orderings.iterator(); i.hasNext();) {
-		    String ordering = i.next();
-		    if (ordering.charAt(0) == ordering.charAt(1)) 
-		        i.remove();
+	private removeNoOverlaps(orderings: string[]): void {
+		for (var i = 0; i < orderings.length; i++) {
+			var ordering = orderings[i];
+		    if (ordering.charAt(0) == ordering.charAt(1)) {
+				orderings.splice(i, 1);
+			}
 		}
 	}
 
-	private void permute(String prefix, String string,
-			HashSet<String> orderings) {
-		int n = string.length();
+	private permute(prefix: string, str: string, orderings: string[]): void {
+		var n = str.length;
 		if (n == 0) {
-            orderings.add(prefix);
+            orderings.push(prefix);
             return;
         }
 		
 		// permute characters after start
-		for(int i = 0 ; i < n ; i++) {
-			permute(prefix + string.charAt(i), string.substring(0,i) + string.substring(i+1), orderings);
+		for (var i = 0 ; i < n ; i++) {
+			this.permute(prefix + str.charAt(i), str.substring(0,i) + str.substring(i+1), orderings);
 		}
 	}
 }

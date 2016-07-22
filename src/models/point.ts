@@ -1,9 +1,17 @@
 export class Point {
+    
+    private x: number;
+    private y: number;
+
+    constructor(x: number, y: number) {
+        this.x = x;
+        this.y = y;
+    }
     getX(): number {
-        throw "not implemeted";
+        return this.x;
     }
 
     getY(): number {
-        throw "not implemeted";
+        return this.y;
     }
 }

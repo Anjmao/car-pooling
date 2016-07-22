@@ -1,11 +1,13 @@
 {
     "compilerOptions": {
-        "target": "es6",
+        "target": "es5",
         "module": "commonjs",
-        "outDir": "build"
+        "outDir": "build",
+        "sourceMap": true,
+        "rootDir": "src"
     },
-    "files": [
-        "./typings/tsd.d.ts",
-        "./src/index.ts"
+    "exclude": [
+        "node_modules",
+        "build"
     ]
 }

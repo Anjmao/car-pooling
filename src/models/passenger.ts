@@ -7,7 +7,7 @@ export class Passenger {
 
     private destination : Point;
 
-    public constructor(name? : any, origin? : any, destination? : any) {
+    public constructor(name? : any, origin? : Point, destination? : Point) {
         this.setUID(name);
         this.setOrigin(origin);
         this.setDestination(destination);

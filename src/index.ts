@@ -1,34 +1,39 @@
 
-process.env.UV_THREADPOOL_SIZE = Math.ceil(require('os').cpus().length * 1.5);
-
 import * as express from "express";
-var OSRM = require('../');
-var path = require('path');
-
 var app = express();
-var osrm = new OSRM(path.join(__dirname,"../test/data/berlin-latest.osrm"));
 
-// Accepts a query like:
-// http://localhost:8888?start=52.519930,13.438640&end=52.513191,13.415852
-app.get('/', function(req, res) {
-    if (!req.query.start || !req.query.end) {
-        return res.json({"error":"invalid start and end query"});
-    }
-    var coordinates = [];
-    var start = req.query.start.split(',');
-    coordinates.push([+start[0],+start[1]]);
-    var end = req.query.end.split(',');
-    coordinates.push([+end[0],+end[1]]);
-    var query = {
-        coordinates: coordinates,
-        alternateRoute: req.query.alternatives !== 'false'
-    };
-    osrm.route(query, function(err, result) {
-        if (err) return res.json({"error":err.message});
-        return res.json(result);
-    });
+import { MatchMaker } from './match-maker';
+import { Passenger } from './models/passenger';
+import { Driver } from './models/driver';
+import { Point } from './models/point';
+import { Constants } from './models/constants';
+
+
+app.get('/', function (req, res) {
+    
+    var maker = new MatchMaker();
+    var p1 = new Passenger('Vovka', getRandomPoint(), getRandomPoint());
+    var p2 = new Passenger('Borkia', getRandomPoint(), getRandomPoint());
+
+    var d1 = new Driver('Buratinas', getRandomPoint());
+
+    maker.setPassengers(p1, p2);
+    maker.setDrivers(d1);
+    var journeys = maker.process();
+
+    console.log(journeys, 'ddd');
 });
 
 console.log('Listening on port: ' + 8888);
 app.listen(8888);
 
+function getRandomPoint() {
+    var randomLat = getRandomDoubleInRange(Constants.getMinimumLatitude(), Constants.getMaximumLatitude());
+    var randomLong = getRandomDoubleInRange(Constants.getMinimumLongitude(), Constants.getMaximumLongitude());
+    return new Point(randomLat, randomLong);
+}
+
+function getRandomDoubleInRange(minimum: number, maximum: number) {
+    var randomVal = minimum + (maximum - minimum) * Math.random();
+    return randomVal;
+}
