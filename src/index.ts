@@ -6,7 +6,7 @@ var OSRM = require('osrm');
 var path = require('path');
 
 var app = express();
-var osrm = new OSRM(path.join(__dirname,"../bremen-latest.osrm"));
+var osrm = new OSRM(path.join(__dirname,"../maps/bremen-latest.osrm"));
 
 // Accepts a query like:
 // http://localhost:8888?start=52.519930,13.438640&end=52.513191,13.415852
