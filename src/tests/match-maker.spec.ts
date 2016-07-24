@@ -25,7 +25,7 @@ describe('Match maker', function () {
         console.log(journeys.length, 'total journeys');
     });
 
-    it('performance test', (done) => {
+    xit('performance test', (done) => {
         let passengers: Passenger[] = [];
         for (let index = 0; index < 3; index++) {
             passengers.push(new Passenger('Vovka' + index, getRandomPoint(), getRandomPoint()))
@@ -33,7 +33,7 @@ describe('Match maker', function () {
 
         let drivers: Driver[] = [];
         for (let index = 0; index < 1000; index++) {
-            drivers.push(new Driver('Buratinas'+index, getRandomPoint()))
+            drivers.push(new Driver('Buratinas' + index, getRandomPoint()))
         }
 
         maker.setPassengers(...passengers);
@@ -42,6 +42,26 @@ describe('Match maker', function () {
         let journeys = maker.process();
         console.log(journeys.length, 'total journeys');
         console.log(journeys[0], 'best journey');
+        done();
+    });
+
+    it('test1', (done) => {
+        let passengers: Passenger[] = [];
+        for (let index = 0; index < 10; index++) {
+            passengers.push(new Passenger('Vovka' + index, getRandomPoint(), getRandomPoint()))
+        }
+
+        let drivers: Driver[] = [];
+        for (let index = 0; index < 3; index++) {
+            drivers.push(new Driver('Buratinas' + index, getRandomPoint(), getRandomPoint(), getRandomPoint()))
+        }
+
+        maker.setPassengers(...passengers);
+        maker.setDrivers(...drivers);
+
+        let journeys = maker.calculate();
+        console.log(journeys.length, 'total journeys');
+        console.log(journeys, 'best journey');
         done();
     });
 });

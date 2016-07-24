@@ -3,11 +3,15 @@ import { Point } from './point';
 export class Driver {
 	
 	private UID: string;
-	private currentLocation: Point;
+	private currentLocation: Point; //TODO remove this
+	private origin : Point;
+    private destination : Point;
 	
-	constructor(name: string, location?: Point) {
+	constructor(name: string, location?: Point, origin? : Point, destination? : Point) {
         this.setUID(name);
         this.setCurrentLocation(location);
+		this.setOrigin(origin);
+        this.setDestination(destination);
 	}
 
 	getUID(): string {
@@ -25,4 +29,20 @@ export class Driver {
 	setCurrentLocation(currentLocation: Point) {
 		this.currentLocation = currentLocation;
 	}
+
+	getOrigin() : Point {
+        return this.origin;
+    }
+
+    setOrigin(origin : Point) {
+        this.origin = origin;
+    }
+
+    getDestination() : Point {
+        return this.destination;
+    }
+
+    setDestination(destination : Point) {
+        this.destination = destination;
+    }
 }

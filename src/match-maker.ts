@@ -4,6 +4,17 @@ import { Driver } from './models/driver';
 import { Constants } from './models/constants';
 import { Journey } from './models/journey';
 import { JourneyData } from './models/journey-data';
+import { Haversine } from './models/haversine';
+
+class DriverPickup {
+	passenger: Passenger;
+	distancesToDriver: number;
+}
+
+class DriverBucket {
+	driver: Driver;
+	pickups: DriverPickup[]
+}
 
 export class MatchMaker {
 
@@ -25,6 +36,30 @@ export class MatchMaker {
 	public setDrivers(...drivers: Driver[]): void {
 		for (let driver of drivers)
 			this.DriverList.push(driver);
+	}
+
+	public calculate(): DriverBucket[] {
+
+		let results:DriverBucket[] = [];
+		for (let driver of this.DriverList) {
+			let pickups: DriverPickup[] = [];
+			for (let passenger of this.PassengerList) {
+
+				var h = Haversine.getHaversine(
+					driver.getOrigin().getX(), 
+					passenger.getOrigin().getX(), 
+					driver.getOrigin().getY(), 
+					passenger.getDestination().getY());
+
+				pickups.push({passenger: passenger, distancesToDriver: h});
+			}
+			results.push({
+				driver: driver,
+				pickups: pickups.sort((a, b) => b.distancesToDriver - a.distancesToDriver)
+			});
+		}
+
+		return results;
 	}
 
 	public process(): Journey[] {

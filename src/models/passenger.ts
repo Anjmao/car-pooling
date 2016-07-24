@@ -4,7 +4,6 @@ export class Passenger {
     private UID : string;
 
     private origin : Point;
-
     private destination : Point;
 
     public constructor(name? : any, origin? : Point, destination? : Point) {
