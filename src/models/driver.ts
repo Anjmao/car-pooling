@@ -56,11 +56,15 @@ export class Driver {
         this.destinationBoundary = this.getBoundary(this.destination, distance);
     }
 
+    matchesPoints(point: Point){
+        return true;
+    }
+
     private getBoundary(point: Point, distance) {
         let oneDegreeInKm = 110.574;
 
-        let latitudeConversionFactor = this.flyingDistance / oneDegreeInKm;
-        let longitudeConversionFactor = this.flyingDistance / oneDegreeInKm / Math.abs(Math.cos(Haversine.toRadian(point.lat)));
+        let latitudeConversionFactor = distance / oneDegreeInKm;
+        let longitudeConversionFactor = distance / oneDegreeInKm / Math.abs(Math.cos(Haversine.toRadian(point.lat)));
 
         var boundary: Boundary = {
             minLat: point.lat - latitudeConversionFactor,

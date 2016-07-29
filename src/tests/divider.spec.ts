@@ -4,7 +4,7 @@ import { Point } from '../models/point';
 
 var expect: Chai.ExpectStatic = require('chai').expect;
 
-describe('divider', () => {
+describe.only('divider', () => {
 
     it('should sort by longtitude', () => {
         var data: Booking[] = [
@@ -36,7 +36,8 @@ describe('divider', () => {
         ];
 
         var drivers = group(data);
-
+        console.log(drivers.values().next().value);
+        
         expect(drivers.size).to.equal(1);
     });
 
