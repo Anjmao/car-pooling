@@ -48,6 +48,7 @@
     <Compile Include="Models\Booking.cs" />
     <Compile Include="Models\Coordinate.cs" />
     <Compile Include="Models\Driver.cs" />
+    <Compile Include="Permutator.cs" />
     <Compile Include="Interfaces\IRider.cs" />
     <Compile Include="Models\Passenger.cs" />
     <Compile Include="Models\Rider.cs" />
