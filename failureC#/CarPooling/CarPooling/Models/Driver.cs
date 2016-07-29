@@ -35,8 +35,14 @@ namespace CarPooling.Models
             {
                 this.PickupBoundary.MinCoordinate.Latitude = this.Pickup.Latitude;
                 this.PickupBoundary.MaxCoordinate.Latitude = this.Pickup.Latitude;
+
                 this.DropoffBoundary.MinCoordinate.Latitude = this.Dropoff.Latitude;
                 this.DropoffBoundary.MaxCoordinate.Latitude = this.Dropoff.Latitude;
+
+                if (down)
+                {
+                    this.DropoffBoundary.MaxCoordinate.Longitude = this.Dropoff.Longitude;
+                }
             }
             else if (left || right)
             {
