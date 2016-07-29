@@ -49,8 +49,8 @@ namespace CarPooling.IO
             var bookings = input.Bookings.Select(x => new Booking
             {
                 Id = x.Id,
-                Pickup = new Coordinate(x.Pickup.Lat, x.Pickup.Lon),
-                Dropoff = new Coordinate(x.Dropoff.Lat, x.Dropoff.Lon),
+                Pickup = new Coordinate(x.Pickup.Lat, x.Pickup.Lon) { Id = x.Pickup.Id },
+                Dropoff = new Coordinate(x.Dropoff.Lat, x.Dropoff.Lon) { Id = x.Dropoff.Id },
                 IsDriver = x.IsDriver
             });
 

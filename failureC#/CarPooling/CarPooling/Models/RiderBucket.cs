@@ -9,6 +9,6 @@ namespace CarPooling.Models
     public class RiderBucket
     {
         public Driver Driver { get; set; }
-        public HashSet<Passenger> Passengers { get; set; } = new HashSet<Passenger>();
+        public List<Passenger> Passengers { get; set; }
     }
 }

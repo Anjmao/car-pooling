@@ -4,6 +4,9 @@ namespace CarPooling.Models
 {
     public class Coordinate : IEqualityComparer<Coordinate>
     {
+        // Needed only for test team
+        public string Id { get; set; }
+
         public double Latitude { get; set; }
         public double Longitude { get; set; }
 

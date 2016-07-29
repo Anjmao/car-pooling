@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarPoolingService.cs" />
     <Compile Include="Divider.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="IO\InputParser.cs" />
@@ -76,6 +77,7 @@
     <Content Include="dd-input.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="dd-out.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
