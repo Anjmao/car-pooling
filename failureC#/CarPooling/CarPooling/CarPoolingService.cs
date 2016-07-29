@@ -21,15 +21,14 @@ namespace CarPooling
             this.divider = divider;
         }
 
-        public void Process()
+        public List<Journey> Process()
         {
             List<Booking> bookings = this.inputParser.ReadInput("dd-input.json");
 
             var buckets = this.divider.Group(bookings);
 
             this.matchMaker.SetBuckets(buckets);
-            var journeys = this.matchMaker.Process();
-
+            return this.matchMaker.Process();
         }
     }
 }
