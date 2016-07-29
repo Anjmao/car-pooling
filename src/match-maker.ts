@@ -146,7 +146,6 @@ export class MatchMaker {
 				thisJourney.setPassengerList(this.PassengerList);
 				thisJourney.setOrdering(ordering);
 				thisJourney.setWaypoints(waypoints);
-				thisJourney.setStartLocation(driver.getCurrentLocation());
 				thisJourney.setEndLocation(last);
 				thisJourney.setOrderingCharacterBuffer(this.buffer);
 				var j = new Journey(thisJourney);

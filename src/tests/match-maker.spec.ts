@@ -53,7 +53,7 @@ describe('Match maker', function () {
 
         let drivers: Driver[] = [];
         for (let index = 0; index < 3; index++) {
-            drivers.push(new Driver('Buratinas' + index, getRandomPoint(), getRandomPoint(), getRandomPoint()))
+            drivers.push(new Driver('Buratinas' + index, getRandomPoint(), getRandomPoint()))
         }
 
         maker.setPassengers(...passengers);
