@@ -12,5 +12,7 @@ namespace CarPooling.Models
         {
 
         }
+
+        public bool IsMatched { get; set; }
     }
 }
