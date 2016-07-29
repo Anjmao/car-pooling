@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CarPooling.Models;
+using Combinatorics.Collections;
 
 namespace CarPooling
 {
@@ -12,8 +13,7 @@ namespace CarPooling
     {
         private List<Driver> drivers = new List<Driver>();
         private List<Passenger> passengers = new List<Passenger>();
-        private int buffer = 65;
-
+        
         public MatchMaker(List<Driver> drivers, List<Passenger> passengers)
         {
             this.drivers = drivers;
@@ -22,36 +22,44 @@ namespace CarPooling
 
         public List<Journey> Process()
         {
-            var letters = this.CreateLetters();
-            var orderings = Permutator.GetPermutations<char>(letters, 4).Select(x => x.ToList()).ToList();
-
-            throw new NotImplementedException();
+            var journeys = this.ComputeJourneys();
+            return journeys;
         }
 
-        private Journey ComputeJourneys(char[][] orderings)
+        private List<Journey> ComputeJourneys()
         {
+            var journeys = new List<Journey>();
             foreach (var driver in this.drivers)
             {
-                foreach(var ordering in orderings)
+                var orderings = new Combinations<char>(this.CreateLetters(), 4, GenerateOption.WithoutRepetition);
+
+                foreach (var ordering in orderings)
                 {
                     var waypoints = this.CreateWaypoins(ordering);
+                    var journey = new Journey();
+                    journey.SetDriver(driver);
+                    journey.SetPassengers(this.passengers);
+                    journey.SetWaypoints(waypoints);
+                    journey.ComputeRoute();
+
+                    journeys.Add(journey);
                 }
             }
 
-            throw new NotImplementedException();
+            return journeys;
         }
 
-        private HashSet<Coordinate> CreateWaypoins(char[] ordering)
+        private HashSet<Coordinate> CreateWaypoins(IList<char> ordering)
         {
             var waypoints = new HashSet<Coordinate>();
 
             foreach (var letter in ordering)
             {
-                var curPassengerIndex = (int)letter - this.buffer;
+                var curPassengerIndex = (int)letter - Constrains.Buffer;
                 var currentPassenger = this.passengers[curPassengerIndex];
                 var addOrigin = waypoints.Add(currentPassenger.Pickup);
                 // if addOrigin is false, it was already added to the set
-                if (!addOrigin)
+                if (addOrigin)
                 {
                     waypoints.Add(currentPassenger.Dropoff);
                 }
@@ -64,7 +72,7 @@ namespace CarPooling
         {
             var passengerChars = new List<char>();
 
-            for (var i = this.buffer; i < this.buffer + this.passengers.Count; i++)
+            for (var i = Constrains.Buffer; i < Constrains.Buffer + this.passengers.Count; i++)
             {
                 var letter = (char)i;
                 passengerChars.Add(letter);
