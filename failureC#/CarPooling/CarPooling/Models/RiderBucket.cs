@@ -8,6 +8,11 @@ namespace CarPooling.Models
 {
     public class RiderBucket
     {
+        public RiderBucket()
+        {
+            this.Passengers = new List<Passenger>();
+        }
+
         public Driver Driver { get; set; }
         public List<Passenger> Passengers { get; set; }
     }
