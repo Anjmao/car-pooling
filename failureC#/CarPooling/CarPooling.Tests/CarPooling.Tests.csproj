@@ -55,6 +55,7 @@
     <Compile Include="PermutatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DividerTests.cs" />
+    <Compile Include="MatchMakerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarPooling\CarPooling.csproj">
