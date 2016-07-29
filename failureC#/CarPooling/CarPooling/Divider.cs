@@ -11,7 +11,7 @@ namespace CarPooling
         private HashSet<Driver> drivers = new HashSet<Driver>();
         private HashSet<Passenger> passengers = new HashSet<Passenger>();
 
-        private IEnumerable<RiderBucket> Group(IEnumerable<Booking> orderings)
+        public IEnumerable<RiderBucket> Group(IEnumerable<Booking> orderings)
         {
             var riderBucket = new HashSet<RiderBucket>();
 
@@ -25,7 +25,7 @@ namespace CarPooling
                 var bucket = new RiderBucket { Driver = driver };
 
                 driver.FlyingDistance = GeoLocation.GetDistance(driver.Pickup, driver.Dropoff);
-                driver.ComputeBoundaries();
+                //driver.ComputeBoundaries();
 
                 foreach (var passenger in passengers)
                 {

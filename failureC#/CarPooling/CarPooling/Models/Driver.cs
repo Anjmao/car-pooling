@@ -9,10 +9,8 @@ namespace CarPooling.Models
 {
     public class Driver : Rider
     {
-
-        private Boundary pickupBoundary;
-        private Boundary dropoffBoundary;
-
+        public Boundary PickupBoundary { get; set; }
+        public Boundary DropoffBoundary { get; set; }
 
         public Driver(string id, Coordinate pickup, Coordinate dropoff) : base(id, pickup, dropoff)
         {
@@ -21,10 +19,10 @@ namespace CarPooling.Models
 
         public void ComputeBoundaries()
         {
-            var distance = this.FlyingDistance / 2;
+            var distance = this.FlyingDistance;
 
-            this.pickupBoundary = this.GetBoundary(this.Pickup, distance);
-            this.dropoffBoundary = this.GetBoundary(this.Dropoff, distance);
+            this.PickupBoundary = this.GetBoundary(this.Pickup, distance);
+            this.DropoffBoundary = this.GetBoundary(this.Dropoff, distance);
         }
 
         public bool Bounds(Passenger passenger)
@@ -44,7 +42,7 @@ namespace CarPooling.Models
             var minLongitude = point.Longitude - longitudeConversionFactor;
 
             var maxLatitude = point.Latitude + latitudeConversionFactor;
-            var maxLongitude = point.Latitude + longitudeConversionFactor;
+            var maxLongitude = point.Longitude + longitudeConversionFactor;
 
             var boundary = new Boundary
             {
