@@ -41,8 +41,6 @@ namespace CarPooling.Tests
                 Console.WriteLine(Environment.NewLine);
             }
 
-
-
             //Assert.AreEqual(2, riderBuckets.Count());
         }
     }

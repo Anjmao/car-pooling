@@ -19,7 +19,7 @@ namespace CarPooling.Models
 
         public void ComputeBoundaries()
         {
-            var distance = this.FlyingDistance;
+            var distance = this.FlyingDistance / 2;
 
             this.PickupBoundary = this.GetBoundary(this.Pickup, distance);
             this.DropoffBoundary = this.GetBoundary(this.Dropoff, distance);
@@ -52,6 +52,14 @@ namespace CarPooling.Models
 
             return boundary;
         }
+
+        //        public bool isWithin(Coordinate pt, GeoCoordinate sw, GeoCoordinate ne)
+        //        {
+        //            return pt.Latitude >= sw.Latitude &&
+        //                   pt.Latitude <= ne.Latitude &&
+        //                   pt.Longitude >= sw.Longitude &&
+        //                   pt.Longitude <= ne.Longitude
+        //}
 
         public bool DrivesInSameDirection(Passenger passenger)
         {
