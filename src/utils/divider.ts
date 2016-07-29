@@ -13,14 +13,21 @@ export function group(data: Booking[]) {
 
     distinctDrivers(riders)
 
-    var iterator = drivers.values();
-    var nextDriver = iterator.next();
+    let iterator = drivers.values();
+    let nextDriver = iterator.next();
 
     while (!nextDriver.done) {
-        var driver = nextDriver.value;
-
+        let driver = nextDriver.value;
         driver.flyingDistance = Haversine.getDistance(driver.getOrigin(), driver.getDestination());
         driver.computeBoundaries();
+
+        let passengerIterator = passengers.values();
+        let nextPassenger = passengerIterator.next();
+
+        while (!nextPassenger.done) {
+            let passenger = nextPassenger.value;
+            nextPassenger = passengerIterator.next(); 
+        }
 
         nextDriver = iterator.next();
     }
@@ -35,11 +42,11 @@ export function sortByLongtitude(data: Booking[]) {
 }
 
 function distinctDrivers(riders: Set<Booking>) {
-    var iterator = riders.values();
-    var next = iterator.next();
+    let iterator = riders.values();
+    let next = iterator.next();
 
     while (!next.done) {
-        var rider = next.value;
+        let rider = next.value;
         if (rider.isDriver) {
             drivers.add(new Driver(rider.id, rider.pickup, rider.dropoff))
         } else {
