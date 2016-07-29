@@ -44,7 +44,11 @@ namespace CarPooling
                     journeys.Add(journey);
                 }
             }
-            
+
+            journeys = journeys.OrderBy(x => x.TotalDistance).ToList();
+
+
+
             return journeys;
         }
 

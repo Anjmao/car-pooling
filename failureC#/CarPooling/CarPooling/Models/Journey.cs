@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +32,11 @@ namespace CarPooling.Models
             this.waypoints = waypoints;
         }
 
+        public HashSet<Coordinate> GetWaypoints()
+        {
+            return this.waypoints;
+        }
+
         //TODO: calculate from OSRM
         public void ComputeRoute()
         {
@@ -45,6 +51,34 @@ namespace CarPooling.Models
             var end = this.driver.Dropoff;
             this.TotalDistance += GeoLocation.GetDistance(cur, end);
             this.TotalTime = 50 * this.TotalDistance;
+        }
+
+        public override string ToString()
+        {
+            var builder = new StringBuilder();
+
+            int index = 0;
+            int length = this.waypoints.Count;
+
+            foreach (var item in this.waypoints)
+            {
+                if (index == 0)
+                {
+                    builder.AppendLine(string.Format("{0}, {1} <green-dot>", item.Latitude.ToString(CultureInfo.InvariantCulture), item.Longitude.ToString(CultureInfo.InvariantCulture)));
+                }
+                else if (index == length - 1)
+                {
+                    builder.AppendLine(string.Format("{0}, {1} <green-dot>", item.Latitude.ToString(CultureInfo.InvariantCulture), item.Longitude.ToString(CultureInfo.InvariantCulture)));
+                }
+                else
+                {
+                    builder.AppendLine(string.Format("{0}, {1}", item.Latitude.ToString(CultureInfo.InvariantCulture), item.Longitude.ToString(CultureInfo.InvariantCulture)));
+                }
+                index++;
+            }
+            
+
+            return builder.ToString();
         }
     }
 }

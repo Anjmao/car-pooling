@@ -46,7 +46,7 @@ namespace CarPooling.Tests
             drivers.Add(new Driver("d1", new Coordinate(54.711096, 25.294731), new Coordinate(54.732556, 25.365460)));
 
             var passengers = new List<Passenger>();
-            passengers.Add(new Passenger("p1", GetRandomPoint(), GetRandomPoint()));
+            passengers.Add(new Passenger("p1", new Coordinate(54.715752, 25.321600), new Coordinate(54.719768, 25.345032)));
             passengers.Add(new Passenger("p2", GetRandomPoint(), GetRandomPoint()));
             passengers.Add(new Passenger("p3", GetRandomPoint(), GetRandomPoint()));
             passengers.Add(new Passenger("p4", GetRandomPoint(), GetRandomPoint()));
