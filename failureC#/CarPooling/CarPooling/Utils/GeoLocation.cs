@@ -89,5 +89,13 @@ namespace CarPooling.Utils
 
             return boundary;
         }
+
+        public static void GetDirection()
+        {
+            //var up = Direction == "NE" || Direction == "NW" || Direction == "N";
+            //var down = Direction == "SE" || Direction == "SW" || Direction == "S";
+            //var left = Direction == "WN" || Direction == "WS" || Direction == "W";
+            //var right = Direction == "EN" || Direction == "ES" || Direction == "E";
+        }
     }
 }
