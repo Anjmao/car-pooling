@@ -25,14 +25,14 @@ describe('Match maker', function () {
         console.log(journeys.length, 'total journeys');
     });
 
-    xit('performance test', (done) => {
+    it('performance test', (done) => {
         let passengers: Passenger[] = [];
-        for (let index = 0; index < 3; index++) {
+        for (let index = 0; index < 5; index++) {
             passengers.push(new Passenger('Vovka' + index, getRandomPoint(), getRandomPoint()))
         }
 
         let drivers: Driver[] = [];
-        for (let index = 0; index < 1000; index++) {
+        for (let index = 0; index < 1; index++) {
             drivers.push(new Driver('Buratinas' + index, getRandomPoint()))
         }
 
@@ -41,27 +41,6 @@ describe('Match maker', function () {
 
         let journeys = maker.process();
         console.log(journeys.length, 'total journeys');
-        console.log(journeys[0], 'best journey');
-        done();
-    });
-
-    it('test1', (done) => {
-        let passengers: Passenger[] = [];
-        for (let index = 0; index < 10; index++) {
-            passengers.push(new Passenger('Vovka' + index, getRandomPoint(), getRandomPoint()))
-        }
-
-        let drivers: Driver[] = [];
-        for (let index = 0; index < 3; index++) {
-            drivers.push(new Driver('Buratinas' + index, getRandomPoint(), getRandomPoint(), getRandomPoint()))
-        }
-
-        maker.setPassengers(...passengers);
-        maker.setDrivers(...drivers);
-
-        let journeys = maker.calculate();
-        console.log(journeys.length, 'total journeys');
-        console.log(journeys, 'best journey');
         done();
     });
 });
