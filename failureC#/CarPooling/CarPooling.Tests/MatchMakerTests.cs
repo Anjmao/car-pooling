@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using CarPooling.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -25,8 +26,13 @@ namespace CarPooling.Tests
             passengers.Add(new Passenger("p3", GetRandomPoint(), GetRandomPoint()));
             passengers.Add(new Passenger("p4", GetRandomPoint(), GetRandomPoint()));
 
-            var maker = new MatchMaker(drivers, passengers);
+            var buckets = new List<RiderBucket>();
+            buckets.Add(new RiderBucket { Driver = drivers[0], Passengers = passengers });
+
+            var maker = new MatchMaker();
+            maker.SetBuckets(buckets.AsEnumerable());
             var journeys = maker.Process();
+
             Assert.AreNotEqual(journeys.Count, 0);
         }
 
@@ -37,7 +43,7 @@ namespace CarPooling.Tests
             var b = GetRandomPoint();
             var c = GetRandomPoint();
             var drivers = new List<Driver>();
-            drivers.Add(new Driver("d1", new Coordinate(54.711096, 25.294731), new Coordinate(54.711096, 25.294731)));
+            drivers.Add(new Driver("d1", new Coordinate(54.711096, 25.294731), new Coordinate(54.732556, 25.365460)));
 
             var passengers = new List<Passenger>();
             passengers.Add(new Passenger("p1", GetRandomPoint(), GetRandomPoint()));
@@ -45,8 +51,13 @@ namespace CarPooling.Tests
             passengers.Add(new Passenger("p3", GetRandomPoint(), GetRandomPoint()));
             passengers.Add(new Passenger("p4", GetRandomPoint(), GetRandomPoint()));
 
-            var maker = new MatchMaker(drivers, passengers);
+            var buckets = new List<RiderBucket>();
+            buckets.Add(new RiderBucket { Driver = drivers[0], Passengers = passengers });
+
+            var maker = new MatchMaker();
+            maker.SetBuckets(buckets.AsEnumerable());
             var journeys = maker.Process();
+
             Assert.AreNotEqual(journeys.Count, 0);
         }
 

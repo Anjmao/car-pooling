@@ -1,0 +1,40 @@
+{
+  "trips": [
+  	{
+  		"locations": [
+        { "id": "GGP" },
+        { "id": "RABP" },
+        { "id": "APP" },
+        { "id": "RABD" },
+        { "id": "APD" },
+        { "id": "GGD" }
+      ]
+  	},
+    {
+      "locations": [
+        { "id": "JBP" },
+        { "id": "AAP" },
+        { "id": "AMP" },
+        { "id": "AMD" },
+        { "id": "AAD" },
+        { "id": "JBD" }
+      ]
+    },
+    {
+      "locations": [
+        { "id": "JNP" },
+        { "id": "JND" }
+      ]
+    },
+    {
+      "locations": [
+        { "id": "TVP" },
+        { "id": "JPP" },
+        { "id": "PSP" },
+        { "id": "PSD" },
+        { "id": "JPD" },
+        { "id": "TVD" }
+      ]
+    }
+  ]
+}
