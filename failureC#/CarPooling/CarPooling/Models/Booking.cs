@@ -8,16 +8,9 @@ namespace CarPooling.Models
 {
     public class Booking
     {
-
         public string Id { get; set; }
-        
-
-    //    id?: any;
-    //pickup?: Coordinate;
-    //dropoff?: Coordinate;
-    //isDriver?: boolean;
+        public Coordinate Pickup { get; set; }
+        public Coordinate Dropoff { get; set; }
+        public bool IsDriver { get; set; }
     }
-
-
-
 }
