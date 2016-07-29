@@ -7,7 +7,6 @@ using CarPooling.Models;
 
 namespace CarPooling
 {
-
     
     public class MatchMaker
     {
@@ -21,34 +20,55 @@ namespace CarPooling
             this.passengers = passengers;
         }
 
-        public void Process()
+        public List<Journey> Process()
         {
             var letters = this.CreateLetters();
-            var orderings = Permutator.GetPermutations<string>(letters, 4).Select(x => x.ToList()).ToList();
+            var orderings = Permutator.GetPermutations<char>(letters, 4).Select(x => x.ToList()).ToList();
+
+            throw new NotImplementedException();
         }
 
-        private Journey ComputeJourneys(string[][] orderings)
+        private Journey ComputeJourneys(char[][] orderings)
         {
             foreach (var driver in this.drivers)
             {
                 foreach(var ordering in orderings)
                 {
-
+                    var waypoints = this.CreateWaypoins(ordering);
                 }
             }
 
-            throw new NotFiniteNumberException();
+            throw new NotImplementedException();
         }
 
-        private List<string> CreateLetters()
+        private HashSet<Coordinate> CreateWaypoins(char[] ordering)
         {
-            var passengerChars = new List<string>();
+            var waypoints = new HashSet<Coordinate>();
+
+            foreach (var letter in ordering)
+            {
+                var curPassengerIndex = (int)letter - this.buffer;
+                var currentPassenger = this.passengers[curPassengerIndex];
+                var addOrigin = waypoints.Add(currentPassenger.Pickup);
+                // if addOrigin is false, it was already added to the set
+                if (!addOrigin)
+                {
+                    waypoints.Add(currentPassenger.Dropoff);
+                }
+            }
+
+            return waypoints;
+        }
+
+        private List<char> CreateLetters()
+        {
+            var passengerChars = new List<char>();
 
             for (var i = this.buffer; i < this.buffer + this.passengers.Count; i++)
             {
                 var letter = (char)i;
-                passengerChars.Add(i.ToString());
-                passengerChars.Add(i.ToString());
+                passengerChars.Add(letter);
+                passengerChars.Add(letter);
             }
 
             return passengerChars;
