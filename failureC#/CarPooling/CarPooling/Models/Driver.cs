@@ -11,6 +11,7 @@ namespace CarPooling.Models
     {
         public Boundary PickupBoundary { get; set; }
         public Boundary DropoffBoundary { get; set; }
+        public string Direction { get; set; }
 
         public Driver(string id, Coordinate pickup, Coordinate dropoff) : base(id, pickup, dropoff)
         {
@@ -23,6 +24,26 @@ namespace CarPooling.Models
 
             this.PickupBoundary = this.GetBoundary(this.Pickup, distance);
             this.DropoffBoundary = this.GetBoundary(this.Dropoff, distance);
+
+            var up = Direction == "NE" || Direction == "NW" || Direction == "N";
+            var down = Direction == "SE" || Direction == "SW" || Direction == "S";
+            var left = Direction == "WN" || Direction == "WS" || Direction == "W";
+            var right = Direction == "EN" || Direction == "ES" || Direction == "E";
+
+            if (up || down)
+            {
+                this.PickupBoundary.MinCoordinate.Latitude = this.Pickup.Latitude;
+                this.PickupBoundary.MaxCoordinate.Latitude = this.Pickup.Latitude;
+                this.DropoffBoundary.MinCoordinate.Latitude = this.Dropoff.Latitude;
+                this.DropoffBoundary.MaxCoordinate.Latitude = this.Dropoff.Latitude;
+            }
+            else if (left || right)
+            {
+                this.PickupBoundary.MinCoordinate.Longitude = this.Pickup.Longitude;
+                this.PickupBoundary.MaxCoordinate.Longitude = this.Pickup.Longitude;
+                this.DropoffBoundary.MinCoordinate.Longitude = this.Dropoff.Longitude;
+                this.DropoffBoundary.MaxCoordinate.Longitude = this.Dropoff.Longitude;
+            }
         }
 
         public bool Bounds(Passenger passenger)
@@ -64,6 +85,11 @@ namespace CarPooling.Models
         public bool DrivesInSameDirection(Passenger passenger)
         {
             return true;
+        }
+
+        public void SetDirection()
+        {
+            this.Direction = GeoLocation.GetDirection(this.Pickup, this.Dropoff);
         }
     }
 }
