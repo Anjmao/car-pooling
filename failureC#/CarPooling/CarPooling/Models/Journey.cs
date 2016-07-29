@@ -11,8 +11,7 @@ namespace CarPooling.Models
     {
         private Driver driver;
         private List<Passenger> passengers;
-        private string[] ordering;
-        private List<Coordinate> waypoints;
+        private HashSet<Coordinate> waypoints;
 
         public double TotalDistance { get; set; }
         private double TotalTime { get; set; }
@@ -27,12 +26,7 @@ namespace CarPooling.Models
             this.passengers = passengers;
         }
 
-        public void SetOrdering(string[] ordering)
-        {
-            this.ordering = ordering;
-        }
-
-        public void SetWaypoints(List<Coordinate> waypoints)
+        public void SetWaypoints(HashSet<Coordinate> waypoints)
         {
             this.waypoints = waypoints;
         }
