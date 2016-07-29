@@ -1,0 +1,179 @@
+{
+  "bookings": [
+  	{
+  		"id": "GG",
+  		"pickup": {
+  			"id": "GGP",
+  			"lat": 54.797079,
+  			"lon": 25.292601,
+  			"zone": "VER"
+  		},
+  		"dropoff": {
+  			"id": "GGD",
+  			"lat": 54.711295,
+  			"lon": 25.293195,
+  			"zone": "ZIR"
+  		},
+  		"isDriver": true
+  	},
+  	{
+  		"id": "AA",
+  		"pickup": {
+  			"id": "AAP",
+  			"lat": 54.719422,
+  			"lon": 25.282051,
+  			"zone": "VER"
+  		},
+  		"dropoff": {
+  			"id": "AAD",
+  			"lat": 54.711295,
+  			"lon": 25.293195,
+  			"zone": "ZIR"
+  		},
+  		"isDriver": false
+  	},
+  	{
+  		"id": "AM",
+  		"pickup": {
+  			"id": "AMP",
+  			"lat": 54.719702,
+  			"lon": 25.282193,
+  			"zone": "VER"
+  		},
+  		"dropoff": {
+  			"id": "AMD",
+  			"lat": 54.710979,
+  			"lon": 25.293077,
+  			"zone": "ZIR"
+  		},
+  		"isDriver": false
+  	},
+  	{
+  		"id": "JB",
+  		"pickup": {
+  			"id": "JBP",
+  			"lat": 54.717217,
+  			"lon": 25.289739,
+  			"zone": "ZIR"
+  		},
+  		"dropoff": {
+  			"id": "JBD",
+  			"lat": 54.711271,
+  			"lon": 25.293372,
+  			"zone": "ZIR"
+  		},
+  		"isDriver": true
+  	},
+  	{
+  		"id": "RAB",
+  		"pickup": {
+  			"id": "RABP",
+  			"lat": 54.727397,
+  			"lon": 25.246875,
+  			"zone": "FAB"
+  		},
+  		"dropoff": {
+  			"id": "RABD",
+  			"lat": 54.711271,
+  			"lon": 25.293372,
+  			"zone": "ZIR"
+  		},
+  		"isDriver": false
+  	},
+  	{
+  		"id": "AP",
+  		"pickup": {
+  			"id": "APP",
+  			"lat": 54.723028,
+  			"lon": 25.245073,
+  			"zone": "FAB"
+  		},
+  		"dropoff": {
+  			"id": "APD",
+  			"lat": 54.711271,
+  			"lon": 25.293372,
+  			"zone": "ZIR"
+  		},
+  		"isDriver": false
+  	},
+  	{
+  		"id": "JP",
+  		"pickup": {
+  			"id": "JPP",
+  			"lat": 54.643062,
+  			"lon": 25.280363,
+  			"zone": "NAJ"
+  		},
+  		"dropoff": {
+  			"id": "JPD",
+  			"lat": 54.711271,
+  			"lon": 25.293372,
+  			"zone": "ZIR"
+  		},
+  		"isDriver": false
+  	},
+  	{
+  		"id": "MV",
+  		"pickup": {
+  			"id": "MVP",
+  			"lat": 54.643062,
+  			"lon": 25.280363,
+  			"zone": "NAJ"
+  		},
+  		"dropoff": {
+  			"id": "MVD",
+  			"lat": 54.711271,
+  			"lon": 25.293372,
+  			"zone": "ZIR"
+  		},
+  		"isDriver": false
+  	},
+  	{
+  		"id": "PS",
+  		"pickup": {
+  			"id": "PSP",
+  			"lat": 54.643062,
+  			"lon": 25.280363,
+  			"zone": "NAJ"
+  		},
+  		"dropoff": {
+  			"id": "PSD",
+  			"lat": 54.711271,
+  			"lon": 25.293372,
+  			"zone": "ZIR"
+  		},
+  		"isDriver": false
+  	},
+  	{
+  		"id": "JN",
+  		"pickup": {
+  			"id": "JNP",
+  			"lat": 54.680324, 
+  			"lon": 25.274663,
+  			"zone": "ZIR"
+  		},
+  		"dropoff": {
+  			"id": "JND",
+  			"lat": 54.711271,
+  			"lon": 25.293372,
+  			"zone": "ZIR"
+  		},
+  		"isDriver": true
+  	},
+  	{
+  		"id": "TV",
+  		"pickup": {
+  			"id": "TVP",
+  			"lat": 54.597936, 
+  			"lon": 25.192112
+  		},
+  		"dropoff": {
+  			"id": "TVD",
+  			"lat": 54.711271,
+  			"lon": 25.293372,
+  			"zone": "ZIR"
+  		},
+  		"isDriver": true
+  	}
+  ]
+}

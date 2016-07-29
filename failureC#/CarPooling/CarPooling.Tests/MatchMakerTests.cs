@@ -37,7 +37,7 @@ namespace CarPooling.Tests
             var b = GetRandomPoint();
             var c = GetRandomPoint();
             var drivers = new List<Driver>();
-            drivers.Add(new Driver("d1", new Coordinate(54.711096, 25.294731), new Coordinate(54.711096, 25.294731)));
+            drivers.Add(new Driver("d1", new Coordinate(54.711096, 25.294731), new Coordinate(54.732556, 25.365460)));
 
             var passengers = new List<Passenger>();
             passengers.Add(new Passenger("p1", GetRandomPoint(), GetRandomPoint()));
