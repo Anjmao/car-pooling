@@ -25,7 +25,7 @@ namespace CarPooling
                 var bucket = new RiderBucket { Driver = driver };
 
                 driver.FlyingDistance = GeoLocation.GetDistance(driver.Pickup, driver.Dropoff);
-                //driver.ComputeBoundaries();
+                driver.ComputeBoundaries();
 
                 foreach (var passenger in passengers)
                 {
