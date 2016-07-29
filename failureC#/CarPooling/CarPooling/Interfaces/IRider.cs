@@ -14,6 +14,6 @@ namespace CarPooling.Interfaces
         Coordinate Pickup { get; set; }
         Coordinate Dropoff { get; set; }
 
-        decimal FlyingDistance { get; set; }
+        double FlyingDistance { get; set; }
     }
 }
