@@ -3,45 +3,61 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CarPooling.Utils;
 
 namespace CarPooling.Models
 {
-    class Driver : Rider
+    public class Driver : Rider
     {
+
+        private Boundary pickupBoundary;
+        private Boundary dropoffBoundary;
+
+
         public Driver(string id, Coordinate pickup, Coordinate dropoff) : base(id, pickup, dropoff)
         {
 
         }
 
-        //    computeBoundaries()
-        //    {
-        //        let distance = this.flyingDistance / 2;
+        public void ComputeBoundaries()
+        {
+            var distance = this.FlyingDistance / 2;
 
-        //        this.originBoundary = this.getBoundary(this.origin, distance);
-        //        this.destinationBoundary = this.getBoundary(this.destination, distance);
-        //    }
+            this.pickupBoundary = this.GetBoundary(this.Pickup, distance);
+            this.dropoffBoundary = this.GetBoundary(this.Dropoff, distance);
+        }
 
-        //matchesPoints(point: Point)
-        //    {
-        //        return true;
-        //    }
+        public bool Bounds(Passenger passenger)
+        {
+            return true;
+        }
 
-        //    private getBoundary(point: Point, distance)
-        //    {
-        //        let oneDegreeInKm = 110.574;
+        private Boundary GetBoundary(Coordinate point, double distance)
+        {
+            const double oneDegreeInKm = 110.574;
 
-        //        let latitudeConversionFactor = distance / oneDegreeInKm;
-        //        let longitudeConversionFactor = distance / oneDegreeInKm / Math.abs(Math.cos(Haversine.toRadian(point.lat)));
+            var latitudeConversionFactor = distance / oneDegreeInKm;
+            var longitudeConversionFactor = distance / oneDegreeInKm / Math.Abs(Math.Cos(GeoLocation.ToRadians(point.Latitude)));
 
-        //        var boundary: Boundary = {
-        //            minLat: point.lat - latitudeConversionFactor,
-        //        maxLat: point.lat + latitudeConversionFactor,
-        //        minLon: point.lon - longitudeConversionFactor,
-        //        maxLon: point.lon + longitudeConversionFactor
-        //        };
 
-        //        return boundary;
-        //    }
+            var minLatitude = point.Latitude - latitudeConversionFactor;
+            var minLongitude = point.Longitude - longitudeConversionFactor;
 
+            var maxLatitude = point.Latitude + latitudeConversionFactor;
+            var maxLongitude = point.Latitude + longitudeConversionFactor;
+
+            var boundary = new Boundary
+            {
+                MinCoordinate = new Coordinate(minLatitude, minLongitude),
+                MaxCoordinate = new Coordinate(maxLatitude, maxLongitude)
+            };
+
+            return boundary;
+        }
+
+        public bool DrivesInSameDirection(Passenger passenger)
+        {
+            return true;
+        }
     }
 }
