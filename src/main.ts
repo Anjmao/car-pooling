@@ -1,7 +1,10 @@
+import { Booking } from './utils/import';
+
 class Main {
     calculate() {
 
         //0.   import data
+        var data: Booking[] = [];
 
         //1:   sort by longtitude
         //1.1: group driver with possible passengers 

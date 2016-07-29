@@ -1,18 +1,18 @@
 export class Point {
     
-    private x: number;
-    private y: number;
+    public lat: number;
+    public lon: number;
 
-    constructor(x: number, y: number) {
-        this.x = x;
-        this.y = y;
-    }
-    
-    getX(): number {
-        return this.x;
+    constructor(lat: number, lon: number) {
+        this.lat = lat;
+        this.lon = lon;
     }
 
-    getY(): number {
-        return this.y;
+    getLat(): number {
+        return this.lat;
+    }
+
+    getLon(): number {
+        return this.lon;
     }
 }

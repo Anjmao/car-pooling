@@ -46,10 +46,10 @@ export class MatchMaker {
 			for (let passenger of this.PassengerList) {
 
 				var h = Haversine.getHaversine(
-					driver.getOrigin().getX(), 
-					passenger.getOrigin().getX(), 
-					driver.getOrigin().getY(), 
-					passenger.getDestination().getY());
+					driver.getOrigin().getLat(), 
+					passenger.getOrigin().getLat(), 
+					driver.getOrigin().getLon(), 
+					passenger.getDestination().getLon());
 
 				pickups.push({passenger: passenger, distancesToDriver: h});
 			}
@@ -133,7 +133,6 @@ export class MatchMaker {
 				thisJourney.setPassengerList(this.PassengerList);
 				thisJourney.setOrdering(ordering);
 				thisJourney.setWaypoints(waypoints);
-				thisJourney.setStartLocation(driver.getCurrentLocation());
 				thisJourney.setEndLocation(last);
 				thisJourney.setOrderingCharacterBuffer(this.buffer);
 				var j = new Journey(thisJourney);
