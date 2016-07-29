@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarPooling.Models
 {
-    class Driver : Rider
+    public class Driver : Rider
     {
         public Driver(string id, Coordinate pickup, Coordinate dropoff) : base(id, pickup, dropoff)
         {

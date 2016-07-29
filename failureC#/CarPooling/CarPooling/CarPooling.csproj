@@ -45,10 +45,11 @@
   <ItemGroup>
     <Compile Include="Divider.cs" />
     <Compile Include="Helpers.cs" />
-    <Compile Include="MachMaker.cs" />
+    <Compile Include="MatchMaker.cs" />
     <Compile Include="Models\Booking.cs" />
     <Compile Include="Models\Coordinate.cs" />
     <Compile Include="Models\Driver.cs" />
+    <Compile Include="Models\Journey.cs" />
     <Compile Include="Permutator.cs" />
     <Compile Include="Interfaces\IRider.cs" />
     <Compile Include="Models\Passenger.cs" />
