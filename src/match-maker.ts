@@ -63,19 +63,6 @@ export class MatchMaker {
 	}
 
 	public process(): Journey[] {
-		// get all orderings of passengers
-		// say list is -> p1, p2, p3, ... pn
-		// get permutations of AABBCC... without repeats
-		// first instance = pick up
-		// second instance = drop off
-		// for passenger p, pick up and drop off cannot be back-to-back
-		// char in Java is 16 bits
-		// so, 2^16 passengers can be supported concurrently in a region
-		// not like that is ever going to happen since a car can hold 7
-		// people at the most
-
-		// assign character for every passenger
-		// passenger at index 0 gets (char)0, index 1 gets (char)1, ...
 		var passengerChars: string[] = [];
 
 		for (var i = this.buffer; i < this.buffer + this.PassengerList.length; i++) {
@@ -84,11 +71,11 @@ export class MatchMaker {
 		}
 
 		// all possible orderings for passengers
-        // TODO: convert to set
 		var orderings: string[] = [];
 
 		// get permutations
-		this.permute("", passengerChars.join(''), orderings);
+		this.permute("_", passengerChars.join(''), orderings);
+		console.log(orderings.length);
 
 		// remove cases of no overlap [pick up, drop off, pick up, ...]
 		// first [pick, drop] is useless
