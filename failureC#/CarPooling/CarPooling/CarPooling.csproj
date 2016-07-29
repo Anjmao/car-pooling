@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Divider.cs" />
     <Compile Include="Helpers.cs" />
+    <Compile Include="MachMaker.cs" />
     <Compile Include="Models\Booking.cs" />
     <Compile Include="Models\Coordinate.cs" />
     <Compile Include="Permutator.cs" />
