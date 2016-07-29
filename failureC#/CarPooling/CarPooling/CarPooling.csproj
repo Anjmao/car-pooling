@@ -47,6 +47,7 @@
     <Compile Include="Helpers.cs" />
     <Compile Include="Models\Booking.cs" />
     <Compile Include="Models\Coordinate.cs" />
+    <Compile Include="Permutator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
