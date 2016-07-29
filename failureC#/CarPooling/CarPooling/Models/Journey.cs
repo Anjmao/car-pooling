@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CarPooling.Utils;
 
 namespace CarPooling.Models
 {
@@ -36,14 +37,20 @@ namespace CarPooling.Models
             this.waypoints = waypoints;
         }
 
+        //TODO: calculate from OSRM
         public void ComputeRoute()
         {
             var cur = driver.Pickup;
             this.TotalDistance = 0;
             foreach (var waypoint in this.waypoints)
             {
-
+                this.TotalDistance += GeoLocation.GetDistance(cur, waypoint);
+                cur = waypoint;
             }
+
+            var end = this.driver.Dropoff;
+            this.TotalDistance += GeoLocation.GetDistance(cur, end);
+            this.TotalTime = 50 * this.TotalDistance;
         }
     }
 }
