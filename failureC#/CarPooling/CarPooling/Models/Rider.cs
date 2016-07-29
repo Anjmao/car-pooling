@@ -12,7 +12,7 @@ namespace CarPooling.Models
         public string Id { get; set; }
         public Coordinate Pickup { get; set; }
         public Coordinate Dropoff { get; set; }
-        public decimal FlyingDistance { get; set; }
+        public double FlyingDistance { get; set; }
 
         protected Rider(string id, Coordinate pickup, Coordinate dropoff)
         {
