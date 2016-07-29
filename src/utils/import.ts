@@ -1,3 +1,5 @@
+import { Point } from '../models/point';
+
 export interface Booking {
     id?: any;
     pickup?: Coordinate;
@@ -5,8 +7,6 @@ export interface Booking {
     isDriver?: boolean;
 }
 
-interface Coordinate {
+interface Coordinate extends Point {
     id?: any;
-    lat?: any;
-    lon?: any;
 }

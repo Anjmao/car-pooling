@@ -21,7 +21,7 @@ export class Journey {
         var st: string[] = [];
         st.push("origin=");
         var start = this.thisJourney.getStartLocation();
-        st.push(start.getX() + "," + start.getY());
+        st.push(start.getLat() + "," + start.getLon());
         return st.join('');
     }
 
@@ -29,7 +29,7 @@ export class Journey {
         var st: string[] = [];
         st.push("&destination=");
         var end = this.thisJourney.getEndLocation();
-        st.push(end.getX() + "," + end.getY());
+        st.push(end.getLat() + "," + end.getLon());
         return st.join('');
     }
 
@@ -42,7 +42,7 @@ export class Journey {
         st.push("&waypoints=");
         for (let wayoint of waypoints) {
             var point = wayoint;
-            st.push(point.getX() + "," + point.getY() + "|");
+            st.push(point.getLat() + "," + point.getLon() + "|");
         }
 
         // remove extra | at the end
@@ -161,10 +161,10 @@ export class Journey {
         //			
         //			System.out.println("(pointLat, pointLong)\n[" + point.getY() + " " + point.getX() + "]\n\n");
         //		}
-        if (Math.abs(point.getY()) < Math.abs(Constants.getMinimumLongitude())
-            || Math.abs(point.getY()) > Math.abs(Constants.getMaximumLongitude())
-            || Math.abs(point.getX()) < Math.abs(Constants.getMinimumLatitude())
-            || Math.abs(point.getX()) > Math.abs(Constants.getMaximumLatitude()))
+        if (Math.abs(point.getLon()) < Math.abs(Constants.getMinimumLongitude())
+            || Math.abs(point.getLon()) > Math.abs(Constants.getMaximumLongitude())
+            || Math.abs(point.getLat()) < Math.abs(Constants.getMinimumLatitude())
+            || Math.abs(point.getLat()) > Math.abs(Constants.getMaximumLatitude()))
             return false;
 
         return true;
@@ -185,13 +185,13 @@ export class Journey {
         var cur = this.thisJourney.getStartLocation();
         var totalDistance = 0;
         for (let waypoint of this.thisJourney.getWaypoints()) {
-            totalDistance += Haversine.getHaversine(cur.getX(), waypoint.getX(), cur.getY(), waypoint.getY());
+            totalDistance += Haversine.getHaversine(cur.getLat(), waypoint.getLat(), cur.getLon(), waypoint.getLon());
             cur = waypoint;
         }
 
         var end = this.thisJourney.getEndLocation();
-        totalDistance += Haversine.getHaversine(cur.getX(), end.getX(),
-            cur.getY(), end.getY());
+        totalDistance += Haversine.getHaversine(cur.getLat(), end.getLat(),
+            cur.getLon(), end.getLon());
 
         this.thisJourney.setDistance(totalDistance);
         this.thisJourney.setTime(0);

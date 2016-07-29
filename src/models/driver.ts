@@ -7,9 +7,8 @@ export class Driver {
 	private origin : Point;
     private destination : Point;
 	
-	constructor(name: string, location?: Point, origin? : Point, destination? : Point) {
-        this.setUID(name);
-        this.setCurrentLocation(location);
+	constructor(id: string, origin? : Point, destination? : Point) {
+        this.setUID(id);
 		this.setOrigin(origin);
         this.setDestination(destination);
 	}
@@ -24,10 +23,6 @@ export class Driver {
 
 	getCurrentLocation(): Point {
 		return this.currentLocation;
-	}
-
-	setCurrentLocation(currentLocation: Point) {
-		this.currentLocation = currentLocation;
 	}
 
 	getOrigin() : Point {

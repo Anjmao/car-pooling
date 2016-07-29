@@ -46,10 +46,10 @@ export class MatchMaker {
 			for (let passenger of this.PassengerList) {
 
 				var h = Haversine.getHaversine(
-					driver.getOrigin().getX(), 
-					passenger.getOrigin().getX(), 
-					driver.getOrigin().getY(), 
-					passenger.getDestination().getY());
+					driver.getOrigin().getLat(), 
+					passenger.getOrigin().getLat(), 
+					driver.getOrigin().getLon(), 
+					passenger.getDestination().getLon());
 
 				pickups.push({passenger: passenger, distancesToDriver: h});
 			}

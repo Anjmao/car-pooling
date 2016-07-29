@@ -1,5 +1,6 @@
 import { group, sortByLongtitude } from '../utils/divider';
 import { Booking } from '../utils/import';
+import { Point } from '../models/point';
 
 var expect: Chai.ExpectStatic = require('chai').expect;
 
@@ -7,12 +8,12 @@ describe('divider', () => {
 
     it.only('should sort by longtitude', () => {
         var data: Booking[] = [
-            { pickup: { lon: 10 }, id: 'p1' },
-            { pickup: { lon: 25 }, id: 'p2' },
-            { pickup: { lon: 0 }, id: 'p3' },
-            { pickup: { lon: -75 }, id: 'p4' },
-            { pickup: { lon: -6 }, id: 'p5' },
-            { pickup: { lon: 71 }, id: 'p6' },
+            { pickup: new Point(0, 10), id: 'p1' },
+            { pickup: new Point(0, 25), id: 'p2' },
+            { pickup: new Point(0, 0), id: 'p3' },
+            { pickup: new Point(0, -75), id: 'p4' },
+            { pickup: new Point(0, -6), id: 'p5' },
+            { pickup: new Point(0, 71), id: 'p6' },
         ]
 
         var sorted = sortByLongtitude(data);
