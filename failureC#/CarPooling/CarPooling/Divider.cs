@@ -13,8 +13,6 @@ namespace CarPooling
 
         public IEnumerable<RiderBucket> Group(IEnumerable<Booking> orderings)
         {
-            var riderBucket = new HashSet<RiderBucket>();
-
             var ordered = orderings.OrderBy(x => x.Pickup.Longitude);
             var riders = new HashSet<Booking>(ordered);
 
@@ -30,6 +28,12 @@ namespace CarPooling
 
                 foreach (var passenger in passengers)
                 {
+                    if (passenger.Pickup.Longitude > driver.RightMostLongitude)
+                    {
+                        // passengers after right most boundary reached, stop processing
+                        break;
+                    }
+
                     if (driver.Bounds(passenger))
                     {
                         if (driver.DrivesInSameDirection(passenger))
@@ -39,10 +43,8 @@ namespace CarPooling
                     }
                 }
 
-                riderBucket.Add(bucket);
+                yield return bucket;
             }
-
-            return riderBucket;
         }
 
         private void DistinctDrivers(HashSet<Booking> riders)

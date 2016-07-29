@@ -66,5 +66,28 @@ namespace CarPooling.Utils
         {
             return r * 180 / Math.PI;
         }
+
+        public static Boundary GetBoundary(Coordinate point, double distance)
+        {
+            const double oneDegreeInKm = 110.574;
+
+            var latitudeConversionFactor = distance / oneDegreeInKm;
+            var longitudeConversionFactor = distance / oneDegreeInKm / Math.Abs(Math.Cos(GeoLocation.ToRadians(point.Latitude)));
+
+
+            var minLatitude = point.Latitude - latitudeConversionFactor;
+            var minLongitude = point.Longitude - longitudeConversionFactor;
+
+            var maxLatitude = point.Latitude + latitudeConversionFactor;
+            var maxLongitude = point.Longitude + longitudeConversionFactor;
+
+            var boundary = new Boundary
+            {
+                MinCoordinate = new Coordinate(minLatitude, minLongitude),
+                MaxCoordinate = new Coordinate(maxLatitude, maxLongitude)
+            };
+
+            return boundary;
+        }
     }
 }
