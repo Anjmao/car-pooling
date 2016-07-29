@@ -10,8 +10,7 @@
   "author": "Andzej Maciusovic",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.14.0",
-    "osrm": "^5.2.6"
+    "express": "^4.14.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
