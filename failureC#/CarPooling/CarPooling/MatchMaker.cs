@@ -11,33 +11,72 @@ namespace CarPooling
     
     public class MatchMaker
     {
-        private IEnumerable<RiderBucket> bucket;
-        
-        public void SetBuckets(IEnumerable<RiderBucket> bucket)
+        private IEnumerable<RiderBucket> buckets;
+        private HashSet<Passenger> matchedPassengers = new HashSet<Passenger>();
+
+        public void SetBuckets(IEnumerable<RiderBucket> buckets)
         {
-            this.bucket = bucket;
+            this.buckets = buckets;
         }
 
         public List<Journey> Process()
         {
+            var matchedJourneys = new List<Journey>();
+
             var journeys = this.ComputeJourneys();
-            return journeys;
+            var i = journeys.Count;
+            while (i > 0)
+            {
+                var bestJourney = journeys[0];
+
+                // if no more passengers break this loop;
+                if (bestJourney.Passengers == null) break;
+
+                // TODO: dont set all passengers as matched
+                bestJourney.Passengers.ForEach(x => x.IsMatched = true);
+
+                matchedJourneys.Add(journeys[0]);
+                this.buckets = this.buckets.Where(x => x.Driver.Id != bestJourney.Driver.Id);
+                journeys = this.ComputeJourneys();
+                i = journeys.Count;
+            }
+
+            //var bestJourney = journeys[0];
+            
+            return matchedJourneys;
         }
 
         private List<Journey> ComputeJourneys()
         {
             var journeys = new List<Journey>();
 
-            foreach (var item in this.bucket)
+            foreach (var item in this.buckets)
             {
+                // TODO: OMG this soooo so bad
+                item.Passengers = item.Passengers.Where(x => x.IsMatched == false).ToList();
+
+                // if no passengers return only driver journey
+                if (item.Passengers.Count == 0)
+                {
+                    var waypoints = this.CreateWaypoins(null, null, item.Driver);
+                    var journey = new Journey();
+                    journey.Driver = item.Driver;
+                    journey.Passengers = null;
+                    journey.SetWaypoints(waypoints);
+                    journey.ComputeRoute();
+                    journeys.Add(journey);
+
+                    return journeys;
+                }
+
                 var orderings = new Combinations<char>(this.CreateLetters(item.Passengers.Count), 4, GenerateOption.WithoutRepetition);
 
                 foreach (var ordering in orderings)
                 {
-                    var waypoints = this.CreateWaypoins(ordering, item.Passengers);
+                    var waypoints = this.CreateWaypoins(ordering, item.Passengers, item.Driver);
                     var journey = new Journey();
-                    journey.SetDriver(item.Driver);
-                    journey.SetPassengers(item.Passengers);
+                    journey.Driver = item.Driver;
+                    journey.Passengers = item.Passengers;
                     journey.SetWaypoints(waypoints);
                     journey.ComputeRoute();
 
@@ -46,27 +85,32 @@ namespace CarPooling
             }
 
             journeys = journeys.OrderBy(x => x.TotalDistance).ToList();
-
-
-
+            
             return journeys;
         }
 
-        private HashSet<Coordinate> CreateWaypoins(IList<char> ordering, IList<Passenger> passengers)
+        private HashSet<Coordinate> CreateWaypoins(IList<char> ordering, IList<Passenger> passengers, Driver driver)
         {
             var waypoints = new HashSet<Coordinate>();
 
-            foreach (var letter in ordering)
+            waypoints.Add(driver.Pickup);
+
+            if (ordering != null && passengers != null)
             {
-                var curPassengerIndex = (int)letter - Constrains.Buffer;
-                var currentPassenger = passengers[curPassengerIndex];
-                var addOrigin = waypoints.Add(currentPassenger.Pickup);
-                // if addOrigin is false, it was already added to the set
-                if (addOrigin)
+                foreach (var letter in ordering)
                 {
-                    waypoints.Add(currentPassenger.Dropoff);
+                    var curPassengerIndex = (int)letter - Constrains.Buffer;
+                    var currentPassenger = passengers[curPassengerIndex];
+                    var addOrigin = waypoints.Add(currentPassenger.Pickup);
+                    // if addOrigin is false, it was already added to the set
+                    if (addOrigin)
+                    {
+                        waypoints.Add(currentPassenger.Dropoff);
+                    }
                 }
             }
+            
+            waypoints.Add(driver.Dropoff);
 
             return waypoints;
         }

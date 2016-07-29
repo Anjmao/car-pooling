@@ -66,6 +66,8 @@ namespace CarPooling.Models
 
         public bool Bounds(Passenger passenger)
         {
+            return true;
+
             if (passenger.Pickup.Latitude < this.Latitudes[2] && passenger.Pickup.Latitude < this.Latitudes[3]
                 && passenger.Dropoff.Latitude < this.Latitudes[2] && passenger.Dropoff.Latitude < this.Latitudes[3]
                 && passenger.Pickup.Latitude > this.Latitudes[0] && passenger.Pickup.Latitude > this.Latitudes[1]

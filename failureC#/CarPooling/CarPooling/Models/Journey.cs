@@ -10,23 +10,14 @@ namespace CarPooling.Models
 {
     public class Journey
     {
-        private Driver driver;
-        private List<Passenger> passengers;
+        public Driver Driver { get; set; }
+        public List<Passenger> Passengers { get; set; }
+
         private HashSet<Coordinate> waypoints;
 
         public double TotalDistance { get; set; }
         private double TotalTime { get; set; }
-
-        public void SetDriver(Driver driver)
-        {
-            this.driver = driver;
-        }
-
-        public void SetPassengers(List<Passenger> passengers)
-        {
-            this.passengers = passengers;
-        }
-
+        
         public void SetWaypoints(HashSet<Coordinate> waypoints)
         {
             this.waypoints = waypoints;
@@ -40,7 +31,7 @@ namespace CarPooling.Models
         //TODO: calculate from OSRM
         public void ComputeRoute()
         {
-            var cur = driver.Pickup;
+            var cur = Driver.Pickup;
             this.TotalDistance = 0;
             foreach (var waypoint in this.waypoints)
             {
@@ -48,7 +39,7 @@ namespace CarPooling.Models
                 cur = waypoint;
             }
 
-            var end = this.driver.Dropoff;
+            var end = this.Driver.Dropoff;
             this.TotalDistance += GeoLocation.GetDistance(cur, end);
             this.TotalTime = 50 * this.TotalDistance;
         }
