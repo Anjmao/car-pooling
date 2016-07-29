@@ -35,8 +35,14 @@ namespace CarPooling.Models
             {
                 this.PickupBoundary.MinCoordinate.Latitude = this.Pickup.Latitude;
                 this.PickupBoundary.MaxCoordinate.Latitude = this.Pickup.Latitude;
+
                 this.DropoffBoundary.MinCoordinate.Latitude = this.Dropoff.Latitude;
                 this.DropoffBoundary.MaxCoordinate.Latitude = this.Dropoff.Latitude;
+
+                if (down)
+                {
+                    this.DropoffBoundary.MaxCoordinate.Longitude = this.Dropoff.Longitude;
+                }
             }
             else if (left || right)
             {
@@ -50,14 +56,14 @@ namespace CarPooling.Models
 
             Latitudes = new[]
             {
-                PickupBoundary.MinCoordinate.Latitude, PickupBoundary.MinCoordinate.Latitude,
-                DropoffBoundary.MinCoordinate.Latitude, DropoffBoundary.MinCoordinate.Latitude
+                PickupBoundary.MinCoordinate.Latitude, PickupBoundary.MaxCoordinate.Latitude,
+                DropoffBoundary.MinCoordinate.Latitude, DropoffBoundary.MaxCoordinate.Latitude
             };
 
             Longitudes = new[]
             {
-                PickupBoundary.MinCoordinate.Longitude, PickupBoundary.MinCoordinate.Longitude,
-                DropoffBoundary.MinCoordinate.Longitude, DropoffBoundary.MinCoordinate.Longitude
+                PickupBoundary.MinCoordinate.Longitude, PickupBoundary.MaxCoordinate.Longitude,
+                DropoffBoundary.MinCoordinate.Longitude, DropoffBoundary.MaxCoordinate.Longitude
             };
 
             Array.Sort(Latitudes);
@@ -66,17 +72,23 @@ namespace CarPooling.Models
 
         public bool Bounds(Passenger passenger)
         {
-            return true;
+            var latitudeTop = (passenger.Pickup.Latitude < this.Latitudes[2] || passenger.Pickup.Latitude < this.Latitudes[3])
+                    && (passenger.Dropoff.Latitude < this.Latitudes[2] || passenger.Dropoff.Latitude < this.Latitudes[3]);
 
-            if (passenger.Pickup.Latitude < this.Latitudes[2] && passenger.Pickup.Latitude < this.Latitudes[3]
-                && passenger.Dropoff.Latitude < this.Latitudes[2] && passenger.Dropoff.Latitude < this.Latitudes[3]
-                && passenger.Pickup.Latitude > this.Latitudes[0] && passenger.Pickup.Latitude > this.Latitudes[1]
-                && passenger.Dropoff.Latitude > this.Latitudes[0] && passenger.Dropoff.Latitude > this.Latitudes[1]
+            var latitudeBottom = passenger.Pickup.Latitude > this.Latitudes[0] && passenger.Pickup.Latitude > this.Latitudes[1]
+                    && passenger.Dropoff.Latitude > this.Latitudes[0] && passenger.Dropoff.Latitude > this.Latitudes[1];
 
-                && passenger.Pickup.Longitude < this.Longitudes[2] && passenger.Pickup.Longitude < this.Longitudes[3]
-                && passenger.Dropoff.Longitude < this.Longitudes[2] && passenger.Dropoff.Longitude < this.Longitudes[3]
-                && passenger.Pickup.Longitude > this.Longitudes[0] && passenger.Pickup.Longitude > this.Longitudes[1]
-                && passenger.Dropoff.Longitude > this.Longitudes[0] && passenger.Dropoff.Longitude > this.Longitudes[1])
+            var latitude = latitudeTop && latitudeBottom;
+
+            var longitudeRight = (passenger.Pickup.Longitude < this.Longitudes[2] || passenger.Pickup.Longitude < this.Longitudes[3])
+                    && (passenger.Dropoff.Longitude < this.Longitudes[2] || passenger.Dropoff.Longitude < this.Longitudes[3]);
+
+            var longitudeLeft = (passenger.Pickup.Longitude > this.Longitudes[0] || passenger.Pickup.Longitude > this.Longitudes[1])
+                && (passenger.Dropoff.Longitude > this.Longitudes[0] || passenger.Dropoff.Longitude > this.Longitudes[1]);
+
+            var longitude = longitudeRight && longitudeLeft;
+
+            if (latitude && longitude)
             {
                 return true;
             }
