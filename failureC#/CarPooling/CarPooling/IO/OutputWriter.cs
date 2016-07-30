@@ -6,7 +6,15 @@ namespace stem.IO
     using System.Reflection;
     using CarPooling.Models;
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Serialization;
 
+    public class LowercaseContractResolver : DefaultContractResolver
+    {
+        protected override string ResolvePropertyName(string propertyName)
+        {
+            return propertyName.ToLower();
+        }
+    }
 
     internal class OutputStructure
     {
@@ -29,7 +37,9 @@ namespace stem.IO
         {
             var output = this.PrepareOutputStructure(journeys);
 
-            var outputJson = JsonConvert.SerializeObject(output);
+            var settings = new JsonSerializerSettings();
+            settings.ContractResolver = new LowercaseContractResolver();
+            var outputJson = JsonConvert.SerializeObject(output, Formatting.Indented, settings);
 
             string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             string location = Path.Combine(executableLocation, fileName);
