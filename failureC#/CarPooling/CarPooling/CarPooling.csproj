@@ -74,7 +74,6 @@
     <Compile Include="Models\RiderBucket.cs" />
     <Compile Include="Models\Journey.cs" />
     <Compile Include="OsrmClient.cs" />
-    <Compile Include="Permutator.cs" />
     <Compile Include="Interfaces\IRider.cs" />
     <Compile Include="Models\Passenger.cs" />
     <Compile Include="Models\Rider.cs" />

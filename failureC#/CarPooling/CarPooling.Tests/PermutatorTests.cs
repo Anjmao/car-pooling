@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using CarPooling.Models;
+using Combinatorics.Collections;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CarPooling.Tests
@@ -11,10 +13,24 @@ namespace CarPooling.Tests
         [TestMethod]
         public void TestMethod1()
         {
-            var passengers = new List<char>() { 'A', 'A', 'B', 'B'};
-            var combinations = Permutator.GetPermutations<char>(passengers, 2 * 2).Select(x => x.ToList()).ToList();
+            var combinations = new Combinations<string>(this.CreateLetters(3), 4, GenerateOption.WithoutRepetition);
 
-            Assert.AreEqual(combinations.Count, 24);
+            Assert.AreEqual(24, combinations.Count);
+        }
+
+
+        private List<string> CreateLetters(int length)
+        {
+            var passengerChars = new List<string>();
+
+            for (var i = Constrains.Buffer; i < Constrains.Buffer + length; i++)
+            {
+                var letter = (char)i;
+                passengerChars.Add(letter.ToString());
+                passengerChars.Add(letter.ToString());
+            }
+
+            return passengerChars;
         }
     }
 }
