@@ -85,12 +85,12 @@ namespace CarPooling.Models
 
         public bool Bounds(Passenger passenger)
         {
-            var latitudeTop = passenger.Pickup.Latitude < this.Latitudes.Last() && passenger.Dropoff.Latitude < this.Latitudes.Last();
-            var latitudeBottom = passenger.Pickup.Latitude > this.Latitudes.First() && passenger.Dropoff.Latitude > this.Latitudes.First();
+            var latitudeTop = passenger.Pickup.Latitude <= this.Latitudes.Last() && passenger.Dropoff.Latitude <= this.Latitudes.Last();
+            var latitudeBottom = passenger.Pickup.Latitude >= this.Latitudes.First() && passenger.Dropoff.Latitude >= this.Latitudes.First();
             var latitude = latitudeTop && latitudeBottom;
 
-            var longitudeRight = passenger.Pickup.Longitude < this.Longitudes.Last() && passenger.Dropoff.Longitude < this.Longitudes.Last();
-            var longitudeLeft = passenger.Pickup.Longitude > this.Longitudes.First() && passenger.Dropoff.Longitude > this.Longitudes.First();
+            var longitudeRight = passenger.Pickup.Longitude <= this.Longitudes.Last() && passenger.Dropoff.Longitude <= this.Longitudes.Last();
+            var longitudeLeft = passenger.Pickup.Longitude >= this.Longitudes.First() && passenger.Dropoff.Longitude >= this.Longitudes.First();
             var longitude = longitudeRight && longitudeLeft;
 
             if (latitude && longitude)
