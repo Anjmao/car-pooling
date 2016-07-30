@@ -16,7 +16,7 @@ namespace CarPooling.Models
         private HashSet<Coordinate> waypoints;
 
         public double TotalDistance { get; set; }
-        private double TotalTime { get; set; }
+        public double TotalTime { get; set; }
         
         public void SetWaypoints(HashSet<Coordinate> waypoints)
         {
@@ -44,11 +44,11 @@ namespace CarPooling.Models
             this.TotalTime = 50 * this.TotalDistance;
         }
 
-        public async Task ComputeOsrmRoute()
+        public void ComputeOsrmRoute()
         {
             using(var client = new OsrmClient())
             {
-                var result = await client.GetRoutes(this.waypoints);
+                var result = client.GetRoutes(this.waypoints).Result;
                 var route = result.Routes[0];
                 this.TotalDistance = route.Distance;
                 this.TotalTime = route.Duration;

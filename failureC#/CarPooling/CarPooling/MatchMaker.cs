@@ -101,7 +101,7 @@ namespace CarPooling
             }
 
             // TODO: implement trip score
-            journeys = journeys.OrderBy(x => x.TotalDistance).ToList();
+            journeys = journeys.OrderBy(x => x.TotalTime).ThenBy(x => x.TotalDistance).ToList();
             
             return journeys;
         }

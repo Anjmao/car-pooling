@@ -84,6 +84,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Include="input-2016-01-29-morning.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <Choose>
