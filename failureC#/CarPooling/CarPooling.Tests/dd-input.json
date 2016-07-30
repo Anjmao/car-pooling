@@ -1,179 +1,278 @@
 {
   "bookings": [
-  	{
-  		"id": "GG",
-  		"pickup": {
-  			"id": "GGP",
-  			"lat": 54.797079,
-  			"lon": 25.292601,
-  			"zone": "VER"
-  		},
-  		"dropoff": {
-  			"id": "GGD",
-  			"lat": 54.711295,
-  			"lon": 25.293195,
-  			"zone": "ZIR"
-  		},
-  		"isDriver": true
-  	},
-  	{
-  		"id": "AA",
-  		"pickup": {
-  			"id": "AAP",
-  			"lat": 54.719422,
-  			"lon": 25.282051,
-  			"zone": "VER"
-  		},
-  		"dropoff": {
-  			"id": "AAD",
-  			"lat": 54.711295,
-  			"lon": 25.293195,
-  			"zone": "ZIR"
-  		},
-  		"isDriver": false
-  	},
-  	{
-  		"id": "AM",
-  		"pickup": {
-  			"id": "AMP",
-  			"lat": 54.719702,
-  			"lon": 25.282193,
-  			"zone": "VER"
-  		},
-  		"dropoff": {
-  			"id": "AMD",
-  			"lat": 54.710979,
-  			"lon": 25.293077,
-  			"zone": "ZIR"
-  		},
-  		"isDriver": false
-  	},
-  	{
-  		"id": "JB",
-  		"pickup": {
-  			"id": "JBP",
-  			"lat": 54.717217,
-  			"lon": 25.289739,
-  			"zone": "ZIR"
-  		},
-  		"dropoff": {
-  			"id": "JBD",
-  			"lat": 54.711271,
-  			"lon": 25.293372,
-  			"zone": "ZIR"
-  		},
-  		"isDriver": true
-  	},
-  	{
-  		"id": "RAB",
-  		"pickup": {
-  			"id": "RABP",
-  			"lat": 54.727397,
-  			"lon": 25.246875,
-  			"zone": "FAB"
-  		},
-  		"dropoff": {
-  			"id": "RABD",
-  			"lat": 54.711271,
-  			"lon": 25.293372,
-  			"zone": "ZIR"
-  		},
-  		"isDriver": false
-  	},
-  	{
-  		"id": "AP",
-  		"pickup": {
-  			"id": "APP",
-  			"lat": 54.723028,
-  			"lon": 25.245073,
-  			"zone": "FAB"
-  		},
-  		"dropoff": {
-  			"id": "APD",
-  			"lat": 54.711271,
-  			"lon": 25.293372,
-  			"zone": "ZIR"
-  		},
-  		"isDriver": false
-  	},
-  	{
-  		"id": "JP",
-  		"pickup": {
-  			"id": "JPP",
-  			"lat": 54.643062,
-  			"lon": 25.280363,
-  			"zone": "NAJ"
-  		},
-  		"dropoff": {
-  			"id": "JPD",
-  			"lat": 54.711271,
-  			"lon": 25.293372,
-  			"zone": "ZIR"
-  		},
-  		"isDriver": false
-  	},
-  	{
-  		"id": "MV",
-  		"pickup": {
-  			"id": "MVP",
-  			"lat": 54.643062,
-  			"lon": 25.280363,
-  			"zone": "NAJ"
-  		},
-  		"dropoff": {
-  			"id": "MVD",
-  			"lat": 54.711271,
-  			"lon": 25.293372,
-  			"zone": "ZIR"
-  		},
-  		"isDriver": false
-  	},
-  	{
-  		"id": "PS",
-  		"pickup": {
-  			"id": "PSP",
-  			"lat": 54.643062,
-  			"lon": 25.280363,
-  			"zone": "NAJ"
-  		},
-  		"dropoff": {
-  			"id": "PSD",
-  			"lat": 54.711271,
-  			"lon": 25.293372,
-  			"zone": "ZIR"
-  		},
-  		"isDriver": false
-  	},
-  	{
-  		"id": "JN",
-  		"pickup": {
-  			"id": "JNP",
-  			"lat": 54.680324, 
-  			"lon": 25.274663,
-  			"zone": "ZIR"
-  		},
-  		"dropoff": {
-  			"id": "JND",
-  			"lat": 54.711271,
-  			"lon": 25.293372,
-  			"zone": "ZIR"
-  		},
-  		"isDriver": true
-  	},
-  	{
-  		"id": "TV",
-  		"pickup": {
-  			"id": "TVP",
-  			"lat": 54.597936, 
-  			"lon": 25.192112
-  		},
-  		"dropoff": {
-  			"id": "TVD",
-  			"lat": 54.711271,
-  			"lon": 25.293372,
-  			"zone": "ZIR"
-  		},
-  		"isDriver": true
-  	}
+    {
+      "id": "GG",
+      "pickup": {
+        "id": "GGP",
+        "lat": 54.797079,
+        "lon": 25.292601,
+        "zone": "VER"
+      },
+      "dropoff": {
+        "id": "GGD",
+        "lat": 54.711295,
+        "lon": 25.293195,
+        "zone": "ZIR"
+      },
+      "isDriver": true
+    },
+    {
+      "id": "AA",
+      "pickup": {
+        "id": "AAP",
+        "lat": 54.719422,
+        "lon": 25.282051,
+        "zone": "VER"
+      },
+      "dropoff": {
+        "id": "AAD",
+        "lat": 54.711295,
+        "lon": 25.293195,
+        "zone": "ZIR"
+      },
+      "isDriver": false
+    },
+    {
+      "id": "AM",
+      "pickup": {
+        "id": "AMP",
+        "lat": 54.719702,
+        "lon": 25.282193,
+        "zone": "VER"
+      },
+      "dropoff": {
+        "id": "AMD",
+        "lat": 54.710979,
+        "lon": 25.293077,
+        "zone": "ZIR"
+      },
+      "isDriver": false
+    },
+    {
+      "id": "JB",
+      "pickup": {
+        "id": "JBP",
+        "lat": 54.717217,
+        "lon": 25.289739,
+        "zone": "ZIR"
+      },
+      "dropoff": {
+        "id": "JBD",
+        "lat": 54.711271,
+        "lon": 25.293372,
+        "zone": "ZIR"
+      },
+      "isDriver": true
+    },
+    {
+      "id": "RAB",
+      "pickup": {
+        "id": "RABP",
+        "lat": 54.727397,
+        "lon": 25.246875,
+        "zone": "FAB"
+      },
+      "dropoff": {
+        "id": "RABD",
+        "lat": 54.711271,
+        "lon": 25.293372,
+        "zone": "ZIR"
+      },
+      "isDriver": false
+    },
+    {
+      "id": "AP",
+      "pickup": {
+        "id": "APP",
+        "lat": 54.723028,
+        "lon": 25.245073,
+        "zone": "FAB"
+      },
+      "dropoff": {
+        "id": "APD",
+        "lat": 54.711271,
+        "lon": 25.293372,
+        "zone": "ZIR"
+      },
+      "isDriver": false
+    },
+    {
+      "id": "JP",
+      "pickup": {
+        "id": "JPP",
+        "lat": 54.643062,
+        "lon": 25.280363,
+        "zone": "NAJ"
+      },
+      "dropoff": {
+        "id": "JPD",
+        "lat": 54.711271,
+        "lon": 25.293372,
+        "zone": "ZIR"
+      },
+      "isDriver": false
+    },
+    {
+      "id": "MV",
+      "pickup": {
+        "id": "MVP",
+        "lat": 54.643062,
+        "lon": 25.280363,
+        "zone": "NAJ"
+      },
+      "dropoff": {
+        "id": "MVD",
+        "lat": 54.711271,
+        "lon": 25.293372,
+        "zone": "ZIR"
+      },
+      "isDriver": false
+    },
+    {
+      "id": "PS",
+      "pickup": {
+        "id": "PSP",
+        "lat": 54.643062,
+        "lon": 25.280363,
+        "zone": "NAJ"
+      },
+      "dropoff": {
+        "id": "PSD",
+        "lat": 54.711271,
+        "lon": 25.293372,
+        "zone": "ZIR"
+      },
+      "isDriver": false
+    },
+    {
+      "id": "JN",
+      "pickup": {
+        "id": "JNP",
+        "lat": 54.680324,
+        "lon": 25.274663,
+        "zone": "ZIR"
+      },
+      "dropoff": {
+        "id": "JND",
+        "lat": 54.711271,
+        "lon": 25.293372,
+        "zone": "ZIR"
+      },
+      "isDriver": true
+    },
+    {
+      "id": "TV",
+      "pickup": {
+        "id": "TVP",
+        "lat": 54.597936,
+        "lon": 25.192112
+      },
+      "dropoff": {
+        "id": "TVD",
+        "lat": 54.711271,
+        "lon": 25.293372,
+        "zone": "ZIR"
+      },
+      "isDriver": true
+    },
+
+
+    {
+      "id": "CASE1d",
+      "pickup": {
+        "id": "CASE1dP",
+        "lat": 54.663926,
+        "lon": 25.184094,
+        "zone": "LAZ"
+      },
+      "dropoff": {
+        "id": "CASE1dD",
+        "lat": 54.704203,
+        "lon": 25.214682,
+        "zone": "VIR"
+      },
+      "isDriver": true
+    },
+    {
+      "id": "CASE1A",
+      "pickup": {
+        "id": "CASE1AP",
+        "lat": 54.683087,
+        "lon": 25.197082,
+        "zone": "KAR"
+      },
+      "dropoff": {
+        "id": "CASE1AD",
+        "lat": 54.689612,
+        "lon": 25.202423,
+        "zone": "KAR"
+      },
+      "isDriver": false
+    },
+    {
+      "id": "CASE1B",
+      "pickup": {
+        "id": "CASE1BP",
+        "lat": 54.689928,
+        "lon": 25.209563,
+        "zone": "KAR"
+      },
+      "dropoff": {
+        "id": "CASE1BD",
+        "lat": 54.695061,
+        "lon": 25.216784,
+        "zone": "KAR"
+      },
+      "isDriver": false
+    },
+
+    {
+      "id": "CASE4d",
+      "pickup": {
+        "id": "CASE4dP",
+        "lat": 54.753849,
+        "lon": 25.299058,
+        "zone": "VER"
+      },
+      "dropoff": {
+        "id": "CASE4dD",
+        "lat": 54.722029,
+        "lon": 25.300793,
+        "zone": "ZIR"
+      },
+      "isDriver": true
+    },
+    {
+      "id": "CASE4A",
+      "pickup": {
+        "id": "CASE4AP",
+        "lat": 54.733169,
+        "lon": 25.317941,
+        "zone": "ANT"
+      },
+      "dropoff": {
+        "id": "CASE4AD",
+        "lat": 54.722029,
+        "lon": 25.300793,
+        "zone": "ZIR"
+      },
+      "isDriver": false
+    },
+    {
+      "id": "CASE4B",
+      "pickup": {
+        "id": "CASE4BP",
+        "lat": 54.736469,
+        "lon": 25.403986,
+        "zone": "ANT"
+      },
+      "dropoff": {
+        "id": "CASE4BD",
+        "lat": 54.692071,
+        "lon": 25.301405,
+        "zone": "KAR"
+      },
+      "isDriver": true
+    }
   ]
 }
