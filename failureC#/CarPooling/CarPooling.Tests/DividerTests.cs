@@ -29,6 +29,7 @@ namespace CarPooling.Tests
                 new Booking { Id = "pickup-outside-bottom->top",  Pickup = new Coordinate(54.700294, 25.275542), Dropoff = new Coordinate(54.732859, 25.242382), IsDriver = false },
                 new Booking { Id = "pickup-inside-bottom->top",  Pickup = new Coordinate(54.731550, 25.231383), Dropoff = new Coordinate(54.710903, 25.264943), IsDriver = false },
                 new Booking { Id = "pickup-inside-right->left",  Pickup = new Coordinate(54.733216, 25.262626), Dropoff = new Coordinate(54.717084, 25.221233), IsDriver = false },
+                new Booking { Id = "pickup-inside-bottom->top-wrong-direction",  Pickup = new Coordinate(54.716362, 25.270920), Dropoff = new Coordinate(54.729535, 25.239405), IsDriver = false },
             };
 
             var riderBuckets = divider.Group(orderings);

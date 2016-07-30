@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using CarPooling.Utils;
 
 namespace CarPooling.Models
@@ -14,6 +15,19 @@ namespace CarPooling.Models
         private double[] Latitudes;
         private double[] Longitudes;
 
+        private readonly string[] up = { "NE", "NW", "N" };
+        private readonly string[] down = { "SE", "SW", "S" };
+        private readonly string[] left = { "WN", "WS", "W" };
+        private readonly string[] right = { "EN", "ES", "E" };
+
+        private readonly string[][] directions =
+        {
+            new[] { "NE", "NW", "N" },
+            new[] { "SE", "SW", "S" },
+            new[] { "WN", "WS", "W" },
+            new[] { "EN", "ES", "E" }
+        };
+
         public Driver(string id, Coordinate pickup, Coordinate dropoff) : base(id, pickup, dropoff)
         {
 
@@ -26,10 +40,10 @@ namespace CarPooling.Models
             this.PickupBoundary = GeoLocation.GetBoundary(this.Pickup, distance);
             this.DropoffBoundary = GeoLocation.GetBoundary(this.Dropoff, distance);
 
-            var up = Direction == "NE" || Direction == "NW" || Direction == "N";
-            var down = Direction == "SE" || Direction == "SW" || Direction == "S";
-            var left = Direction == "WN" || Direction == "WS" || Direction == "W";
-            var right = Direction == "EN" || Direction == "ES" || Direction == "E";
+            var up = this.up.Contains(Direction);
+            var down = this.down.Contains(Direction);
+            var left = this.left.Contains(Direction);
+            var right = this.right.Contains(Direction);
 
             if (up || down)
             {
@@ -98,7 +112,13 @@ namespace CarPooling.Models
 
         public bool DrivesInSameDirection(Passenger passenger)
         {
-            return true;
+            var passengerDirection = GeoLocation.GetDirection(passenger.Pickup, passenger.Dropoff);
+            if (passengerDirection == this.Direction)
+            {
+                return true;
+            }
+
+            return this.directions.Any(x => x.Contains(passengerDirection) && x.Contains(this.Direction));
         }
 
         public void SetDirection()
