@@ -80,7 +80,7 @@ namespace CarPooling
                 }
 
                 // TODO: cache to dictionary by passengers count
-                var orderings = new Combinations<char>(this.CreateLetters(item.Passengers.Count), 4, GenerateOption.WithoutRepetition);
+                var orderings = new Variations<char>(this.CreateLetters(item.Passengers.Count), Constrains.MaxPassengersInCar * 2, GenerateOption.WithoutRepetition);
 
                 foreach (var ordering in orderings)
                 {

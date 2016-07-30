@@ -13,9 +13,10 @@ namespace CarPooling.Tests
         [TestMethod]
         public void TestMethod1()
         {
-            var combinations = new Combinations<string>(this.CreateLetters(3), 4, GenerateOption.WithoutRepetition);
+            var combinations = new Variations<string>(this.CreateLetters(2), 4, GenerateOption.WithoutRepetition);
 
-            Assert.AreEqual(24, combinations.Count);
+            //Assert.AreEqual(24, combinations.Count);
+            Assert.IsTrue(combinations.FirstOrDefault(x => x[0] == "A" && x[1] == "B" && x[2] == "A" && x[3] == "B") != null);
         }
 
 
