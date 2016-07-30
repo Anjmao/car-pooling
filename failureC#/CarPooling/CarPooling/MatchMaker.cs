@@ -29,13 +29,6 @@ namespace CarPooling
             while (i > 0)
             {
                 var bestJourney = journeys[0];
-
-                // if no more passengers break this loop;
-                if (bestJourney.Passengers == null)
-                {
-                    matchedJourneys.Add(bestJourney);
-                    break;
-                }
                 
                 matchedJourneys.Add(bestJourney);
                 AddMatchedPassengers(bestJourney);
@@ -72,9 +65,6 @@ namespace CarPooling
 
             foreach (var item in this.buckets)
             {
-                // TODO: OMG this soooo so bad
-                item.Passengers = item.Passengers.Where(x => x.IsMatched == false).ToList();
-
                 // if no passengers return only driver journey
                 if (item.Passengers.Count == 0)
                 {

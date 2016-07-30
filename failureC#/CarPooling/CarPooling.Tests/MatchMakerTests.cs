@@ -67,7 +67,7 @@ namespace CarPooling.Tests
             journeys.ForEach(x => Console.WriteLine(x.ToString()));
 
             // Assert
-            Assert.AreEqual(journeys.Count, 1);
+            Assert.AreEqual(3, journeys.Count);
         }
 
         private Coordinate GetRandomPoint()
