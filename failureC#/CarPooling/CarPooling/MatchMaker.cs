@@ -14,6 +14,7 @@ namespace CarPooling
         private IEnumerable<RiderBucket> buckets;
         private HashSet<Passenger> matchedPassengers = new HashSet<Passenger>();
 
+
         public void SetBuckets(IEnumerable<RiderBucket> buckets)
         {
             this.buckets = buckets;
@@ -30,13 +31,17 @@ namespace CarPooling
                 var bestJourney = journeys[0];
 
                 // if no more passengers break this loop;
-                if (bestJourney.Passengers == null) break;
+                if (bestJourney.Passengers == null)
+                {
+                    matchedJourneys.Add(bestJourney);
+                    break;
+                }
+                
 
-                // TODO: dont set all passengers as matched
-                bestJourney.Passengers.ForEach(x => x.IsMatched = true);
-
-                matchedJourneys.Add(journeys[0]);
+                matchedJourneys.Add(bestJourney);
                 this.buckets = this.buckets.Where(x => x.Driver.Id != bestJourney.Driver.Id);
+
+                //TODO: remove matched passengers from all buckets
                 journeys = this.ComputeJourneys();
                 i = journeys.Count;
             }
@@ -69,6 +74,7 @@ namespace CarPooling
                     return journeys;
                 }
 
+                // TODO: cache to dictionary by passengers count
                 var orderings = new Combinations<char>(this.CreateLetters(item.Passengers.Count), 4, GenerateOption.WithoutRepetition);
 
                 foreach (var ordering in orderings)
@@ -84,9 +90,15 @@ namespace CarPooling
                 }
             }
 
+            // TODO: implement trip score
             journeys = journeys.OrderBy(x => x.TotalDistance).ToList();
             
             return journeys;
+        }
+
+        private void RemoveMatchedJourneyData()
+        {
+            
         }
 
         private HashSet<Coordinate> CreateWaypoins(IList<char> ordering, IList<Passenger> passengers, Driver driver)
@@ -99,8 +111,8 @@ namespace CarPooling
             {
                 foreach (var letter in ordering)
                 {
-                    var curPassengerIndex = (int)letter - Constrains.Buffer;
-                    var currentPassenger = passengers[curPassengerIndex];
+                    var currentPassenger = passengers[(int)letter - Constrains.Buffer];
+
                     var addOrigin = waypoints.Add(currentPassenger.Pickup);
                     // if addOrigin is false, it was already added to the set
                     if (addOrigin)
@@ -129,5 +141,4 @@ namespace CarPooling
             return passengerChars;
         }
     }
-
 }
