@@ -11,12 +11,13 @@ namespace CarPooling
     
     public class MatchMaker
     {
-        private IEnumerable<RiderBucket> buckets;
-        private HashSet<Passenger> matchedPassengers = new HashSet<Passenger>();
+        private List<RiderBucket> buckets;
+        private HashSet<string> matchedPassengers = new HashSet<string>();
+
 
         public void SetBuckets(IEnumerable<RiderBucket> buckets)
         {
-            this.buckets = buckets;
+            this.buckets = buckets.ToList();
         }
 
         public List<Journey> Process()
@@ -30,22 +31,41 @@ namespace CarPooling
                 var bestJourney = journeys[0];
 
                 // if no more passengers break this loop;
-                if (bestJourney.Passengers == null) break;
-
-                // TODO: dont set all passengers as matched
-                bestJourney.Passengers.ForEach(x => x.IsMatched = true);
-
-                matchedJourneys.Add(journeys[0]);
-                this.buckets = this.buckets.Where(x => x.Driver.Id != bestJourney.Driver.Id);
+                if (bestJourney.Passengers == null)
+                {
+                    matchedJourneys.Add(bestJourney);
+                    break;
+                }
+                
+                matchedJourneys.Add(bestJourney);
+                AddMatchedPassengers(bestJourney);
+                RemoveMatchedPassengersFromBuckets(bestJourney.Driver.Id);
+                
                 journeys = this.ComputeJourneys();
                 i = journeys.Count;
             }
-
-            //var bestJourney = journeys[0];
+            
             
             return matchedJourneys;
         }
 
+        private void AddMatchedPassengers(Journey journey)
+        {
+            foreach (var item in journey.GetWaypoints())
+            {
+                this.matchedPassengers.Add(item.RiderId);
+            }
+        }
+
+        private void RemoveMatchedPassengersFromBuckets(string driverId)
+        {
+            this.buckets.RemoveAll(x => x.Driver.Id == driverId);
+            foreach (var item in this.buckets)  
+            {
+                item.Passengers.RemoveAll(x => this.matchedPassengers.Contains(x.Id));
+            }
+        }
+        
         private List<Journey> ComputeJourneys()
         {
             var journeys = new List<Journey>();
@@ -69,6 +89,7 @@ namespace CarPooling
                     return journeys;
                 }
 
+                // TODO: cache to dictionary by passengers count
                 var orderings = new Combinations<char>(this.CreateLetters(item.Passengers.Count), 4, GenerateOption.WithoutRepetition);
 
                 foreach (var ordering in orderings)
@@ -84,6 +105,7 @@ namespace CarPooling
                 }
             }
 
+            // TODO: implement trip score
             journeys = journeys.OrderBy(x => x.TotalDistance).ToList();
             
             return journeys;
@@ -99,8 +121,8 @@ namespace CarPooling
             {
                 foreach (var letter in ordering)
                 {
-                    var curPassengerIndex = (int)letter - Constrains.Buffer;
-                    var currentPassenger = passengers[curPassengerIndex];
+                    var currentPassenger = passengers[(int)letter - Constrains.Buffer];
+
                     var addOrigin = waypoints.Add(currentPassenger.Pickup);
                     // if addOrigin is false, it was already added to the set
                     if (addOrigin)
@@ -129,5 +151,4 @@ namespace CarPooling
             return passengerChars;
         }
     }
-
 }

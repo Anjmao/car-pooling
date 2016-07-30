@@ -53,17 +53,18 @@ namespace CarPooling.Models
 
             foreach (var item in this.waypoints)
             {
+                var coordinate = item;
                 if (index == 0)
                 {
-                    builder.AppendLine(string.Format("{0}, {1} <green-dot>", item.Latitude.ToString(CultureInfo.InvariantCulture), item.Longitude.ToString(CultureInfo.InvariantCulture)));
+                    builder.AppendLine(string.Format("{0}, {1} <green-dot>", coordinate.Latitude.ToString(CultureInfo.InvariantCulture), coordinate.Longitude.ToString(CultureInfo.InvariantCulture)));
                 }
                 else if (index == length - 1)
                 {
-                    builder.AppendLine(string.Format("{0}, {1} <green-dot>", item.Latitude.ToString(CultureInfo.InvariantCulture), item.Longitude.ToString(CultureInfo.InvariantCulture)));
+                    builder.AppendLine(string.Format("{0}, {1} <green-dot>", coordinate.Latitude.ToString(CultureInfo.InvariantCulture), coordinate.Longitude.ToString(CultureInfo.InvariantCulture)));
                 }
                 else
                 {
-                    builder.AppendLine(string.Format("{0}, {1}", item.Latitude.ToString(CultureInfo.InvariantCulture), item.Longitude.ToString(CultureInfo.InvariantCulture)));
+                    builder.AppendLine(string.Format("{0}, {1}", coordinate.Latitude.ToString(CultureInfo.InvariantCulture), coordinate.Longitude.ToString(CultureInfo.InvariantCulture)));
                 }
                 index++;
             }

@@ -23,7 +23,7 @@ namespace CarPooling
 
         public List<Journey> Process()
         {
-            List<Booking> bookings = this.inputParser.ReadInput("dd-input.json");
+            List<Booking> bookings = this.inputParser.ReadInput("input-2016-01-29-evening.json");
 
             var buckets = this.divider.Group(bookings);
 
