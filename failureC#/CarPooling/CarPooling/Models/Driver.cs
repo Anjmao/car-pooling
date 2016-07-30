@@ -65,18 +65,21 @@ namespace CarPooling.Models
                 this.DropoffBoundary.MaxCoordinate.Longitude = this.Dropoff.Longitude;
             }
 
-            this.RightMostLongitude = Math.Max(this.PickupBoundary.MaxCoordinate.Longitude, this.DropoffBoundary.MaxCoordinate.Longitude);
+            const double oneDegreeInMeters = 110574;
+            var extraRadius = 100/oneDegreeInMeters;
+
+            this.RightMostLongitude = Math.Max(this.PickupBoundary.MaxCoordinate.Longitude + extraRadius, this.DropoffBoundary.MaxCoordinate.Longitude + extraRadius);
 
             Latitudes = new[]
             {
-                PickupBoundary.MinCoordinate.Latitude, PickupBoundary.MaxCoordinate.Latitude,
-                DropoffBoundary.MinCoordinate.Latitude, DropoffBoundary.MaxCoordinate.Latitude
+                PickupBoundary.MinCoordinate.Latitude - extraRadius, PickupBoundary.MaxCoordinate.Latitude + extraRadius,
+                DropoffBoundary.MinCoordinate.Latitude - extraRadius, DropoffBoundary.MaxCoordinate.Latitude + extraRadius
             };
 
             Longitudes = new[]
             {
-                PickupBoundary.MinCoordinate.Longitude, PickupBoundary.MaxCoordinate.Longitude,
-                DropoffBoundary.MinCoordinate.Longitude, DropoffBoundary.MaxCoordinate.Longitude
+                PickupBoundary.MinCoordinate.Longitude - extraRadius, PickupBoundary.MaxCoordinate.Longitude + extraRadius,
+                DropoffBoundary.MinCoordinate.Longitude - extraRadius, DropoffBoundary.MaxCoordinate.Longitude + extraRadius
             };
 
             Array.Sort(Latitudes);
