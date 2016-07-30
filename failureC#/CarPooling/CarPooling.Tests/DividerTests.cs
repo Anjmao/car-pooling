@@ -13,6 +13,8 @@ namespace CarPooling.Tests
         public void ShouldGroup()
         {
             var divider = new Divider();
+            var inputParser = new IO.InputParser();
+            //List<Booking> orderings = inputParser.ReadInput("dd-input.json");
 
             var orderings = new List<Booking>
             {
@@ -47,16 +49,18 @@ namespace CarPooling.Tests
                 Console.WriteLine(pickupBoundary.MaxCoordinate.Latitude + ", " + pickupBoundary.MaxCoordinate.Longitude);
                 Console.WriteLine(dropoffBoundary.MinCoordinate.Latitude + ", " + dropoffBoundary.MinCoordinate.Longitude);
                 Console.WriteLine(dropoffBoundary.MaxCoordinate.Latitude + ", " + dropoffBoundary.MaxCoordinate.Longitude);
-                Console.WriteLine(Environment.NewLine);
 
+                Console.WriteLine(Environment.NewLine);
                 foreach (var passenger in riderBucket.Passengers)
                 {
-                    Console.WriteLine(passenger.Pickup.Latitude + " , " + passenger.Pickup.Longitude + " <tan-dot>");
+                    Console.WriteLine(passenger.Pickup.Latitude + " , " + passenger.Pickup.Longitude + " <gray-dot>");
                     Console.WriteLine(passenger.Dropoff.Latitude + ", " + passenger.Dropoff.Longitude + " <yellow-dot>");
                 }
+                Console.WriteLine("--------------------------------------------------------------------------------------");
 
                 Assert.AreEqual(3, riderBucket.Passengers.Count);
             }
+
         }
     }
 }
