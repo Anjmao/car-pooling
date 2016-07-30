@@ -58,6 +58,7 @@
     <Compile Include="MatchMakerTests.cs" />
     <Compile Include="InputParserTests.cs" />
     <Compile Include="CarPoolingTests.cs" />
+    <Compile Include="OsrmClientTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarPooling\CarPooling.csproj">

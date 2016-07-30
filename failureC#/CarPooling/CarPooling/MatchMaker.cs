@@ -99,7 +99,7 @@ namespace CarPooling
                     journey.Driver = item.Driver;
                     journey.Passengers = item.Passengers;
                     journey.SetWaypoints(waypoints);
-                    journey.ComputeRoute();
+                    journey.ComputeOsrmRoute();
 
                     journeys.Add(journey);
                 }

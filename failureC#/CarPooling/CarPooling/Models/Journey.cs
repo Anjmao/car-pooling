@@ -44,6 +44,17 @@ namespace CarPooling.Models
             this.TotalTime = 50 * this.TotalDistance;
         }
 
+        public async Task ComputeOsrmRoute()
+        {
+            using(var client = new OsrmClient())
+            {
+                var result = await client.GetRoutes(this.waypoints);
+                var route = result.Routes[0];
+                this.TotalDistance = route.Distance;
+                this.TotalTime = route.Duration;
+            }
+        }
+
         public override string ToString()
         {
             var builder = new StringBuilder();
