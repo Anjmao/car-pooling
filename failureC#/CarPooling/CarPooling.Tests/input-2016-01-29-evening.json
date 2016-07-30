@@ -1,0 +1,2256 @@
+{
+  "fromTimeStamp": 1454083200000,
+  "toTimeStamp": 1454126400000,
+  "fromAt": "Fri Jan 29 2016 18:00:00 GMT+0200 (FLE Standard Time)",
+  "toAt": "Sat Jan 30 2016 06:00:00 GMT+0200 (FLE Standard Time)",
+  "bookings": [
+    {
+      "id": "88b52546325b47958d64c4d694f1323a",
+      "pickup": {
+        "id": "88b52546325b47958d64c4d694f1323a_pickup",
+        "lat": 54.7121322,
+        "lon": 25.1876004,
+        "address": "Priegliaus g. 9, Priegliaus g. 9 Priegliaus gatvė 9 , 06288",
+        "zone": "PIL"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "88b52546325b47958d64c4d694f1323a_dropoff",
+        "lat": 54.6961685,
+        "lon": 25.2682523,
+        "address": "Upės gatvė, Upės gatvė",
+        "zone": "SNI"
+      }
+    },
+    {
+      "id": "4ff23b79b43c4a42a4cb6152c3ce4582",
+      "pickup": {
+        "id": "4ff23b79b43c4a42a4cb6152c3ce4582_pickup",
+        "lat": 54.685406,
+        "lon": 25.3056769,
+        "address": "Varpų g. 6, Varpų g. 6 Varpų gatvė 6 , 01209",
+        "zone": "SEN"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "4ff23b79b43c4a42a4cb6152c3ce4582_dropoff",
+        "lat": 54.7072233,
+        "lon": 25.2274149,
+        "address": "Viršuliškių gatvė, Viršuliškių gatvė",
+        "zone": "VIR"
+      }
+    },
+    {
+      "id": "e7dbd56bd5234271af73a7758f754c7a",
+      "pickup": {
+        "id": "e7dbd56bd5234271af73a7758f754c7a_pickup",
+        "lat": 54.7190919,
+        "lon": 25.3083684,
+        "address": "Žirmūnų g. 71, Žirmūnų g. 71 Žirmūnų gatvė 71 , 09112",
+        "zone": "ZIR"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "e7dbd56bd5234271af73a7758f754c7a_dropoff",
+        "lat": 54.7239068,
+        "lon": 25.3367703,
+        "address": "Saulėtekio alėja, Saulėtekio alėja",
+        "zone": "ANT"
+      }
+    },
+    {
+      "id": "98dce01d46754896a0c1feb88736613d",
+      "pickup": {
+        "id": "98dce01d46754896a0c1feb88736613d_pickup",
+        "lat": 54.6828127,
+        "lon": 25.2724998,
+        "address": "K. Kalinausko g. 11, K. Kalinausko g. 11 K. Kalinausko gatvė 11 , 03107",
+        "zone": "NAU"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "98dce01d46754896a0c1feb88736613d_dropoff",
+        "lat": 54.7186089,
+        "lon": 25.2137857,
+        "address": "Justiniškės, ",
+        "zone": "JUS"
+      }
+    },
+    {
+      "id": "5bf6f9c5fd884b6e981fccd97a0516eb",
+      "pickup": {
+        "id": "5bf6f9c5fd884b6e981fccd97a0516eb_pickup",
+        "lat": 54.7147131,
+        "lon": 25.3163899,
+        "address": "Antakalnio g. 75, Antakalnio g. 75 Antakalnio gatvė 75 , 10213",
+        "zone": "ANT"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "5bf6f9c5fd884b6e981fccd97a0516eb_dropoff",
+        "lat": 54.7047508,
+        "lon": 25.2968527,
+        "address": "Minties gatvė, Minties gatvė",
+        "zone": "ZIR"
+      }
+    },
+    {
+      "id": "79b3ac0e5e474f389d9c5edd6e19201d",
+      "pickup": {
+        "id": "79b3ac0e5e474f389d9c5edd6e19201d_pickup",
+        "lat": 54.7065327,
+        "lon": 25.2741547,
+        "address": "Utenos g. 36, Utenos g. 36 Utenos gatvė 36 , 08217",
+        "zone": "SNI"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "79b3ac0e5e474f389d9c5edd6e19201d_dropoff",
+        "lat": 54.806111,
+        "lon": 25.240093,
+        "address": "Riešė, "
+      }
+    },
+    {
+      "id": "963a8b7702e640e0a2b66455d6fcafb9",
+      "pickup": {
+        "id": "963a8b7702e640e0a2b66455d6fcafb9_pickup",
+        "lat": 54.6993172,
+        "lon": 25.3153692,
+        "address": "Kuosų g. 14B, Kuosų g. 14B Kuosų gatvė 14B , 10313",
+        "zone": "ANT"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "963a8b7702e640e0a2b66455d6fcafb9_dropoff",
+        "lat": 54.68637829999999,
+        "lon": 25.276072,
+        "address": " A. Smetonos gatvė 5 , 01115",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "c22bcd5aa7964901a9624b42b57e5d09",
+      "pickup": {
+        "id": "c22bcd5aa7964901a9624b42b57e5d09_pickup",
+        "lat": 54.6982449,
+        "lon": 25.343333,
+        "address": "Filaretų g. 115A, Filaretų g. 115A Filaretų gatvė 115A , 01215",
+        "zone": "ANT"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "c22bcd5aa7964901a9624b42b57e5d09_dropoff",
+        "lat": 54.69202379999999,
+        "lon": 25.2883729,
+        "address": " A. Juozapavičiaus gatvė 19 , 09311",
+        "zone": "SNI"
+      }
+    },
+    {
+      "id": "90e7b7b154d74e18953bf505d426330b",
+      "pickup": {
+        "id": "90e7b7b154d74e18953bf505d426330b_pickup",
+        "lat": 54.7353031,
+        "lon": 25.3385704,
+        "address": " Nemenčinės plentas 54a , 10104",
+        "zone": "ANT"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "90e7b7b154d74e18953bf505d426330b_dropoff",
+        "lat": 54.6787694,
+        "lon": 25.2867243,
+        "address": "Didžioji g. 25, Didžioji g. 25 Didžioji gatvė 25 , 01128",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "9b4c4d55ee3a4d84b2092d8b23a80f93",
+      "pickup": {
+        "id": "9b4c4d55ee3a4d84b2092d8b23a80f93_pickup",
+        "lat": 54.6784719,
+        "lon": 25.2780228,
+        "address": " Pylimo gatvė 23 , 01141",
+        "zone": "NAU"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "9b4c4d55ee3a4d84b2092d8b23a80f93_dropoff",
+        "lat": 54.6801472,
+        "lon": 25.2902262,
+        "address": " Bokšto gatvė 7 , 01126",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "61a63ded0f964a6cae7a6117febfdfc9",
+      "pickup": {
+        "id": "61a63ded0f964a6cae7a6117febfdfc9_pickup",
+        "lat": 54.682751,
+        "lon": 25.2674509,
+        "address": "V. Mykolaičio-Putino g. 2, V. Mykolaičio-Putino g. 2 V. Mykolaičio-Putino gatvė 2 , 03104",
+        "zone": "NAU"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "61a63ded0f964a6cae7a6117febfdfc9_dropoff",
+        "lat": 54.6716862,
+        "lon": 25.2822736,
+        "address": "Sodų gatvė, Sodų gatvė",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "abce372c5a2f4f43a7ebcb4b5671a242",
+      "pickup": {
+        "id": "abce372c5a2f4f43a7ebcb4b5671a242_pickup",
+        "lat": 54.6779179,
+        "lon": 25.287866,
+        "address": "RIMI Didžioji, RIMI Didžioji Didžioji gatvė 28 , 01128",
+        "zone": "SEN"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "abce372c5a2f4f43a7ebcb4b5671a242_dropoff",
+        "lat": 54.7127837,
+        "lon": 25.2532065,
+        "address": "Šeškinė, ",
+        "zone": "SES"
+      }
+    },
+    {
+      "id": "79783b184ff94d54b023b501f018b3b4",
+      "pickup": {
+        "id": "79783b184ff94d54b023b501f018b3b4_pickup",
+        "lat": 54.6922529,
+        "lon": 25.2717468,
+        "address": "A. Goštauto gatvė, A. Goštauto gatvė",
+        "zone": "NAU"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "79783b184ff94d54b023b501f018b3b4_dropoff",
+        "lat": 54.6790833,
+        "lon": 25.2702795,
+        "address": "HVAC Centras, HVAC Centras , 03161",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "8502b839c2954a01918a33e0d8f3b6af",
+      "pickup": {
+        "id": "8502b839c2954a01918a33e0d8f3b6af_pickup",
+        "lat": 54.6821467,
+        "lon": 25.2578305,
+        "address": "M. K. Čiurlionio g. 70, M. K. Čiurlionio g. 70 M. K. Čiurlionio gatvė 70 , 03100",
+        "zone": "NAU"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "8502b839c2954a01918a33e0d8f3b6af_dropoff",
+        "lat": 54.6925219,
+        "lon": 25.2849216,
+        "address": "A. Juozapavičiaus gatvė, A. Juozapavičiaus gatvė",
+        "zone": "SNI"
+      }
+    },
+    {
+      "id": "f91fb9d091db4ab1aea813c84a7a1b72",
+      "pickup": {
+        "id": "f91fb9d091db4ab1aea813c84a7a1b72_pickup",
+        "lat": 54.710518,
+        "lon": 25.2964042,
+        "address": "J. Galvydžio g. 11, J. Galvydžio g. 11 J. Galvydžio gatvė 11 , 08242",
+        "zone": "ZIR"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "f91fb9d091db4ab1aea813c84a7a1b72_dropoff",
+        "lat": 54.68577490000001,
+        "lon": 25.27845,
+        "address": " Jogailos gatvė 7-9 , 01116",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "25ad3ea6d675481daa8ad088c477f635",
+      "pickup": {
+        "id": "25ad3ea6d675481daa8ad088c477f635_pickup",
+        "lat": 54.6976839,
+        "lon": 25.2754214,
+        "address": "Lvovo gatvė, Lvovo gatvė",
+        "zone": "SNI"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "25ad3ea6d675481daa8ad088c477f635_dropoff",
+        "lat": 54.6882389,
+        "lon": 25.265067,
+        "address": "J. Jasinskio g. 7, J. Jasinskio g. 7 J. Jasinskio gatvė 7 , 01111",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "edfcf00afa6f40c5860a7096fad19cf8",
+      "pickup": {
+        "id": "edfcf00afa6f40c5860a7096fad19cf8_pickup",
+        "lat": 54.6858559,
+        "lon": 25.296508,
+        "address": "B. Radvilaitės g. 12, B. Radvilaitės g. 12 B. Radvilaitės gatvė 12 , 01100",
+        "zone": "SEN"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "edfcf00afa6f40c5860a7096fad19cf8_dropoff",
+        "lat": 54.6748722,
+        "lon": 25.2775092,
+        "address": "Aguonų gatvė, Aguonų gatvė",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "d98a44155dda43cc8f9afcbbbfc824b1",
+      "pickup": {
+        "id": "d98a44155dda43cc8f9afcbbbfc824b1_pickup",
+        "lat": 54.6733943,
+        "lon": 25.3060338,
+        "address": "P. Višinskio g. 24, P. Višinskio g. 24 P. Višinskio gatvė 24 , 11347",
+        "zone": "SEN"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "d98a44155dda43cc8f9afcbbbfc824b1_dropoff",
+        "lat": 54.6547913,
+        "lon": 25.331917,
+        "address": "Gurių gatvė, Gurių gatvė",
+        "zone": "NVL"
+      }
+    },
+    {
+      "id": "ffcf0cd9ff2e4315a46d63477f005160",
+      "pickup": {
+        "id": "ffcf0cd9ff2e4315a46d63477f005160_pickup",
+        "lat": 54.6733943,
+        "lon": 25.3060338,
+        "address": "P. Višinskio g. 24, P. Višinskio g. 24 P. Višinskio gatvė 24 , 11347",
+        "zone": "SEN"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "ffcf0cd9ff2e4315a46d63477f005160_dropoff",
+        "lat": 54.6585787,
+        "lon": 25.3501491,
+        "address": " Gurių Sodų gatvė 33 , 11310",
+        "zone": "NVL"
+      }
+    },
+    {
+      "id": "6684d97cfa5a46689d072356123c4bb0",
+      "pickup": {
+        "id": "6684d97cfa5a46689d072356123c4bb0_pickup",
+        "lat": 54.7084455,
+        "lon": 25.2959293,
+        "address": "S. Žukausko g. 20A, S. Žukausko g. 20A S. Žukausko gatvė 20A , 08234",
+        "zone": "ZIR"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "6684d97cfa5a46689d072356123c4bb0_dropoff",
+        "lat": 54.6883001,
+        "lon": 25.2728502,
+        "address": "Gedimino prospektas, Gedimino prospektas",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "9a5a8cf7ab8542a68119e973a8f382ad",
+      "pickup": {
+        "id": "9a5a8cf7ab8542a68119e973a8f382ad_pickup",
+        "lat": 54.6792629,
+        "lon": 25.2578716,
+        "address": "Savanorių pr. 1, Savanorių pr. 1 Savanorių prospektas 1 , 03116",
+        "zone": "NAU"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "9a5a8cf7ab8542a68119e973a8f382ad_dropoff",
+        "lat": 54.7066798,
+        "lon": 25.237751,
+        "address": "Ąžuolyno gatvė, Ąžuolyno gatvė",
+        "zone": "SES"
+      }
+    },
+    {
+      "id": "dbabdfa3f0a4407f82adf4e11a3ecca6",
+      "pickup": {
+        "id": "dbabdfa3f0a4407f82adf4e11a3ecca6_pickup",
+        "lat": 54.70362,
+        "lon": 25.297761,
+        "address": "Minties g. 30B, Minties g. 30B Minties gatvė 30B , 09223",
+        "zone": "ZIR"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "dbabdfa3f0a4407f82adf4e11a3ecca6_dropoff",
+        "lat": 54.7147131,
+        "lon": 25.3163899,
+        "address": "Antakalnio g. 75, Antakalnio g. 75 Antakalnio gatvė 75 , 10213",
+        "zone": "ANT"
+      }
+    },
+    {
+      "id": "108c1ef173ee44128e447974e91923ca",
+      "pickup": {
+        "id": "108c1ef173ee44128e447974e91923ca_pickup",
+        "lat": 54.6884834,
+        "lon": 25.4089813,
+        "address": " V. Sirokomlės gatvė 8-10 , 11200",
+        "zone": "NVL"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "108c1ef173ee44128e447974e91923ca_dropoff",
+        "lat": 54.6884834,
+        "lon": 25.4089813,
+        "address": " V. Sirokomlės gatvė 8-10 , 11200",
+        "zone": "NVL"
+      }
+    },
+    {
+      "id": "340fdabce60c46e08b2c6a654dc94255",
+      "pickup": {
+        "id": "340fdabce60c46e08b2c6a654dc94255_pickup",
+        "lat": 54.6815279,
+        "lon": 25.2862063,
+        "address": " Dominikonų gatvė 14 , 01131",
+        "zone": "SEN"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "340fdabce60c46e08b2c6a654dc94255_dropoff",
+        "lat": 54.685033,
+        "lon": 25.3076109,
+        "address": " Filaretų gatvė 20 , 01208",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "ae4c61baf6a94a8facfb0e6d9d4c70fd",
+      "pickup": {
+        "id": "ae4c61baf6a94a8facfb0e6d9d4c70fd_pickup",
+        "lat": 54.6923708,
+        "lon": 25.2849586,
+        "address": "A. Juozapavičiaus g. 9a, A. Juozapavičiaus g. 9a A. Juozapavičiaus gatvė 9a , 09311",
+        "zone": "SNI"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "ae4c61baf6a94a8facfb0e6d9d4c70fd_dropoff",
+        "lat": 54.6790772,
+        "lon": 25.2877627,
+        "address": "Didžioji gatvė, Didžioji gatvė",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "fd966f0d2f9b4a1187805965c226a5a6",
+      "pickup": {
+        "id": "fd966f0d2f9b4a1187805965c226a5a6_pickup",
+        "lat": 54.7173052,
+        "lon": 25.2536523,
+        "address": "Paberžės g. 16, Paberžės g. 16 Paberžės gatvė 16 , 07155",
+        "zone": "SES"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "fd966f0d2f9b4a1187805965c226a5a6_dropoff",
+        "lat": 54.6922529,
+        "lon": 25.2717468,
+        "address": "A. Goštauto gatvė, A. Goštauto gatvė",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "3e1d1cef74d54c7192d713f0a4f175f1",
+      "pickup": {
+        "id": "3e1d1cef74d54c7192d713f0a4f175f1_pickup",
+        "lat": 54.7091238,
+        "lon": 25.2825522,
+        "address": "Kalvarijų g. 152, Kalvarijų g. 152 Kalvarijų gatvė 152 , 08208",
+        "zone": "SNI"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "3e1d1cef74d54c7192d713f0a4f175f1_dropoff",
+        "lat": 54.6943317,
+        "lon": 25.2780421,
+        "address": " Konstitucijos prospektas 14 , 09309",
+        "zone": "SNI"
+      }
+    },
+    {
+      "id": "f9da2d4c213d431b859961d899e220ef",
+      "pickup": {
+        "id": "f9da2d4c213d431b859961d899e220ef_pickup",
+        "lat": 54.6995648,
+        "lon": 25.2650028,
+        "address": " Konstitucijos prospektas 29 , 08105",
+        "zone": "SNI"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "f9da2d4c213d431b859961d899e220ef_dropoff",
+        "lat": 54.6900083,
+        "lon": 25.2636831,
+        "address": " Gynėjų gatvė 51 , 01109",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "c9b7604d8eda419395e295b64071a309",
+      "pickup": {
+        "id": "c9b7604d8eda419395e295b64071a309_pickup",
+        "lat": 54.7402179,
+        "lon": 25.2709761,
+        "address": " Bitininkų gatvė 2A , 08310",
+        "zone": "VER"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "c9b7604d8eda419395e295b64071a309_dropoff",
+        "lat": 54.6844189,
+        "lon": 25.2774698,
+        "address": " Islandijos gatvė 2-6 , 01401",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "68c1325285874c9985c513d43e54515d",
+      "pickup": {
+        "id": "68c1325285874c9985c513d43e54515d_pickup",
+        "lat": 54.684507,
+        "lon": 25.267421,
+        "address": "V. Mykolaičio-Putino g. 10, V. Mykolaičio-Putino g. 10 V. Mykolaičio-Putino gatvė 10 , 03105",
+        "zone": "NAU"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "68c1325285874c9985c513d43e54515d_dropoff",
+        "lat": 54.6748048,
+        "lon": 25.3093487,
+        "address": "Subačiaus gatvė, Subačiaus gatvė",
+        "zone": "RAS"
+      }
+    },
+    {
+      "id": "babcda9836f140b9a9a16eb7e2f50d1e",
+      "pickup": {
+        "id": "babcda9836f140b9a9a16eb7e2f50d1e_pickup",
+        "lat": 54.71335,
+        "lon": 25.214106,
+        "address": "Taikos g. 191, Taikos g. 191 Taikos gatvė 191 , 05210",
+        "zone": "JUS"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "babcda9836f140b9a9a16eb7e2f50d1e_dropoff",
+        "lat": 54.716544,
+        "lon": 25.2865045,
+        "address": "Kalvarijų gatvė, Kalvarijų gatvė",
+        "zone": "VER"
+      }
+    },
+    {
+      "id": "710670635de14503b93e05703e8dde51",
+      "pickup": {
+        "id": "710670635de14503b93e05703e8dde51_pickup",
+        "lat": 54.6975742,
+        "lon": 25.2667411,
+        "address": "Forum Palace, sporto, pramogu ir verslo centras, Forumo rumai, Forum Palace, sporto, pramogu ir verslo centras, Forumo rumai Konstitucijos prospektas 26 , 08105",
+        "zone": "SNI"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "710670635de14503b93e05703e8dde51_dropoff",
+        "lat": 54.6783931,
+        "lon": 25.2865091,
+        "address": "Senamiestis, ",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "503a1232e76d4f35b3ae3da5bcb044b3",
+      "pickup": {
+        "id": "503a1232e76d4f35b3ae3da5bcb044b3_pickup",
+        "lat": 54.6380366,
+        "lon": 25.2865583,
+        "address": "Vilnius International Airport, Vilnius International Airport Rodūnios kelias 10A , 02189",
+        "zone": "NAJ"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "503a1232e76d4f35b3ae3da5bcb044b3_dropoff",
+        "lat": 54.7117424,
+        "lon": 25.2974345,
+        "address": "Šiaurės miestelis, ",
+        "zone": "ZIR"
+      }
+    },
+    {
+      "id": "9006feafdf7b4a9abf6652241b85f9e7",
+      "pickup": {
+        "id": "9006feafdf7b4a9abf6652241b85f9e7_pickup",
+        "lat": 54.672091,
+        "lon": 25.275371,
+        "address": "Mindaugo g. 27, Mindaugo g. 27 Mindaugo gatvė 27 , 03211",
+        "zone": "NAU"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "9006feafdf7b4a9abf6652241b85f9e7_dropoff",
+        "lat": 54.6825595,
+        "lon": 25.272065,
+        "address": "K. Kalinausko gatvė, K. Kalinausko gatvė",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "48496786cc044d85a23b89b2bcedb8fa",
+      "pickup": {
+        "id": "48496786cc044d85a23b89b2bcedb8fa_pickup",
+        "lat": 54.672415,
+        "lon": 25.2825421,
+        "address": "Sodų g. 15, Sodų g. 15 Sodų gatvė 15 , 01313",
+        "zone": "SEN"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "48496786cc044d85a23b89b2bcedb8fa_dropoff",
+        "lat": 54.6774712,
+        "lon": 25.2801257,
+        "address": "Pylimo gatvė, Pylimo gatvė",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "88728f779e81430fa73d92f24920d1e3",
+      "pickup": {
+        "id": "88728f779e81430fa73d92f24920d1e3_pickup",
+        "lat": 54.6926157,
+        "lon": 25.2514619,
+        "address": "Kęstučio g. 29, Kęstučio g. 29 Kęstučio gatvė 29 , 08121",
+        "zone": "ZVE"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "88728f779e81430fa73d92f24920d1e3_dropoff",
+        "lat": 54.6642191,
+        "lon": 25.2874535,
+        "address": "Dzūkų gatvė, Dzūkų gatvė",
+        "zone": "NAJ"
+      }
+    },
+    {
+      "id": "beba70b1d83944ac8212e892eb8039b8",
+      "pickup": {
+        "id": "beba70b1d83944ac8212e892eb8039b8_pickup",
+        "lat": 54.659668,
+        "lon": 25.2796079,
+        "address": "Kaminkelio g. 26, Kaminkelio g. 26 Kaminkelio gatvė 26 , 02192",
+        "zone": "NAJ"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "beba70b1d83944ac8212e892eb8039b8_dropoff",
+        "lat": 54.6380366,
+        "lon": 25.2865583,
+        "address": "Vilnius International Airport, Vilnius International Airport Rodūnios kelias 10A , 02189",
+        "zone": "NAJ"
+      }
+    },
+    {
+      "id": "48eeb82789974983865b980ea87935dd",
+      "pickup": {
+        "id": "48eeb82789974983865b980ea87935dd_pickup",
+        "lat": 54.6778419,
+        "lon": 25.3022729,
+        "address": "Paupio g. 31A, Paupio g. 31A Paupio gatvė 31A , 11341",
+        "zone": "SEN"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "48eeb82789974983865b980ea87935dd_dropoff",
+        "lat": 54.670299,
+        "lon": 25.2818853,
+        "address": "Sodų g. 22, Sodų g. 22 Sodų gatvė 22 , 03211",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "9708a8a0e6344e1d97522c1ba348283d",
+      "pickup": {
+        "id": "9708a8a0e6344e1d97522c1ba348283d_pickup",
+        "lat": 54.69437293705265,
+        "lon": 25.276759900152683,
+        "address": " Konstitucijos prospektas 12,14 , 09309",
+        "zone": "SNI"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "9708a8a0e6344e1d97522c1ba348283d_dropoff",
+        "lat": 54.71617389999999,
+        "lon": 25.277133,
+        "address": " Ozo gatvė 14C , 08200",
+        "zone": "VER"
+      }
+    },
+    {
+      "id": "8be49fdf039444eb9296aff8380a9774",
+      "pickup": {
+        "id": "8be49fdf039444eb9296aff8380a9774_pickup",
+        "lat": 54.6641337,
+        "lon": 25.2723674,
+        "address": "Brolių g. 7, Brolių g. 7 Brolių gatvė 7 , 02155",
+        "zone": "NAJ"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "8be49fdf039444eb9296aff8380a9774_dropoff",
+        "lat": 54.6380366,
+        "lon": 25.2865583,
+        "address": "Vilnius International Airport, Vilnius International Airport Rodūnios kelias 10A , 02189",
+        "zone": "NAJ"
+      }
+    },
+    {
+      "id": "dfcd5bff81464ca5b61a29f23a8ddcd4",
+      "pickup": {
+        "id": "dfcd5bff81464ca5b61a29f23a8ddcd4_pickup",
+        "lat": 54.6796989,
+        "lon": 25.1894604,
+        "address": "M. Mironaitės g. 20, M. Mironaitės g. 20 M. Mironaitės gatvė 20 , 04232",
+        "zone": "LAZ"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "dfcd5bff81464ca5b61a29f23a8ddcd4_dropoff",
+        "lat": 54.6380366,
+        "lon": 25.2865583,
+        "address": "Vilnius International Airport, Vilnius International Airport Rodūnios kelias 10A , 02189",
+        "zone": "NAJ"
+      }
+    },
+    {
+      "id": "c5dd190a7e1b4146b382e6dc537bf682",
+      "pickup": {
+        "id": "c5dd190a7e1b4146b382e6dc537bf682_pickup",
+        "lat": 54.6693708,
+        "lon": 25.2795307,
+        "address": " Sodų gatvė 22 , 01312",
+        "zone": "NAU"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "c5dd190a7e1b4146b382e6dc537bf682_dropoff",
+        "lat": 54.6693425,
+        "lon": 25.2794334,
+        "address": " Sodų gatvė 22 , 01312",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "c0bdf8495c674946a7f355e8c8c5447b",
+      "pickup": {
+        "id": "c0bdf8495c674946a7f355e8c8c5447b_pickup",
+        "lat": 54.7155639,
+        "lon": 25.229006,
+        "address": "Rygos g. 2, Rygos g. 2 Rygos gatvė 2 , 05264",
+        "zone": "VIR"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "c0bdf8495c674946a7f355e8c8c5447b_dropoff",
+        "lat": 54.6708979,
+        "lon": 25.3607999,
+        "address": "Pavilnys, ",
+        "zone": "NVL"
+      }
+    },
+    {
+      "id": "616fcf1efb7e4b81892c407a9eee87a8",
+      "pickup": {
+        "id": "616fcf1efb7e4b81892c407a9eee87a8_pickup",
+        "lat": 54.699865,
+        "lon": 25.2584309,
+        "address": "Saltoniškių g. 9, Saltoniškių g. 9 Saltoniškių gatvė 9 , 08105",
+        "zone": "ZVE"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "616fcf1efb7e4b81892c407a9eee87a8_dropoff",
+        "lat": 54.6783931,
+        "lon": 25.2865091,
+        "address": "Senamiestis, ",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "43b954b02bfe4a3e83a8cb89dbe796d4",
+      "pickup": {
+        "id": "43b954b02bfe4a3e83a8cb89dbe796d4_pickup",
+        "lat": 54.699865,
+        "lon": 25.2584309,
+        "address": "Saltoniškių g. 9, Saltoniškių g. 9 Saltoniškių gatvė 9 , 08105",
+        "zone": "ZVE"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "43b954b02bfe4a3e83a8cb89dbe796d4_dropoff",
+        "lat": 54.6783931,
+        "lon": 25.2865091,
+        "address": "Senamiestis, ",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "b6878555a3954fc3b7fc4d0e041d58fd",
+      "pickup": {
+        "id": "b6878555a3954fc3b7fc4d0e041d58fd_pickup",
+        "lat": 54.677809,
+        "lon": 25.2496858,
+        "address": "S. Konarskio g. 49, S. Konarskio g. 49 S. Konarskio gatvė 49 , 03123",
+        "zone": "NAU"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "b6878555a3954fc3b7fc4d0e041d58fd_dropoff",
+        "lat": 54.6815138,
+        "lon": 25.2740828,
+        "address": "Teatro gatvė, Teatro gatvė Teatro gatvė , 03107",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "326053c7568e4755907dc1a6127317a1",
+      "pickup": {
+        "id": "326053c7568e4755907dc1a6127317a1_pickup",
+        "lat": 54.6941902,
+        "lon": 25.2544368,
+        "address": "D. Poškos g. 6, D. Poškos g. 6 D. Poškos gatvė 6 , 08123",
+        "zone": "ZVE"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "326053c7568e4755907dc1a6127317a1_dropoff",
+        "lat": 54.6716862,
+        "lon": 25.2822736,
+        "address": "Sodų gatvė, Sodų gatvė",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "c2752f57d505466b8b4368042f2c1af7",
+      "pickup": {
+        "id": "c2752f57d505466b8b4368042f2c1af7_pickup",
+        "lat": 54.676283,
+        "lon": 25.287957,
+        "address": "Aušros Vartų g. 5, Aušros Vartų g. 5 Aušros Vartų gatvė 5 , 01305",
+        "zone": "SEN"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "c2752f57d505466b8b4368042f2c1af7_dropoff",
+        "lat": 54.6637199,
+        "lon": 25.2702599,
+        "address": "Brolių gatvė, Brolių gatvė",
+        "zone": "NAJ"
+      }
+    },
+    {
+      "id": "03938dc2bb264a8eb41be5074e3af69f",
+      "pickup": {
+        "id": "03938dc2bb264a8eb41be5074e3af69f_pickup",
+        "lat": 54.677809,
+        "lon": 25.2496858,
+        "address": "S. Konarskio g. 49, S. Konarskio g. 49 S. Konarskio gatvė 49 , 03123",
+        "zone": "NAU"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "03938dc2bb264a8eb41be5074e3af69f_dropoff",
+        "lat": 54.6552872,
+        "lon": 25.2576679,
+        "address": "Burbiškių gatvė, Burbiškių gatvė Burbiškių gatvė , 02184",
+        "zone": "NAJ"
+      }
+    },
+    {
+      "id": "1d243c5d86e74e8783799d666fb01f5c",
+      "pickup": {
+        "id": "1d243c5d86e74e8783799d666fb01f5c_pickup",
+        "lat": 54.6380366,
+        "lon": 25.2865583,
+        "address": "Vilnius International Airport, Vilnius International Airport Rodūnios kelias 10A , 02189",
+        "zone": "NAJ"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "1d243c5d86e74e8783799d666fb01f5c_dropoff",
+        "lat": 54.7117424,
+        "lon": 25.2974345,
+        "address": "Šiaurės miestelis, ",
+        "zone": "ZIR"
+      }
+    },
+    {
+      "id": "4413a1fd2dac4a63bf5ad03c7745d954",
+      "pickup": {
+        "id": "4413a1fd2dac4a63bf5ad03c7745d954_pickup",
+        "lat": 54.6784719,
+        "lon": 25.2780228,
+        "address": " Pylimo gatvė 23 , 01141",
+        "zone": "NAU"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "4413a1fd2dac4a63bf5ad03c7745d954_dropoff",
+        "lat": 54.6801472,
+        "lon": 25.2902262,
+        "address": " Bokšto gatvė 7 , 01126",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "137abed5caca4b9982f8454d7bd6c122",
+      "pickup": {
+        "id": "137abed5caca4b9982f8454d7bd6c122_pickup",
+        "lat": 54.745298,
+        "lon": 25.335058,
+        "address": "Turniškių g. 13A, Turniškių g. 13A Turniškių gatvė 13A , 10104",
+        "zone": "ANT"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "137abed5caca4b9982f8454d7bd6c122_dropoff",
+        "lat": 54.6380366,
+        "lon": 25.2865583,
+        "address": "Vilnius International Airport, Vilnius International Airport Rodūnios kelias 10A , 02189",
+        "zone": "NAJ"
+      }
+    },
+    {
+      "id": "e9f5888838d04e0ea6939f5d78bb0a40",
+      "pickup": {
+        "id": "e9f5888838d04e0ea6939f5d78bb0a40_pickup",
+        "lat": 54.6380366,
+        "lon": 25.2865583,
+        "address": "Vilnius International Airport, Vilnius International Airport Rodūnios kelias 10A , 02189",
+        "zone": "NAJ"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "e9f5888838d04e0ea6939f5d78bb0a40_dropoff",
+        "lat": 54.676247,
+        "lon": 25.292706,
+        "address": "A. Strazdelio g. 2, A. Strazdelio g. 2 A. Strazdelio gatvė 2 , 01301",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "b77f3f49b70c4879a6b36479d194428b",
+      "pickup": {
+        "id": "b77f3f49b70c4879a6b36479d194428b_pickup",
+        "lat": 54.689263,
+        "lon": 25.2684399,
+        "address": "Gedimino pr. 35, Gedimino pr. 35 Gedimino prospektas 35 , 01108",
+        "zone": "NAU"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "b77f3f49b70c4879a6b36479d194428b_dropoff",
+        "lat": 54.6871555,
+        "lon": 25.2796514,
+        "address": "Vilnius, ",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "257a768f5ace44c3a760b99b4ce6c413",
+      "pickup": {
+        "id": "257a768f5ace44c3a760b99b4ce6c413_pickup",
+        "lat": 54.6767258,
+        "lon": 25.2846796,
+        "address": " Rūdninkų gatvė 14 , 01135",
+        "zone": "SEN"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "257a768f5ace44c3a760b99b4ce6c413_dropoff",
+        "lat": 54.66377199999999,
+        "lon": 25.2694597,
+        "address": " Brolių gatvė 19 , 02156",
+        "zone": "NAJ"
+      }
+    },
+    {
+      "id": "c9749552753c4fceae02d84df09620ed",
+      "pickup": {
+        "id": "c9749552753c4fceae02d84df09620ed_pickup",
+        "lat": 54.6859824,
+        "lon": 25.2849832,
+        "address": "Gedimino pr. 2, Gedimino pr. 2 Gedimino prospektas 2 , 01103",
+        "zone": "SEN"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "c9749552753c4fceae02d84df09620ed_dropoff",
+        "lat": 54.7370039,
+        "lon": 25.232826,
+        "address": "S. Nėries gatvė, S. Nėries gatvė",
+        "zone": "FAB"
+      }
+    },
+    {
+      "id": "726475c55b9a4f738d795dfd1e31e838",
+      "pickup": {
+        "id": "726475c55b9a4f738d795dfd1e31e838_pickup",
+        "lat": 54.7002969,
+        "lon": 25.308609,
+        "address": "Antakalnio g. 32, Antakalnio g. 32 Antakalnio gatvė 32 , 10305",
+        "zone": "ANT"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "726475c55b9a4f738d795dfd1e31e838_dropoff",
+        "lat": 54.6783931,
+        "lon": 25.2865091,
+        "address": "Senamiestis, ",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "56e89eafb5e7402fbc66c9bfb0aa1187",
+      "pickup": {
+        "id": "56e89eafb5e7402fbc66c9bfb0aa1187_pickup",
+        "lat": 54.7563875,
+        "lon": 25.261088,
+        "address": "Bajorų kl. 21, Bajorų kl. 21 Bajorų kelias 21 , 08426",
+        "zone": "VER"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "56e89eafb5e7402fbc66c9bfb0aa1187_dropoff",
+        "lat": 54.6748048,
+        "lon": 25.3093487,
+        "address": "Subačiaus gatvė, Subačiaus gatvė",
+        "zone": "RAS"
+      }
+    },
+    {
+      "id": "e64dbebd929b443ab77c4637017dacd4",
+      "pickup": {
+        "id": "e64dbebd929b443ab77c4637017dacd4_pickup",
+        "lat": 54.6998297,
+        "lon": 25.2549181,
+        "address": " Stirnų gatvė , 08101",
+        "zone": "ZVE"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "e64dbebd929b443ab77c4637017dacd4_dropoff",
+        "lat": 54.8121972,
+        "lon": 25.4946855,
+        "address": " Unnamed Road , 15165"
+      }
+    },
+    {
+      "id": "0c15a6801b95422ea06965c9054684b7",
+      "pickup": {
+        "id": "0c15a6801b95422ea06965c9054684b7_pickup",
+        "lat": 54.6964389,
+        "lon": 25.218737,
+        "address": "A. P. Kavoliuko g. 32, A. P. Kavoliuko g. 32 A. P. Kavoliuko gatvė 32 , 04329",
+        "zone": "KAR"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "0c15a6801b95422ea06965c9054684b7_dropoff",
+        "lat": 54.7075235,
+        "lon": 25.2931527,
+        "address": "Žygio gatvė, Žygio gatvė",
+        "zone": "ZIR"
+      }
+    },
+    {
+      "id": "fba81a1ad676436283f3159ca96f41dc",
+      "pickup": {
+        "id": "fba81a1ad676436283f3159ca96f41dc_pickup",
+        "lat": 54.679095,
+        "lon": 25.2558749,
+        "address": "S. Konarskio g. 2, S. Konarskio g. 2 S. Konarskio gatvė 2 , 03122",
+        "zone": "NAU"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "fba81a1ad676436283f3159ca96f41dc_dropoff",
+        "lat": 54.6883001,
+        "lon": 25.2728502,
+        "address": "Gedimino prospektas, Gedimino prospektas",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "b0dc20e97b254f138a2f2a36e2a6cfb4",
+      "pickup": {
+        "id": "b0dc20e97b254f138a2f2a36e2a6cfb4_pickup",
+        "lat": 54.682209,
+        "lon": 25.2907807,
+        "address": "Literatų g. 9, Literatų g. 9 Literatų gatvė 9 , 01125",
+        "zone": "SEN"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "b0dc20e97b254f138a2f2a36e2a6cfb4_dropoff",
+        "lat": 54.6871555,
+        "lon": 25.2796514,
+        "address": "Vilnius, ",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "c26f8d689d2d4c8ea1bf01b35a8a4a10",
+      "pickup": {
+        "id": "c26f8d689d2d4c8ea1bf01b35a8a4a10_pickup",
+        "lat": 54.677871,
+        "lon": 25.24968,
+        "address": "LRT, LRT S. Konarskio 49 , 03123",
+        "zone": "NAU"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "c26f8d689d2d4c8ea1bf01b35a8a4a10_dropoff",
+        "lat": 54.678941,
+        "lon": 25.2647783,
+        "address": "A. Vivulskio gatvė, A. Vivulskio gatvė",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "e4032135b3b84000bcf2fa4509d9f1d7",
+      "pickup": {
+        "id": "e4032135b3b84000bcf2fa4509d9f1d7_pickup",
+        "lat": 54.717596,
+        "lon": 25.25729,
+        "address": "Gelvonų g. 38, Gelvonų g. 38 Gelvonų gatvė 38 , 07143",
+        "zone": "SES"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "e4032135b3b84000bcf2fa4509d9f1d7_dropoff",
+        "lat": 54.7081774,
+        "lon": 25.1682188,
+        "address": "Pilaitė, ",
+        "zone": "PIL"
+      }
+    },
+    {
+      "id": "b7b757bb0de74d05ab6ec4f503f9e153",
+      "pickup": {
+        "id": "b7b757bb0de74d05ab6ec4f503f9e153_pickup",
+        "lat": 54.681121,
+        "lon": 25.27411,
+        "address": "Teatro g. 7, Teatro g. 7 Teatro gatvė 7 , 03107",
+        "zone": "NAU"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "b7b757bb0de74d05ab6ec4f503f9e153_dropoff",
+        "lat": 54.6647693,
+        "lon": 25.2052419,
+        "address": "Lazdynai, ",
+        "zone": "LAZ"
+      }
+    },
+    {
+      "id": "4835e74dcb1242ab8dbf6255eeb97ed1",
+      "pickup": {
+        "id": "4835e74dcb1242ab8dbf6255eeb97ed1_pickup",
+        "lat": 54.7155337,
+        "lon": 25.3746067,
+        "address": "Pupojų Sodų 5-oji g. 8, Pupojų Sodų 5-oji g. 8 Pupojų Sodų 5-oji gatvė 8 , 10237",
+        "zone": "ANT"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "4835e74dcb1242ab8dbf6255eeb97ed1_dropoff",
+        "lat": 54.7248027,
+        "lon": 25.2987352,
+        "address": " Žirmūnų gatvė 116 , 09125",
+        "zone": "ZIR"
+      }
+    },
+    {
+      "id": "c547ca52ec0147c09d0d960f5339e024",
+      "pickup": {
+        "id": "c547ca52ec0147c09d0d960f5339e024_pickup",
+        "lat": 54.682209,
+        "lon": 25.2907807,
+        "address": "Literatų g. 9, Literatų g. 9 Literatų gatvė 9 , 01125",
+        "zone": "SEN"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "c547ca52ec0147c09d0d960f5339e024_dropoff",
+        "lat": 54.6871555,
+        "lon": 25.2796514,
+        "address": "Vilnius, ",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "a6b79d07d05941bca16829535b9dc59b",
+      "pickup": {
+        "id": "a6b79d07d05941bca16829535b9dc59b_pickup",
+        "lat": 54.6380366,
+        "lon": 25.2865583,
+        "address": "Vilnius International Airport, Vilnius International Airport Rodūnios kelias 10A , 02189",
+        "zone": "NAJ"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "a6b79d07d05941bca16829535b9dc59b_dropoff",
+        "lat": 54.7072233,
+        "lon": 25.2274149,
+        "address": "Viršuliškių gatvė, Viršuliškių gatvė",
+        "zone": "VIR"
+      }
+    },
+    {
+      "id": "6af61dc36fcc4ae49df3a6fc7e8c1dc7",
+      "pickup": {
+        "id": "6af61dc36fcc4ae49df3a6fc7e8c1dc7_pickup",
+        "lat": 54.6940995,
+        "lon": 25.2533507,
+        "address": "D. Poškos g. 12, D. Poškos g. 12 D. Poškos gatvė 12 , 08123",
+        "zone": "ZVE"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "6af61dc36fcc4ae49df3a6fc7e8c1dc7_dropoff",
+        "lat": 54.6716862,
+        "lon": 25.2822736,
+        "address": "Sodų gatvė, Sodų gatvė",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "4a27b537f42c4c36b6ebad5696cf8f51",
+      "pickup": {
+        "id": "4a27b537f42c4c36b6ebad5696cf8f51_pickup",
+        "lat": 54.6380366,
+        "lon": 25.2865583,
+        "address": "Vilnius International Airport, Vilnius International Airport Rodūnios kelias 10A , 02189",
+        "zone": "NAJ"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "4a27b537f42c4c36b6ebad5696cf8f51_dropoff",
+        "lat": 54.7453963,
+        "lon": 25.3868326,
+        "address": "Gvazdikų Sodų 16-oji g. 1, Gvazdikų Sodų 16-oji g. 1 Gvazdikų Sodų 16-oji gatvė 1 , 10250",
+        "zone": "ANT"
+      }
+    },
+    {
+      "id": "734c9850d6eb4f139439fa0d05b1ca91",
+      "pickup": {
+        "id": "734c9850d6eb4f139439fa0d05b1ca91_pickup",
+        "lat": 54.7297608,
+        "lon": 25.2350349,
+        "address": "Pašilaičių g. 2, Pašilaičių g. 2 Pašilaičių gatvė 2 , 06117",
+        "zone": "PAS"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "734c9850d6eb4f139439fa0d05b1ca91_dropoff",
+        "lat": 54.6790772,
+        "lon": 25.2877627,
+        "address": "Didžioji gatvė, Didžioji gatvė",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "ee2bc55c6eca4072a42704d07b604197",
+      "pickup": {
+        "id": "ee2bc55c6eca4072a42704d07b604197_pickup",
+        "lat": 54.6880379,
+        "lon": 25.290998,
+        "address": "Arsenalo g. 3, Arsenalo g. 3 Arsenalo gatvė 3 , 01143",
+        "zone": "SEN"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "ee2bc55c6eca4072a42704d07b604197_dropoff",
+        "lat": 54.7084455,
+        "lon": 25.2959293,
+        "address": "S. Žukausko g. 20A, S. Žukausko g. 20A S. Žukausko gatvė 20A , 08234",
+        "zone": "ZIR"
+      }
+    },
+    {
+      "id": "9284cd436f114fa2980d4115626e1366",
+      "pickup": {
+        "id": "9284cd436f114fa2980d4115626e1366_pickup",
+        "lat": 54.6880379,
+        "lon": 25.290998,
+        "address": "Arsenalo g. 3, Arsenalo g. 3 Arsenalo gatvė 3 , 01143",
+        "zone": "SEN"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "9284cd436f114fa2980d4115626e1366_dropoff",
+        "lat": 54.7127837,
+        "lon": 25.2532065,
+        "address": "Šeškinė, ",
+        "zone": "SES"
+      }
+    },
+    {
+      "id": "aa38e40f8e7d4e57a108282d44c2b96e",
+      "pickup": {
+        "id": "aa38e40f8e7d4e57a108282d44c2b96e_pickup",
+        "lat": 54.6828677,
+        "lon": 25.291509,
+        "address": "Šv. Mykolo gatvė, Šv. Mykolo gatvė Šv. Mykolo gatvė , 01124",
+        "zone": "SEN"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "aa38e40f8e7d4e57a108282d44c2b96e_dropoff",
+        "lat": 54.7364977,
+        "lon": 25.3164607,
+        "address": "Valakupių gatvė, Valakupių gatvė",
+        "zone": "ANT"
+      }
+    },
+    {
+      "id": "d5a04c6763f74c749fcfc2c483f5497e",
+      "pickup": {
+        "id": "d5a04c6763f74c749fcfc2c483f5497e_pickup",
+        "lat": 54.6425584,
+        "lon": 25.276486,
+        "address": "Oro Uostas, ",
+        "zone": "NAJ"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "d5a04c6763f74c749fcfc2c483f5497e_dropoff",
+        "lat": 54.687351,
+        "lon": 25.2891429,
+        "address": " Arsenalo gatvė 1 , 01143",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "3477890249614a338ef6c6a805f7a09e",
+      "pickup": {
+        "id": "3477890249614a338ef6c6a805f7a09e_pickup",
+        "lat": 54.68087,
+        "lon": 25.282441,
+        "address": "Vilniaus g. 32, Vilniaus g. 32 Vilniaus gatvė 32 , 01131",
+        "zone": "SEN"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "3477890249614a338ef6c6a805f7a09e_dropoff",
+        "lat": 54.6968164,
+        "lon": 25.2734139,
+        "address": "Konstitucijos prospektas, Konstitucijos prospektas",
+        "zone": "SNI"
+      }
+    },
+    {
+      "id": "1696294be7eb4ea1a974216c7043946f",
+      "pickup": {
+        "id": "1696294be7eb4ea1a974216c7043946f_pickup",
+        "lat": 54.6380366,
+        "lon": 25.2865583,
+        "address": "Vilnius International Airport, Vilnius International Airport Rodūnios kelias 10A , 02189",
+        "zone": "NAJ"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "1696294be7eb4ea1a974216c7043946f_dropoff",
+        "lat": 54.7127837,
+        "lon": 25.2532065,
+        "address": "Šeškinė, ",
+        "zone": "SES"
+      }
+    },
+    {
+      "id": "d9a01b652b0a4533aa0a9aa07785eb90",
+      "pickup": {
+        "id": "d9a01b652b0a4533aa0a9aa07785eb90_pickup",
+        "lat": 54.677809,
+        "lon": 25.2496858,
+        "address": "S. Konarskio g. 49, S. Konarskio g. 49 S. Konarskio gatvė 49 , 03123",
+        "zone": "NAU"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "d9a01b652b0a4533aa0a9aa07785eb90_dropoff",
+        "lat": 54.7040029,
+        "lon": 25.2868399,
+        "address": "Žalgirio g. 95, Žalgirio g. 95 Žalgirio gatvė 95 , 08218",
+        "zone": "ZIR"
+      }
+    },
+    {
+      "id": "b13faed801564e9781266e434258bc57",
+      "pickup": {
+        "id": "b13faed801564e9781266e434258bc57_pickup",
+        "lat": 54.6380366,
+        "lon": 25.2865583,
+        "address": "Vilnius International Airport, Vilnius International Airport Rodūnios kelias 10A , 02189",
+        "zone": "NAJ"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "b13faed801564e9781266e434258bc57_dropoff",
+        "lat": 54.7032539,
+        "lon": 25.2834119,
+        "address": " Kalvarijų gatvė 90 , 09303",
+        "zone": "SNI"
+      }
+    },
+    {
+      "id": "63441d88ed73452dbf613facfb29b9ac",
+      "pickup": {
+        "id": "63441d88ed73452dbf613facfb29b9ac_pickup",
+        "lat": 54.6425584,
+        "lon": 25.276486,
+        "address": "Oro Uostas, ",
+        "zone": "NAJ"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "63441d88ed73452dbf613facfb29b9ac_dropoff",
+        "lat": 54.7124384,
+        "lon": 25.3049681,
+        "address": "Žirmūnų gatvė, Žirmūnų gatvė",
+        "zone": "ZIR"
+      }
+    },
+    {
+      "id": "3b659bbf99304787a5aa548359fae20e",
+      "pickup": {
+        "id": "3b659bbf99304787a5aa548359fae20e_pickup",
+        "lat": 54.6425584,
+        "lon": 25.276486,
+        "address": "Oro Uostas, ",
+        "zone": "NAJ"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "3b659bbf99304787a5aa548359fae20e_dropoff",
+        "lat": 54.6811263,
+        "lon": 25.2580113,
+        "address": "Raseinių gatvė, Raseinių gatvė",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "3f4e65c8f1374036a5d7e4de908bbfd1",
+      "pickup": {
+        "id": "3f4e65c8f1374036a5d7e4de908bbfd1_pickup",
+        "lat": 54.6380366,
+        "lon": 25.2865583,
+        "address": "Vilnius International Airport, Vilnius International Airport Rodūnios kelias 10A , 02189",
+        "zone": "NAJ"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "3f4e65c8f1374036a5d7e4de908bbfd1_dropoff",
+        "lat": 54.7127837,
+        "lon": 25.2532065,
+        "address": "Šeškinė, ",
+        "zone": "SES"
+      }
+    },
+    {
+      "id": "af2f07943e2440419e7d49b0f67e19a4",
+      "pickup": {
+        "id": "af2f07943e2440419e7d49b0f67e19a4_pickup",
+        "lat": 54.6874266,
+        "lon": 25.2813179,
+        "address": "V. Kudirkos aikštė, V. Kudirkos aikštė",
+        "zone": "SEN"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "af2f07943e2440419e7d49b0f67e19a4_dropoff",
+        "lat": 54.743333,
+        "lon": 25.2753929,
+        "address": "Braškių g. 2A, Braškių g. 2A Braškių gatvė 2A , 08415",
+        "zone": "VER"
+      }
+    },
+    {
+      "id": "d7018f91ead647e19c42ef454028305e",
+      "pickup": {
+        "id": "d7018f91ead647e19c42ef454028305e_pickup",
+        "lat": 54.7154712,
+        "lon": 25.2258053,
+        "address": "Rygos g. 6, Rygos g. 6 Rygos gatvė 6 , 05270",
+        "zone": "VIR"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "d7018f91ead647e19c42ef454028305e_dropoff",
+        "lat": 54.6968119,
+        "lon": 25.2730737,
+        "address": "Konstitucijos prospektas, Konstitucijos prospektas",
+        "zone": "SNI"
+      }
+    },
+    {
+      "id": "8b74b1923ac94a95ab9cd387e081ec0c",
+      "pickup": {
+        "id": "8b74b1923ac94a95ab9cd387e081ec0c_pickup",
+        "lat": 54.6380366,
+        "lon": 25.2865583,
+        "address": "Vilnius International Airport, Vilnius International Airport Rodūnios kelias 10A , 02189",
+        "zone": "NAJ"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "8b74b1923ac94a95ab9cd387e081ec0c_dropoff",
+        "lat": 54.6792629,
+        "lon": 25.2578716,
+        "address": "Savanorių pr. 1, Savanorių pr. 1 Savanorių prospektas 1 , 03116",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "47767dc1229340d8869770d4eb26f184",
+      "pickup": {
+        "id": "47767dc1229340d8869770d4eb26f184_pickup",
+        "lat": 54.6829479,
+        "lon": 25.2818749,
+        "address": "Šv. Ignoto g. 4, Šv. Ignoto g. 4 Šv. Ignoto gatvė 4 , 01121",
+        "zone": "SEN"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "47767dc1229340d8869770d4eb26f184_dropoff",
+        "lat": 54.683077,
+        "lon": 25.28098,
+        "address": " Šv. Ignoto gatvė 2 , 01120",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "1efa82a9191545b8a35aa75976b90c4b",
+      "pickup": {
+        "id": "1efa82a9191545b8a35aa75976b90c4b_pickup",
+        "lat": 54.6685676,
+        "lon": 25.212558,
+        "address": "Jonažolių g. 17, Jonažolių g. 17 Jonažolių gatvė 17 , 04139",
+        "zone": "LAZ"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "1efa82a9191545b8a35aa75976b90c4b_dropoff",
+        "lat": 54.6871555,
+        "lon": 25.2796514,
+        "address": "Vilnius, ",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "591ad04d87c04f679a96888b31bc6611",
+      "pickup": {
+        "id": "591ad04d87c04f679a96888b31bc6611_pickup",
+        "lat": 54.708189,
+        "lon": 25.286634,
+        "address": "Apkasų g. 3, Apkasų g. 3 Apkasų gatvė 3 , 08220",
+        "zone": "ZIR"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "591ad04d87c04f679a96888b31bc6611_dropoff",
+        "lat": 54.716544,
+        "lon": 25.2865045,
+        "address": "Kalvarijų gatvė, Kalvarijų gatvė",
+        "zone": "VER"
+      }
+    },
+    {
+      "id": "19313d21f57943b8b1b86200aee7c884",
+      "pickup": {
+        "id": "19313d21f57943b8b1b86200aee7c884_pickup",
+        "lat": 54.6766349,
+        "lon": 25.2867607,
+        "address": "Bix, baras, Etmonai, Bix, baras, Etmonai Etmonų gatvė 6 , 01129",
+        "zone": "SEN"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "19313d21f57943b8b1b86200aee7c884_dropoff",
+        "lat": 54.703245,
+        "lon": 25.310284,
+        "address": "Antakalnio g. 35, Antakalnio g. 35 Antakalnio gatvė 35 , 10312",
+        "zone": "ANT"
+      }
+    },
+    {
+      "id": "064d2d9ef9974ed6ba06f8b55eb67cba",
+      "pickup": {
+        "id": "064d2d9ef9974ed6ba06f8b55eb67cba_pickup",
+        "lat": 54.6757929,
+        "lon": 25.291829,
+        "address": "A. Strazdelio g. 1, A. Strazdelio g. 1 A. Strazdelio gatvė 1 , 02102",
+        "zone": "SEN"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "064d2d9ef9974ed6ba06f8b55eb67cba_dropoff",
+        "lat": 54.6942869,
+        "lon": 25.2848971,
+        "address": "Slucko gatvė, Slucko gatvė",
+        "zone": "SNI"
+      }
+    },
+    {
+      "id": "95d9f5c37c9e4421a624fbf95e92a6b0",
+      "pickup": {
+        "id": "95d9f5c37c9e4421a624fbf95e92a6b0_pickup",
+        "lat": 54.6757929,
+        "lon": 25.291829,
+        "address": "A. Strazdelio g. 1, A. Strazdelio g. 1 A. Strazdelio gatvė 1 , 02102",
+        "zone": "SEN"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "95d9f5c37c9e4421a624fbf95e92a6b0_dropoff",
+        "lat": 54.6942869,
+        "lon": 25.2848971,
+        "address": "Slucko gatvė, Slucko gatvė",
+        "zone": "SNI"
+      }
+    },
+    {
+      "id": "29299ee36f654e9e9a03cb21f1d6b356",
+      "pickup": {
+        "id": "29299ee36f654e9e9a03cb21f1d6b356_pickup",
+        "lat": 54.6380366,
+        "lon": 25.2865583,
+        "address": "Vilnius International Airport, Vilnius International Airport Rodūnios kelias 10A , 02189",
+        "zone": "NAJ"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "29299ee36f654e9e9a03cb21f1d6b356_dropoff",
+        "lat": 54.6792629,
+        "lon": 25.2578716,
+        "address": "Savanorių pr. 1, Savanorių pr. 1 Savanorių prospektas 1 , 03116",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "68d1ccb93c704fe4a147eb05196a85b2",
+      "pickup": {
+        "id": "68d1ccb93c704fe4a147eb05196a85b2_pickup",
+        "lat": 54.6931499,
+        "lon": 25.2812969,
+        "address": "Kalvarijų g. 3, Kalvarijų g. 3 Kalvarijų gatvė 3 , 09310",
+        "zone": "SNI"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "68d1ccb93c704fe4a147eb05196a85b2_dropoff",
+        "lat": 54.7307254,
+        "lon": 25.270642,
+        "address": "Didlaukio gatvė, Didlaukio gatvė",
+        "zone": "VER"
+      }
+    },
+    {
+      "id": "f574ea89c804448bb489f7dd7316a8a4",
+      "pickup": {
+        "id": "f574ea89c804448bb489f7dd7316a8a4_pickup",
+        "lat": 54.67493,
+        "lon": 25.284565,
+        "address": "Visų Šventųjų g. 7, Visų Šventųjų g. 7 Visų Šventųjų gatvė 7 , 01136",
+        "zone": "SEN"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "f574ea89c804448bb489f7dd7316a8a4_dropoff",
+        "lat": 54.7164483,
+        "lon": 25.2539997,
+        "address": "Paberžės gatvė, Paberžės gatvė",
+        "zone": "SES"
+      }
+    },
+    {
+      "id": "41d0518a34864654a1d62fdef43150c8",
+      "pickup": {
+        "id": "41d0518a34864654a1d62fdef43150c8_pickup",
+        "lat": 54.6786779,
+        "lon": 25.28185,
+        "address": "Seven Fridays, ",
+        "zone": "SEN"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "41d0518a34864654a1d62fdef43150c8_dropoff",
+        "lat": 54.708132,
+        "lon": 25.3127612,
+        "address": "Antakalnio gatvė, Antakalnio gatvė",
+        "zone": "ANT"
+      }
+    },
+    {
+      "id": "628a8884c9cb41938eb06818c0798eab",
+      "pickup": {
+        "id": "628a8884c9cb41938eb06818c0798eab_pickup",
+        "lat": 54.6927587,
+        "lon": 25.268066,
+        "address": "Lukiškių g. 5, Lukiškių g. 5 Lukiškių gatvė 5 , 01107",
+        "zone": "NAU"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "628a8884c9cb41938eb06818c0798eab_dropoff",
+        "lat": 54.7359963,
+        "lon": 25.2412183,
+        "address": "Fabijoniškės, ",
+        "zone": "FAB"
+      }
+    },
+    {
+      "id": "b39dea56cf4e456280396501753c9a39",
+      "pickup": {
+        "id": "b39dea56cf4e456280396501753c9a39_pickup",
+        "lat": 54.679309,
+        "lon": 25.2814872,
+        "address": "Pranciškonų gatvė, Pranciškonų gatvė Pranciškonų gatvė , 01133",
+        "zone": "SEN"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "b39dea56cf4e456280396501753c9a39_dropoff",
+        "lat": 54.7263327,
+        "lon": 25.3121984,
+        "address": "Valakampių tiltas, Valakampių tiltas",
+        "zone": "ANT"
+      }
+    },
+    {
+      "id": "0f4328b72550410f85d0f5708daa1d88",
+      "pickup": {
+        "id": "0f4328b72550410f85d0f5708daa1d88_pickup",
+        "lat": 54.6787268,
+        "lon": 25.2842922,
+        "address": "Vokiečių g. 10, Vokiečių g. 10 Vokiečių gatvė 10 , 01130",
+        "zone": "SEN"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "0f4328b72550410f85d0f5708daa1d88_dropoff",
+        "lat": 54.6784105,
+        "lon": 25.3020911,
+        "address": "Paupio gatvė, Paupio gatvė",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "0d0d762fc3af4f099b27a164547c9ebb",
+      "pickup": {
+        "id": "0d0d762fc3af4f099b27a164547c9ebb_pickup",
+        "lat": 54.6857327,
+        "lon": 25.2866599,
+        "address": "Cathedral Clock Tower, Cathedral Clock Tower , 01143",
+        "zone": "SEN"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "0d0d762fc3af4f099b27a164547c9ebb_dropoff",
+        "lat": 54.7051471,
+        "lon": 25.3019711,
+        "address": "Minties g. 4, Minties g. 4 Minties gatvė 4 , 09225",
+        "zone": "ZIR"
+      }
+    },
+    {
+      "id": "4239c16edc8a4e2990a35dd1a796351d",
+      "pickup": {
+        "id": "4239c16edc8a4e2990a35dd1a796351d_pickup",
+        "lat": 54.673815,
+        "lon": 25.2573799,
+        "address": "Statybininkų g. 5, Statybininkų g. 5 Statybininkų gatvė 5 , 03200",
+        "zone": "NAU"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "4239c16edc8a4e2990a35dd1a796351d_dropoff",
+        "lat": 54.6747273,
+        "lon": 25.2720384,
+        "address": "Algirdo gatvė, Algirdo gatvė",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "a6bdb323485448baa1d5d07e279ff813",
+      "pickup": {
+        "id": "a6bdb323485448baa1d5d07e279ff813_pickup",
+        "lat": 54.6748369,
+        "lon": 25.3133522,
+        "address": "Subačiaus g. 90, Subačiaus g. 90 Subačiaus gatvė 90 , 11342",
+        "zone": "RAS"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "a6bdb323485448baa1d5d07e279ff813_dropoff",
+        "lat": 54.6642191,
+        "lon": 25.2874535,
+        "address": "Dzūkų gatvė, Dzūkų gatvė",
+        "zone": "NAJ"
+      }
+    },
+    {
+      "id": "60aa08574a7141938739c12f41a869a5",
+      "pickup": {
+        "id": "60aa08574a7141938739c12f41a869a5_pickup",
+        "lat": 54.6879079,
+        "lon": 25.2764239,
+        "address": "Gedimino pr. 21, Gedimino pr. 21 Gedimino prospektas 21 , 01104",
+        "zone": "NAU"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "60aa08574a7141938739c12f41a869a5_dropoff",
+        "lat": 54.708132,
+        "lon": 25.3127612,
+        "address": "Antakalnio gatvė, Antakalnio gatvė",
+        "zone": "ANT"
+      }
+    },
+    {
+      "id": "e394443c5b51429898fa0f59b0433696",
+      "pickup": {
+        "id": "e394443c5b51429898fa0f59b0433696_pickup",
+        "lat": 54.6952289,
+        "lon": 25.274629,
+        "address": "Konstitucijos pr. 20, Konstitucijos pr. 20 Konstitucijos prospektas 20 , 09309",
+        "zone": "SNI"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "e394443c5b51429898fa0f59b0433696_dropoff",
+        "lat": 54.7117424,
+        "lon": 25.2974345,
+        "address": "Žirmūnai, ",
+        "zone": "ZIR"
+      }
+    },
+    {
+      "id": "12412a4ff4ac4a96beca02527352ad85",
+      "pickup": {
+        "id": "12412a4ff4ac4a96beca02527352ad85_pickup",
+        "lat": 54.6952289,
+        "lon": 25.274629,
+        "address": "Konstitucijos pr. 20, Konstitucijos pr. 20 Konstitucijos prospektas 20 , 09309",
+        "zone": "SNI"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "12412a4ff4ac4a96beca02527352ad85_dropoff",
+        "lat": 54.7266639,
+        "lon": 25.179711,
+        "address": "Zujūnai, ",
+        "zone": "PAS"
+      }
+    },
+    {
+      "id": "2d9259ceb42544869c48ecbb290734e0",
+      "pickup": {
+        "id": "2d9259ceb42544869c48ecbb290734e0_pickup",
+        "lat": 54.673815,
+        "lon": 25.2573799,
+        "address": "Statybininkų g. 5, Statybininkų g. 5 Statybininkų gatvė 5 , 03200",
+        "zone": "NAU"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "2d9259ceb42544869c48ecbb290734e0_dropoff",
+        "lat": 54.6747273,
+        "lon": 25.2720384,
+        "address": "Algirdo gatvė, Algirdo gatvė",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "9baa06c1a58b489ab0deef9e351d6d03",
+      "pickup": {
+        "id": "9baa06c1a58b489ab0deef9e351d6d03_pickup",
+        "lat": 54.7200089,
+        "lon": 25.2212919,
+        "address": "Taikos g. 40, Taikos g. 40 Taikos gatvė 40 , 05238",
+        "zone": "JUS"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "9baa06c1a58b489ab0deef9e351d6d03_dropoff",
+        "lat": 54.6380366,
+        "lon": 25.2865583,
+        "address": "Vilnius International Airport, Vilnius International Airport Rodūnios kelias 10A , 02189",
+        "zone": "NAJ"
+      }
+    },
+    {
+      "id": "46c5022f4c10431b8efd2edefdb2f9f7",
+      "pickup": {
+        "id": "46c5022f4c10431b8efd2edefdb2f9f7_pickup",
+        "lat": 54.686548,
+        "lon": 25.282197,
+        "address": "Paparazzi bar, Paparazzi bar Totorių gatvė 1 , 01121",
+        "zone": "SEN"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "46c5022f4c10431b8efd2edefdb2f9f7_dropoff",
+        "lat": 54.708132,
+        "lon": 25.3127612,
+        "address": "Antakalnio gatvė, Antakalnio gatvė",
+        "zone": "ANT"
+      }
+    },
+    {
+      "id": "9ab2abb3ea184427b788a9e03a1f0462",
+      "pickup": {
+        "id": "9ab2abb3ea184427b788a9e03a1f0462_pickup",
+        "lat": 54.7277379,
+        "lon": 25.26692,
+        "address": "Didlaukio g. 98, Didlaukio g. 98 Didlaukio gatvė 98 , 08332",
+        "zone": "FAB"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "9ab2abb3ea184427b788a9e03a1f0462_dropoff",
+        "lat": 54.6887259,
+        "lon": 25.3187894,
+        "address": "Filaretų gatvė, Filaretų gatvė",
+        "zone": "ANT"
+      }
+    },
+    {
+      "id": "82e57b5cda274e4f87c7d7e1b780009c",
+      "pickup": {
+        "id": "82e57b5cda274e4f87c7d7e1b780009c_pickup",
+        "lat": 54.770577,
+        "lon": 25.355478,
+        "address": "Babinių Sodų 22-oji g. 3, Babinių Sodų 22-oji g. 3 Babinių Sodų 22-oji gatvė 3 , 08456",
+        "zone": "VER"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "82e57b5cda274e4f87c7d7e1b780009c_dropoff",
+        "lat": 54.7505209,
+        "lon": 25.2729885,
+        "address": "M. Marcinkevičiaus gatvė, M. Marcinkevičiaus gatvė",
+        "zone": "VER"
+      }
+    },
+    {
+      "id": "5e577f7556ad449089e7f5db3585116b",
+      "pickup": {
+        "id": "5e577f7556ad449089e7f5db3585116b_pickup",
+        "lat": 54.6851507,
+        "lon": 25.2792248,
+        "address": "Vilniaus g. 25, Vilniaus g. 25 Vilniaus gatvė 25 , 01402",
+        "zone": "SEN"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "5e577f7556ad449089e7f5db3585116b_dropoff",
+        "lat": 54.708132,
+        "lon": 25.3127612,
+        "address": "Antakalnio gatvė, Antakalnio gatvė",
+        "zone": "ANT"
+      }
+    },
+    {
+      "id": "4f2c705395294ca5a572e4b2bee0ebbd",
+      "pickup": {
+        "id": "4f2c705395294ca5a572e4b2bee0ebbd_pickup",
+        "lat": 54.7268479,
+        "lon": 25.2218749,
+        "address": "Medeinos g. 33, Medeinos g. 33 Medeinos gatvė 33 , 06137",
+        "zone": "PAS"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "4f2c705395294ca5a572e4b2bee0ebbd_dropoff",
+        "lat": 54.6380366,
+        "lon": 25.2865583,
+        "address": "Vilnius International Airport, Vilnius International Airport Rodūnios kelias 10A , 02189",
+        "zone": "NAJ"
+      }
+    },
+    {
+      "id": "f7032ce6bbf847a0b6d65895a891c0ff",
+      "pickup": {
+        "id": "f7032ce6bbf847a0b6d65895a891c0ff_pickup",
+        "lat": 54.6863783,
+        "lon": 25.276072,
+        "address": "A. Smetonos g. 5, A. Smetonos g. 5 A. Smetonos gatvė 5 , 01115",
+        "zone": "NAU"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "f7032ce6bbf847a0b6d65895a891c0ff_dropoff",
+        "lat": 54.6642337,
+        "lon": 25.1935649,
+        "address": "Lazdynėlių gatvė, Lazdynėlių gatvė",
+        "zone": "LAZ"
+      }
+    },
+    {
+      "id": "e8d0a64e2f904e7e850409aaf874daaa",
+      "pickup": {
+        "id": "e8d0a64e2f904e7e850409aaf874daaa_pickup",
+        "lat": 54.6641337,
+        "lon": 25.2723674,
+        "address": "Brolių g. 7, Brolių g. 7 Brolių gatvė 7 , 02155",
+        "zone": "NAJ"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "e8d0a64e2f904e7e850409aaf874daaa_dropoff",
+        "lat": 54.6380366,
+        "lon": 25.2865583,
+        "address": "Vilnius International Airport, Vilnius International Airport Rodūnios kelias 10A , 02189",
+        "zone": "NAJ"
+      }
+    },
+    {
+      "id": "1901fb2700d84b93947dfdc0b709f6e3",
+      "pickup": {
+        "id": "1901fb2700d84b93947dfdc0b709f6e3_pickup",
+        "lat": 54.659668,
+        "lon": 25.2796079,
+        "address": "Kaminkelio g. 26, Kaminkelio g. 26 Kaminkelio gatvė 26 , 02192",
+        "zone": "NAJ"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "1901fb2700d84b93947dfdc0b709f6e3_dropoff",
+        "lat": 54.6380366,
+        "lon": 25.2865583,
+        "address": "Vilnius International Airport, Vilnius International Airport Rodūnios kelias 10A , 02189",
+        "zone": "NAJ"
+      }
+    },
+    {
+      "id": "cb72fcf728524a8e86c7172e0d5aafd4",
+      "pickup": {
+        "id": "cb72fcf728524a8e86c7172e0d5aafd4_pickup",
+        "lat": 54.6825446,
+        "lon": 25.2795335,
+        "address": "Vilniaus g. 37, Vilniaus g. 37 Vilniaus gatvė 37 , 01402",
+        "zone": "SEN"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "cb72fcf728524a8e86c7172e0d5aafd4_dropoff",
+        "lat": 54.708132,
+        "lon": 25.3127612,
+        "address": "Antakalnio gatvė, Antakalnio gatvė",
+        "zone": "ANT"
+      }
+    },
+    {
+      "id": "b33f5bd573d542678d31cd645bf68657",
+      "pickup": {
+        "id": "b33f5bd573d542678d31cd645bf68657_pickup",
+        "lat": 54.6883001,
+        "lon": 25.2728502,
+        "address": "Gedimino prospektas, Gedimino prospektas",
+        "zone": "NAU"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "b33f5bd573d542678d31cd645bf68657_dropoff",
+        "lat": 54.73384189999999,
+        "lon": 25.2794791,
+        "address": " Kalvarijų gatvė 267 , 08315",
+        "zone": "VER"
+      }
+    },
+    {
+      "id": "ecd02193a3574c4383870af2ef9d1d86",
+      "pickup": {
+        "id": "ecd02193a3574c4383870af2ef9d1d86_pickup",
+        "lat": 54.6952289,
+        "lon": 25.274629,
+        "address": "Konstitucijos pr. 20, Konstitucijos pr. 20 Konstitucijos prospektas 20 , 09309",
+        "zone": "SNI"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "ecd02193a3574c4383870af2ef9d1d86_dropoff",
+        "lat": 54.7062323,
+        "lon": 25.2265856,
+        "address": " Laisvės prospektas",
+        "zone": "VIR"
+      }
+    },
+    {
+      "id": "6278f6783dc242eb9c0adb5acaab7a2e",
+      "pickup": {
+        "id": "6278f6783dc242eb9c0adb5acaab7a2e_pickup",
+        "lat": 54.672075,
+        "lon": 25.2836217,
+        "address": " Seinų gatvė 14 , 02100",
+        "zone": "SEN"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "6278f6783dc242eb9c0adb5acaab7a2e_dropoff",
+        "lat": 54.672075,
+        "lon": 25.2836217,
+        "address": " Seinų gatvė 14 , 02100",
+        "zone": "SEN"
+      }
+    },
+    {
+      "id": "acbd6cbd28224408babfb43653ccafe9",
+      "pickup": {
+        "id": "acbd6cbd28224408babfb43653ccafe9_pickup",
+        "lat": 54.702893,
+        "lon": 25.2554519,
+        "address": "Paribio g. 4, Paribio g. 4 Paribio gatvė 4 , 08100",
+        "zone": "ZVE"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "acbd6cbd28224408babfb43653ccafe9_dropoff",
+        "lat": 54.7117424,
+        "lon": 25.2974345,
+        "address": "Žirmūnai, ",
+        "zone": "ZIR"
+      }
+    },
+    {
+      "id": "8f8d63734ab4442f8ab90372f632656b",
+      "pickup": {
+        "id": "8f8d63734ab4442f8ab90372f632656b_pickup",
+        "lat": 54.716544,
+        "lon": 25.2865045,
+        "address": "Kalvarijų gatvė, Kalvarijų gatvė",
+        "zone": "VER"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "8f8d63734ab4442f8ab90372f632656b_dropoff",
+        "lat": 54.761034,
+        "lon": 25.2854604,
+        "address": "J. Franko gatvė, J. Franko gatvė",
+        "zone": "VER"
+      }
+    },
+    {
+      "id": "c383bfc10851412a977be3d6bf02a150",
+      "pickup": {
+        "id": "c383bfc10851412a977be3d6bf02a150_pickup",
+        "lat": 54.68184,
+        "lon": 25.2809289,
+        "address": "Vilniaus g. 30, Vilniaus g. 30 Vilniaus gatvė 30 , 01119",
+        "zone": "SEN"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "c383bfc10851412a977be3d6bf02a150_dropoff",
+        "lat": 54.6731027,
+        "lon": 25.2719854,
+        "address": "Algirdo g. 45, Algirdo g. 45 Algirdo gatvė 45 , 03216",
+        "zone": "NAU"
+      }
+    },
+    {
+      "id": "bda75953a74a4808bc790711bd6be470",
+      "pickup": {
+        "id": "bda75953a74a4808bc790711bd6be470_pickup",
+        "lat": 54.716544,
+        "lon": 25.2865045,
+        "address": "Kalvarijų gatvė, Kalvarijų gatvė",
+        "zone": "VER"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "bda75953a74a4808bc790711bd6be470_dropoff",
+        "lat": 54.761034,
+        "lon": 25.2854604,
+        "address": "J. Franko gatvė, J. Franko gatvė",
+        "zone": "VER"
+      }
+    },
+    {
+      "id": "42f5318c1dd04c2ba72bfe96e24065fe",
+      "pickup": {
+        "id": "42f5318c1dd04c2ba72bfe96e24065fe_pickup",
+        "lat": 54.6916309,
+        "lon": 25.299589,
+        "address": "T. Kosciuškos g. 24, T. Kosciuškos g. 24 T. Kosciuškos gatvė 24 , 01100",
+        "zone": "SEN"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "42f5318c1dd04c2ba72bfe96e24065fe_dropoff",
+        "lat": 54.6702069,
+        "lon": 25.2168529,
+        "address": " Lazdynų gatvė 28A , 04130",
+        "zone": "LAZ"
+      }
+    },
+    {
+      "id": "dc2db3576f78447ba457e6401dc2d63e",
+      "pickup": {
+        "id": "dc2db3576f78447ba457e6401dc2d63e_pickup",
+        "lat": 54.677809,
+        "lon": 25.2496858,
+        "address": "S. Konarskio g. 49, S. Konarskio g. 49 S. Konarskio gatvė 49 , 03123",
+        "zone": "NAU"
+      },
+      "isDriver": false,
+      "dropoff": {
+        "id": "dc2db3576f78447ba457e6401dc2d63e_dropoff",
+        "lat": 54.7117424,
+        "lon": 25.2974345,
+        "address": "Žirmūnai, ",
+        "zone": "ZIR"
+      }
+    },
+    {
+      "id": "7c62126db67a451d811832c73b14ce74",
+      "pickup": {
+        "id": "7c62126db67a451d811832c73b14ce74_pickup",
+        "lat": 54.7183825,
+        "lon": 25.2415386,
+        "address": "Ukmergės g. 228A, Ukmergės g. 228A Ukmergės gatvė 228A , 07161",
+        "zone": "SES"
+      },
+      "isDriver": true,
+      "dropoff": {
+        "id": "7c62126db67a451d811832c73b14ce74_dropoff",
+        "lat": 54.7320051,
+        "lon": 25.2340655,
+        "address": " Pašilaičių gatvė 5 , 06115",
+        "zone": "PAS"
+      }
+    }
+  ]
+}

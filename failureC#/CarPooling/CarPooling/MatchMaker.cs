@@ -11,13 +11,13 @@ namespace CarPooling
     
     public class MatchMaker
     {
-        private IEnumerable<RiderBucket> buckets;
-        private HashSet<Passenger> matchedPassengers = new HashSet<Passenger>();
+        private List<RiderBucket> buckets;
+        private HashSet<string> matchedPassengers = new HashSet<string>();
 
 
         public void SetBuckets(IEnumerable<RiderBucket> buckets)
         {
-            this.buckets = buckets;
+            this.buckets = buckets.ToList();
         }
 
         public List<Journey> Process()
@@ -37,20 +37,35 @@ namespace CarPooling
                     break;
                 }
                 
-
                 matchedJourneys.Add(bestJourney);
-                this.buckets = this.buckets.Where(x => x.Driver.Id != bestJourney.Driver.Id);
-
-                //TODO: remove matched passengers from all buckets
+                AddMatchedPassengers(bestJourney);
+                RemoveMatchedPassengersFromBuckets(bestJourney.Driver.Id);
+                
                 journeys = this.ComputeJourneys();
                 i = journeys.Count;
             }
-
-            //var bestJourney = journeys[0];
+            
             
             return matchedJourneys;
         }
 
+        private void AddMatchedPassengers(Journey journey)
+        {
+            foreach (var item in journey.GetWaypoints())
+            {
+                this.matchedPassengers.Add(item.RiderId);
+            }
+        }
+
+        private void RemoveMatchedPassengersFromBuckets(string driverId)
+        {
+            this.buckets.RemoveAll(x => x.Driver.Id == driverId);
+            foreach (var item in this.buckets)  
+            {
+                item.Passengers.RemoveAll(x => this.matchedPassengers.Contains(x.Id));
+            }
+        }
+        
         private List<Journey> ComputeJourneys()
         {
             var journeys = new List<Journey>();
@@ -94,11 +109,6 @@ namespace CarPooling
             journeys = journeys.OrderBy(x => x.TotalDistance).ToList();
             
             return journeys;
-        }
-
-        private void RemoveMatchedJourneyData()
-        {
-            
         }
 
         private HashSet<Coordinate> CreateWaypoins(IList<char> ordering, IList<Passenger> passengers, Driver driver)

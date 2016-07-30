@@ -45,14 +45,14 @@ namespace CarPooling.Tests
             var b = GetRandomPoint();
             var c = GetRandomPoint();
             var drivers = new List<Driver>();
-            drivers.Add(new Driver("d1", new Coordinate(54.711096, 25.294731), new Coordinate(54.732556, 25.365460)));
-            drivers.Add(new Driver("d2", new Coordinate(54.707961, 25.320016), new Coordinate(54.723409, 25.352168)));
-            drivers.Add(new Driver("d3", new Coordinate(54.771149, 25.204108), new Coordinate(54.812915, 25.255607)));
+            drivers.Add(new Driver("d1", new Coordinate(54.711096, 25.294731) { RiderId ="d1" }, new Coordinate(54.732556, 25.365460) { RiderId = "d1" }));
+            drivers.Add(new Driver("d2", new Coordinate(54.707961, 25.320016) { RiderId = "d2" }, new Coordinate(54.723409, 25.352168) { RiderId = "d2" }));
+            drivers.Add(new Driver("d3", new Coordinate(54.771149, 25.204108) { RiderId = "d3" }, new Coordinate(54.812915, 25.255607) { RiderId = "d3" }));
 
             var passengers = new List<Passenger>();
-            passengers.Add(new Passenger("p1", new Coordinate(54.715752, 25.321600), new Coordinate(54.719768, 25.345032)));
-            passengers.Add(new Passenger("p2", new Coordinate(54.738497, 25.311547), new Coordinate(54.745434, 25.340557)));
-            passengers.Add(new Passenger("p3", new Coordinate(54.697131, 25.359615), new Coordinate(54.708218, 25.389534)));
+            passengers.Add(new Passenger("p1", new Coordinate(54.715752, 25.321600) { RiderId = "p1" }, new Coordinate(54.719768, 25.345032) { RiderId = "p1" }));
+            passengers.Add(new Passenger("p2", new Coordinate(54.738497, 25.311547) { RiderId = "p2" }, new Coordinate(54.745434, 25.340557) { RiderId = "p2" }));
+            passengers.Add(new Passenger("p3", new Coordinate(54.697131, 25.359615) { RiderId = "p3" }, new Coordinate(54.708218, 25.389534) { RiderId = "p3" }));
 
             var buckets = new List<RiderBucket>();
             buckets.Add(new RiderBucket { Driver = drivers[0], Passengers = passengers });
