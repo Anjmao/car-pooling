@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using CarPooling.Utils;
 
 namespace CarPooling.Models
@@ -86,20 +85,12 @@ namespace CarPooling.Models
 
         public bool Bounds(Passenger passenger)
         {
-            var latitudeTop = (passenger.Pickup.Latitude < this.Latitudes[2] || passenger.Pickup.Latitude < this.Latitudes[3])
-                    && (passenger.Dropoff.Latitude < this.Latitudes[2] || passenger.Dropoff.Latitude < this.Latitudes[3]);
-
-            var latitudeBottom = passenger.Pickup.Latitude > this.Latitudes[0] && passenger.Pickup.Latitude > this.Latitudes[1]
-                    && passenger.Dropoff.Latitude > this.Latitudes[0] && passenger.Dropoff.Latitude > this.Latitudes[1];
-
+            var latitudeTop = passenger.Pickup.Latitude <= this.Latitudes.Last() && passenger.Dropoff.Latitude <= this.Latitudes.Last();
+            var latitudeBottom = passenger.Pickup.Latitude >= this.Latitudes.First() && passenger.Dropoff.Latitude >= this.Latitudes.First();
             var latitude = latitudeTop && latitudeBottom;
 
-            var longitudeRight = (passenger.Pickup.Longitude < this.Longitudes[2] || passenger.Pickup.Longitude < this.Longitudes[3])
-                    && (passenger.Dropoff.Longitude < this.Longitudes[2] || passenger.Dropoff.Longitude < this.Longitudes[3]);
-
-            var longitudeLeft = (passenger.Pickup.Longitude > this.Longitudes[0] || passenger.Pickup.Longitude > this.Longitudes[1])
-                && (passenger.Dropoff.Longitude > this.Longitudes[0] || passenger.Dropoff.Longitude > this.Longitudes[1]);
-
+            var longitudeRight = passenger.Pickup.Longitude <= this.Longitudes.Last() && passenger.Dropoff.Longitude <= this.Longitudes.Last();
+            var longitudeLeft = passenger.Pickup.Longitude >= this.Longitudes.First() && passenger.Dropoff.Longitude >= this.Longitudes.First();
             var longitude = longitudeRight && longitudeLeft;
 
             if (latitude && longitude)
