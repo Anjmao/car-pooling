@@ -84,6 +84,11 @@ namespace CarPooling
 
                 foreach (var ordering in orderings)
                 {
+                    if (ordering.GroupBy(v => v).Count() > Constrains.MaxPassengersInCar)
+                    {
+                        continue;
+                    }
+
                     var waypoints = this.CreateWaypoins(ordering, item.Passengers, item.Driver);
                     var journey = new Journey();
                     journey.Driver = item.Driver;
