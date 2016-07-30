@@ -21,9 +21,9 @@ namespace CarPooling
             this.divider = divider;
         }
 
-        public List<Journey> Process()
+        public List<Journey> Process(string fileName)
         {
-            List<Booking> bookings = this.inputParser.ReadInput("input-2016-01-29-evening.json");
+            List<Booking> bookings = this.inputParser.ReadInput(fileName);
 
             var buckets = this.divider.Group(bookings);
 
