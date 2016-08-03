@@ -13,6 +13,7 @@ namespace CarPooling
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(args[0]);
             if (args.Count() == 0)
             {
                 Console.WriteLine("No args");
